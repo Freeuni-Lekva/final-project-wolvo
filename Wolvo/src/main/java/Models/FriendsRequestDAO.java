@@ -43,7 +43,7 @@ public class FriendsRequestDAO() {
             statement.setInt(1, usr.getId());
             ResultSet result = statement.executeQuery();
             while(result.next()){
-                recieved.add(convertToUser(result, result.getInt("from_id"));
+                recieved.add(convertToUser(result, result.getInt("from_id")));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -58,7 +58,7 @@ public class FriendsRequestDAO() {
             statement.setInt(1, usr.getId());
             ResultSet result = statement.executeQuery();
             while(result.next()){
-                recieved.add(convertToUser(result, result.getInt("to_id"));
+                recieved.add(convertToUser(result, result.getInt("to_id")));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
