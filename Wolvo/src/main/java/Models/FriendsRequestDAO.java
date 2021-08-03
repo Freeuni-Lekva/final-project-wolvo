@@ -7,13 +7,27 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FriendsRequestDAO() {
+/**
+ * this class is for connection to 'friends_request' table
+ */
+public class FriendsRequestDAO {
     Connection connection;
 
+    /**
+     * constructor, initializes connection.
+     * @param connection Connection is for sql statement.
+     */
     public FriendsRequestDAO(Connection connection){
         this.connection = connection;
     }
 
+    /**
+     * Converts given resultset ro User by id.
+     * @param resultSet Resultset executed by sql statement.
+     * @param id is user Id we want to convert into user.
+     * @return User we are looking for.
+     * @throws SQLException may be thrown while executing sql statement.
+     */
     private User convertToUser(ResultSet resultSet, int id) throws SQLException {
         User usr = new User();
         usr.setId(id);
@@ -36,6 +50,11 @@ public class FriendsRequestDAO() {
         return usr;
     }
 
+    /**
+     * gets User and returns list of requests received.
+     * @param usr User type we want to get list of requests.
+     * @return list of users.
+     */
     public List<User> recievedRequsets(User usr) {
         List<User> recieved = new ArrayList<>();
         try {
@@ -51,6 +70,11 @@ public class FriendsRequestDAO() {
         return recieved;
     }
 
+    /**
+     * gets User and returns sent requests.
+     * @param usr User which we want to get sent requests.
+     * @return list of users requests are sent.
+     */
     public List<User> sentRequests(User usr) {
         List<User> recieved = new ArrayList<>();
         try {

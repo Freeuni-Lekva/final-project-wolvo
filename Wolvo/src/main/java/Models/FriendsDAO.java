@@ -8,13 +8,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * This class is for connection to 'friends' table
+ */
 public class FriendsDAO {
     private Connection connection;
 
+    /**
+     * constructor, which initializes connection
+     * @param connection type of Connection
+     */
     public FriendsDAO(Connection connection) {
         this.connection = connection;
     }
 
+    /**
+     * Converts given resultset to User
+     * id is value of user we're looking friends of.
+     * @param resultSet executed by sql statement.
+     * @param id user's id we want to get list of friends.
+     * @return User - which is friend of user whose id is equal to id given.
+     * @throws SQLException may be thrown while executing sql statement.
+     */
     private User convertToUser(ResultSet resultSet, int id) throws SQLException {
         int id1 = resultSet.getInt("first_id");
         int id2 = resultSet.getInt("second_id");
@@ -41,6 +56,11 @@ public class FriendsDAO {
         return usr;
     }
 
+    /**
+     * gets user as parameter and returns its friends.
+     * @param usr User type.
+     * @return List<User> list of users.
+     */
     public List<User> getFriends(User usr) {
         List<User> friends = new ArrayList<>();
         try {
@@ -58,6 +78,12 @@ public class FriendsDAO {
         return friends;
     }
 
+    /**
+     * checks if two users are friends.
+     * @param usr1 User type.
+     * @param usr2 User type.
+     * @return boolean, true if usr1 and usr2 are friends. false otherwise.
+     */
     public boolean friendship(User usr1, User usr2) {
         User usrLess = usr1;
         User usrGreater = usr2;
