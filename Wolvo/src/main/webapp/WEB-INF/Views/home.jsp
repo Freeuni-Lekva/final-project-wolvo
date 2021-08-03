@@ -8,9 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Welcome</title>
 </head>
 <body>
+    <h1>Welcome To Wolvo</h1>
 
+    <p>Please Log in</p>
+
+    <form action = "home" method = "post">
+        <label for="emailField">Email: </label>
+        <input type = "text" id = "emailField" name = "email" /> <br> <br>
+        <label for = "passwordField">Password: </label>
+        <input type = "password" id = "passwordField" name = "password" />
+        <button>Login</button>
+    </form>
 </body>
 </html>
