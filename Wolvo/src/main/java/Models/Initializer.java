@@ -10,7 +10,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Initializer implements ServletContextListener, HttpSessionListener {
-
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         Connection connection = null;

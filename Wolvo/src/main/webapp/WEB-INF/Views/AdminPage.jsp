@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <p>Welcome <%= request.getAttribute("name") %></p>
+    <p>Welcome admin <%= session.getAttribute("name") %></p>
 </head>
 <body>
 

@@ -1,2 +1,4 @@
 Models\User.class
 Models\Initializer.class
+Controllers\RegisterHandler.class
+Controllers\LoginHandler.class

@@ -16,9 +16,8 @@ public class TestUserDAO extends TestCase {
     private String[] lastNames = {"Babunashvili","Arustashvili","Chukhua"};
     private String[] passwords = {"c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356",
                                             "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a"};
-    private int[] types = {101,101,101};
+    private String[] types = {"Admin","Admin","Admin"};
     private int[] privacyTypes = {0,0,0};
-    private String[] cities = {"Tbilisi","Tbilisi","Tbilisi"};
     private String[] districts = {"Didube","Saburtalo","Gldani"};
     private String[] addresses = {"Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26","3 MD Naneishvili str 20/8"};
     private String[] phoneNumbers = {"555685305","595055777","555725362"};
@@ -48,7 +47,6 @@ public class TestUserDAO extends TestCase {
             user.setPassword(passwords[i]);
             user.setUserType(types[i]);
             user.setPrivacyType(privacyTypes[i]);
-            user.setCity(cities[i]);
             user.setDistrict(districts[i]);
             user.setAddress(addresses[i]);
             user.setPhoneNumber(phoneNumbers[i]);
@@ -62,7 +60,6 @@ public class TestUserDAO extends TestCase {
 
         UserDAO userDAO = new UserDAO(connection);
 
-        Set<User> usersFromDAO = userDAO.getAll();
         List<User> usersAnswer = convertToUserList();
 
         for (User user : userDAO.getAll()) {
@@ -80,7 +77,6 @@ public class TestUserDAO extends TestCase {
         newUser.setPrivacyType(privacyTypes[ind]);
         newUser.setAddress(addresses[ind]);
         newUser.setDistrict(districts[ind]);
-        newUser.setCity(cities[ind]);
         newUser.setPhoneNumber(phoneNumbers[ind]);
         newUser.setPassword(passwords[ind]);
         newUser.setFirstName(firstNames[ind]);
@@ -118,4 +114,31 @@ public class TestUserDAO extends TestCase {
         assertNull(user);
     }
 
+    public void testAddEntry() {
+        UserDAO userDAO = new UserDAO(connection);
+
+        User newUser = new User();
+
+        newUser.setEmail("test@subject.com");
+        newUser.setFirstName("test 1");
+        newUser.setLastName("test 2");
+        newUser.setPassword("test123");
+        newUser.setUserType("Customer");
+        newUser.setPrivacyType(0);
+        newUser.setDistrict("TestDistrict");
+        newUser.setAddress("TestAddress");
+        newUser.setPhoneNumber("3241234");
+        assertNull(userDAO.getByEmail(newUser.getEmail()));
+        int rowsAffected = userDAO.addUser(newUser.getEmail(),newUser.getFirstName(),newUser.getLastName(),newUser.getPassword(),
+                newUser.getUserType(),newUser.getPrivacyType(), newUser.getDistrict(),newUser.getAddress(),newUser.getPhoneNumber());
+        assertEquals(1,rowsAffected);
+
+        User usercmp = userDAO.getByEmail(newUser.getEmail());
+        assertEquals(newUser,usercmp);
+
+        int removed = userDAO.removeUser(newUser.getEmail());
+        assertEquals(1,removed);
+
+        assertNull(userDAO.getByEmail(newUser.getEmail()));
+    }
 }
