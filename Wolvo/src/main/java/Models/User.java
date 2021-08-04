@@ -9,7 +9,7 @@ public class User {
     private String lastName;
     private String password;
     private String userType;
-    private int privacyType;
+    private String privacyType;
     private String district;
     private String address;
     private String phoneNumber;
@@ -49,7 +49,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPrivacyType(int privacyType) {
+    public void setPrivacyType(String privacyType) {
         this.privacyType = privacyType;
     }
 
@@ -61,7 +61,7 @@ public class User {
         return id;
     }
 
-    public int getPrivacyType() {
+    public String getPrivacyType() {
         return privacyType;
     }
 

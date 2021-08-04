@@ -19,7 +19,7 @@ public class UserDAO {
             user.setLastName(resultSet.getString("last_name"));
             user.setId(resultSet.getInt("user_id"));
             user.setUserType(resultSet.getString("user_type"));
-            user.setPrivacyType(resultSet.getInt("privacy"));
+            user.setPrivacyType(resultSet.getString("privacy"));
             user.setPhoneNumber(resultSet.getBigDecimal("phone_number").toPlainString());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -66,7 +66,7 @@ public class UserDAO {
         return userList;
     }
 
-    public int addUser(String email, String firstName, String lastName, String password, String userType, int privacyType,
+    public int addUser(String email, String firstName, String lastName, String password, String userType, String privacyType,
                                 String district, String address, String phoneNumber) {
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -77,7 +77,7 @@ public class UserDAO {
             statement.setString(3,lastName);
             statement.setString(4,password);
             statement.setString(5,userType);
-            statement.setInt(6,privacyType);
+            statement.setString(6,privacyType);
             statement.setString(7,district);
             statement.setString(8,address);
             statement.setString(9,phoneNumber);

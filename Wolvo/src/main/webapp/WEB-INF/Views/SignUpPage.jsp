@@ -40,9 +40,9 @@
     <label for = "address">Enter your living address: </label>
     <input type = "text" id = "address" required="required" name = "Address"/> <br> <br>
     <label>Please specify your privacy settings: </label> <br>
-    <input type = "radio" id = "firstT" name = "privacyT" value="Noone" required>
+    <input type = "radio" id = "firstT" name = "privacyT" value="No one" required>
     <label for = "firstT">No one can see my order history</label> <br>
-    <input type = "radio" id = "secondT" name = "privacyT" value="Onlyfriends">
+    <input type = "radio" id = "secondT" name = "privacyT" value="Friends">
     <label for = "secondT">Only my friends can see my order history</label> <br>
     <input type = "radio" id = "thirdT" name = "privacyT" value="Everyone">
     <label for = "thirdT">Anyone can see my order history</label> <br> <br>

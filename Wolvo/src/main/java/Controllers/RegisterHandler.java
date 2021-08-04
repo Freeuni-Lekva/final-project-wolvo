@@ -60,14 +60,8 @@ public class RegisterHandler extends HttpServlet {
         String district = httpServletRequest.getParameter("districts");
         String address = httpServletRequest.getParameter("Address");
         String privacyType = httpServletRequest.getParameter("privacyT");
-        int privacyEnum = 0;
-        if (privacyType.equals("Everyone")) {
-            privacyEnum = 2;
-        }   else if (privacyType.equals("Onlyfriends")) {
-            privacyEnum = 1;
-        }
         String phonenum = httpServletRequest.getParameter("phone");
-        int rowsAffected = userDAO.addUser(email,firstName,lastName,hashedPassword(password),userType,privacyEnum,district,
+        int rowsAffected = userDAO.addUser(email,firstName,lastName,hashedPassword(password),userType,privacyType,district,
                                 address,phonenum);
         if (rowsAffected == 1) {
             HttpSession session = httpServletRequest.getSession();
