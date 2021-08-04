@@ -15,12 +15,17 @@
 
     <p>Please Log in</p>
 
-    <form action = "home" method = "post">
+    <form action = "login" method = "post">
         <label for="emailField">Email: </label>
-        <input type = "text" id = "emailField" name = "email" /> <br> <br>
+        <input type = "email" id = "emailField" required="required" name = "email" /> <br> <br>
         <label for = "passwordField">Password: </label>
-        <input type = "password" id = "passwordField" name = "password" />
+        <input type = "password" id = "passwordField" required="required" name = "password" />
         <button>Login</button>
     </form>
+
+    <form action="register" method="get">
+        <input type="submit" value="Sign Up" />
+    </form>
+
 </body>
 </html>

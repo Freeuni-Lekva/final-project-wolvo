@@ -9,8 +9,9 @@
 <html>
 <head>
     <title>Title</title>
+    <p>Welcome customer <%= session.getAttribute("name") %></p>
 </head>
 <body>
 
 </body>
-</html>
+</>
