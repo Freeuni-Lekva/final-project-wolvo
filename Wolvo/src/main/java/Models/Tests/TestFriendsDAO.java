@@ -1,5 +1,7 @@
-package Models;
+package Models.Tests;
 
+import Models.*;
+import Models.DAO.FriendsDAO;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +35,7 @@ public class TestFriendsDAO extends TestCase {
     protected void setUp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/test_db?user=root&password=root");
+                "jdbc:mysql://localhost/test_db?user=root&password=inmess10nante");
         users = new User[5];
         for (int i = 0; i < 5; i++) {
             User usr = new User();
@@ -90,7 +92,9 @@ public class TestFriendsDAO extends TestCase {
         }
         assertTrue(s1.isEmpty());
         List<User> s2 = FDAO.getFriends(users[1]);
+        System.out.println(s2);
         for (User usr : f2) {
+            System.out.println(usr);
             assertTrue(s2.contains(usr));
             s2.remove(usr);
         }

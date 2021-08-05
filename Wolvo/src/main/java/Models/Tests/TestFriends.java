@@ -1,5 +1,6 @@
-package Models;
+package Models.Tests;
 
+import Models.*;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -94,9 +95,9 @@ public class TestFriends extends TestCase {
         Set<User> fr = new HashSet<>();
         fr.add(users[1]);
         fr.add(users[2]);
-        String s = "0 (first name \"temur\" last name \"arustashvili\") Friends are " +
-                "1 (first name \"temur\" last name \"arustashvili\"), " +
-                "2 (first name \"temur\" last name \"arustashvili\"), ";
+        String s = "(first name \"temur\" last name \"arustashvili\") Friends are " +
+                "(first name \"temur\" last name \"arustashvili\"), " +
+                "(first name \"temur\" last name \"arustashvili\"), ";
         friends1.setFriends(fr);
         assertEquals(s, friends1.toString());
     }

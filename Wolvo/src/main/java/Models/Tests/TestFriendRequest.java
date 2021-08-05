@@ -1,5 +1,9 @@
-package Models;
+package Models.Tests;
 
+import Models.FriendRequest;
+import Models.RequestStatus;
+import Models.Status;
+import Models.User;
 import junit.framework.TestCase;
 
 public class TestFriendRequest extends TestCase {

@@ -1,4 +1,6 @@
-package Models;
+package Models.DAO;
+
+import Models.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -4,25 +4,25 @@ package Models;
  * this class is to represent status of request.
  */
 public class RequestStatus implements Status {
-    String Status;
+    String status;
 
     /**
      * constructor, default value of request status is notResponded.
      */
     public RequestStatus() {
-        Status = "NotResponded";
+        status = "NotResponded";
     }
 
     /**
      * sets given status active.
-     * @param Status is string, it is set to private variable.
+     * @param status is string, it is set to private variable.
      * @return if status been successfully set.
      */
     @Override
-    public boolean setStatus(String Status) {
-        if (Status.equals("Accepted") || Status.equals("Rejected")
-                || Status.equals("NotResponded") || Status.equals("NotSent")) {
-           this.Status = Status;
+    public boolean setStatus(String status) {
+        if (status.equals("Accepted") || status.equals("Rejected")
+                || status.equals("NotResponded") || status.equals("NotSent")) {
+           this.status = status;
            return true;
         }
         return false;
@@ -33,7 +33,7 @@ public class RequestStatus implements Status {
      * @return String represents request status.
      */
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     /**
@@ -45,6 +45,6 @@ public class RequestStatus implements Status {
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof RequestStatus)) return false;
-        return ((RequestStatus) obj).getStatus().equals(Status);
+        return ((RequestStatus) obj).getStatus().equals(status);
     }
 }

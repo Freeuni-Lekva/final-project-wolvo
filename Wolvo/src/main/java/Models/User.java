@@ -106,12 +106,13 @@ public class User {
                 && Objects.equals(lastName, that.lastName) && Objects.equals(email,that.email)
                     && Objects.equals(password,that.password) && Objects.equals(district,that.district)
                         && Objects.equals(address,that.address) && Objects.equals(phoneNumber,that.phoneNumber)
-                            && Objects.equals(userStatus,that.userStatus) && Objects.equals(privacyStatus,that.privacyStatus);
+                            && Objects.equals(userStatus.getStatus(),that.userStatus.getStatus())
+                                    && Objects.equals(privacyStatus.getStatus(),that.privacyStatus.getStatus());
     }
 
     @Override
     public String toString() {
         return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber + ", "
-                + id + " " + district + " " + address + " " + userStatus + " " + privacyStatus;
+                 + district + " " + address + " " + userStatus.getStatus() + " " + privacyStatus.getStatus();
     }
 }

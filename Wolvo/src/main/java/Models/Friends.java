@@ -68,10 +68,10 @@ public class Friends {
      * @return String which contains class information.
      */
     public String toString() {
-        String s = usr.getId() + " (first name \"" + usr.getFirstName() +
+        String s = "(first name \"" + usr.getFirstName() +
                 "\" last name \"" + usr.getLastName() + "\") Friends are ";
         for (User fr : friends) {
-            s = s + fr.getId() + " (first name \"" + fr.getFirstName() +
+            s = s + "(first name \"" + fr.getFirstName() +
                     "\" last name \"" + fr.getLastName() + "\"), ";
         }
         return s;

@@ -4,13 +4,13 @@ package Models;
  * this status is for privacy status.
  */
 public class PrivacyStatus implements Status {
-    private String Status;
+    private String status;
 
     /**
      * constructor. default privacy status is Public.
      */
     public PrivacyStatus() {
-        this.Status = "Public";
+        this.status = "Public";
     }
 
     /**
@@ -19,7 +19,7 @@ public class PrivacyStatus implements Status {
      */
     @Override
     public String getStatus() {
-        return this.Status;
+        return this.status;
     }
 
     /**
@@ -28,9 +28,9 @@ public class PrivacyStatus implements Status {
      * @return if status been set successfully.
      */
     @Override
-    public boolean setStatus(String Status) {
-        if (Status.equals("Public") || Status.equals("Private") || Status.equals("Friends")) {
-            this.Status = Status;
+    public boolean setStatus(String status) {
+        if (status.equals("Public") || status.equals("Private") || status.equals("Friends")) {
+            this.status = status;
             return true;
         }
         return false;
@@ -45,6 +45,6 @@ public class PrivacyStatus implements Status {
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof PrivacyStatus)) return false;
-        return ((PrivacyStatus) obj).getStatus().equals(Status);
+        return ((PrivacyStatus) obj).getStatus().equals(status);
     }
 }

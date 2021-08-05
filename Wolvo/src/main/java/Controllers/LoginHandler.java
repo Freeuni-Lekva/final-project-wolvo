@@ -1,7 +1,7 @@
 package Controllers;
 
 import Models.User;
-import Models.UserDAO;
+import Models.DAO.UserDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
