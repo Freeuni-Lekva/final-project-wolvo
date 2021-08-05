@@ -1,4 +1,9 @@
-package Models;
+package Models.DAO;
+
+import Models.PrivacyStatus;
+import Models.Status;
+import Models.User;
+import Models.UserStatus;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

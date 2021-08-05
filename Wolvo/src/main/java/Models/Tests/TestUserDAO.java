@@ -1,8 +1,10 @@
-package Models;
+package Models.Tests;
 
+import Models.PrivacyStatus;
+import Models.User;
+import Models.DAO.UserDAO;
+import Models.UserStatus;
 import junit.framework.TestCase;
-import org.junit.Before;
-import org.junit.BeforeClass;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,17 +12,18 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class TestUserDAO extends TestCase {
-    private int[] id = {1,2,3};
-    private String[] email = {"tbabu19@freeuni.edu.ge","tarus19@freeuni.edu.ge","achuk19@freeuni.edu.ge"};
-    private String[] firstNames = {"Tsotne","Temur","Akaki"};
-    private String[] lastNames = {"Babunashvili","Arustashvili","Chukhua"};
+    private int[] id = {1,2,3,4,5};
+    private String[] email = {"tbabu19@freeuni.edu.ge","tarus19@freeuni.edu.ge","achuk19@freeuni.edu.ge",
+            "tbabu19(1)@freeuni.edu.ge", "tarus19(1)@freeuni.edu.ge"};
+    private String[] firstNames = {"Tsotne","Temur","Akaki", "Tsotne(1)", "Temur(1)"};
+    private String[] lastNames = {"Babunashvili","Arustashvili","Chukhua", "Babunashvili(1)","Arustashvili(1)"};
     private String[] passwords = {"c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356",
-                                            "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a"};
-    private String[] types = {"Admin","Admin","Admin"};
-    private String[] privacyTypes = {"Private","Private","Private"};
-    private String[] districts = {"Didube","Saburtalo","Gldani"};
-    private String[] addresses = {"Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26","3 MD Naneishvili str 20/8"};
-    private String[] phoneNumbers = {"555685305","595055777","555725362"};
+            "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a", "c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356"};
+    private String[] types = {"Admin","Courier","Admin", "Customer", "Manager"};
+    private String[] privacyTypes = {"Private","Friends","Private", "Public", "Private"};
+    private String[] districts = {"Didube","Saburtalo","Gldani","Didube","Saburtalo"};
+    private String[] addresses = {"Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26","3 MD Naneishvili str 20/8","Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26"};
+    private String[] phoneNumbers = {"555685305","595055777","555725362","555685305","595055777"};
     private Connection connection;
 
     public void setUp() {
@@ -31,14 +34,14 @@ public class TestUserDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+                    "jdbc:mysql://localhost/test_db?user=root&password=inmess10nante");
         } catch (SQLException throwables) {
         }
     }
 
     private List<User> convertToUserList() {
         List<User> set = new ArrayList<>();
-        for (int i=0;i<3;i++) {
+        for (int i=0;i<5;i++) {
             User user = new User();
             user.setId(id[i]);
             user.setEmail(email[i]);
@@ -65,11 +68,11 @@ public class TestUserDAO extends TestCase {
         UserDAO userDAO = new UserDAO(connection);
 
         List<User> usersAnswer = convertToUserList();
-
         for (User user : userDAO.getAll()) {
             assert(usersAnswer.contains(user));
             usersAnswer.remove(user);
         }
+
 
         assert(usersAnswer.isEmpty());
     }

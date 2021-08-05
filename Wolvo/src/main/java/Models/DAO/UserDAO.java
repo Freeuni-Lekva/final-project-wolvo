@@ -1,4 +1,8 @@
-package Models;
+package Models.DAO;
+
+import Models.PrivacyStatus;
+import Models.User;
+import Models.UserStatus;
 
 import javax.xml.transform.Result;
 import java.math.BigDecimal;
@@ -24,7 +28,7 @@ public class UserDAO {
             PrivacyStatus newPrivacyStatus = new PrivacyStatus();
             newPrivacyStatus.setStatus(resultSet.getString("privacy"));
             user.setPrivacyStatus(newPrivacyStatus);
-            user.setPhoneNumber(resultSet.getBigDecimal("phone_number").toPlainString());
+            user.setPhoneNumber(resultSet.getString("phone_number"));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

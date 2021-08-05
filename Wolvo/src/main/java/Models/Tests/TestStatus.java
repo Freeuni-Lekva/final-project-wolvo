@@ -1,5 +1,9 @@
-package Models;
+package Models.Tests;
 
+import Models.PrivacyStatus;
+import Models.RequestStatus;
+import Models.Status;
+import Models.UserStatus;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 

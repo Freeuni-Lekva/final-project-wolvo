@@ -4,13 +4,13 @@ package Models;
  * this class is for user's status
  */
 public class UserStatus implements Status {
-    private String Status;
+    private String status;
 
     /**
      * constructor. default user status is Normal user.
      */
     public UserStatus() {
-        Status = "Customer";
+        status = "Customer";
     }
 
     /**
@@ -19,7 +19,7 @@ public class UserStatus implements Status {
      */
     @Override
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     /**
@@ -28,10 +28,10 @@ public class UserStatus implements Status {
      * @return if status been successfully set.
      */
     @Override
-    public boolean setStatus(String Status) {
-        if (Status.equals("Admin") || Status.equals("Customer")
-                || Status.equals("Courier") || Status.equals("Manager")) {
-          this.Status = Status;
+    public boolean setStatus(String status) {
+        if (status.equals("Admin") || status.equals("Customer")
+                || status.equals("Courier") || status.equals("Manager")) {
+          this.status = status;
           return true;
         }
         return false;
@@ -46,6 +46,6 @@ public class UserStatus implements Status {
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof UserStatus)) return false;
-        return ((UserStatus) obj).getStatus().equals(Status);
+        return ((UserStatus) obj).getStatus().equals(status);
     }
 }
