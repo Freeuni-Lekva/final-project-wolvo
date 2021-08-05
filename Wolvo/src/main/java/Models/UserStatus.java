@@ -36,4 +36,16 @@ public class UserStatus implements Status {
         }
         return false;
     }
+
+    /**
+     * compares object to UserStatus object.
+     * @param obj Object type which is compared to this class type.
+     * @return boolean representing if both are equal UserStatus.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof UserStatus)) return false;
+        return ((UserStatus) obj).getStatus().equals(Status);
+    }
 }

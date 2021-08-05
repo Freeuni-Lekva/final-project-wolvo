@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -41,17 +42,20 @@ public class FriendsDAO {
         statement.setInt(1, usr.getId());
         ResultSet result = statement.executeQuery();
         if(result.next()){
-            usr.setAddress(result.getString("adress"));
+            usr.setAddress(result.getString("building_address"));
             usr.setCity(result.getString("city"));
             usr.setDistrict(result.getString("district"));
             usr.setEmail(result.getString("email"));
             usr.setFirstName(result.getString("first_name"));
             usr.setLastName(result.getString("last_name"));
             usr.setPassword(result.getString("password"));
-            usr.setAddress(result.getString("building_adress"));
-            usr.setUserType(result.getInt("usert_type"));
+            UserStatus us = new UserStatus();
+            us.setStatus(result.getString("user_type"));
+            usr.setUserType(us);
             usr.setPhoneNumber(result.getString("phone_number"));
-            usr.setPrivacyType(result.getInt("privacy"));
+            PrivacyStatus ps = new PrivacyStatus();
+            ps.setStatus(result.getString("privacy"));
+            usr.setPrivacyType(ps);
         }
         return usr;
     }
@@ -97,8 +101,7 @@ public class FriendsDAO {
             statement.setInt(1, usrLess.getId());
             statement.setInt(2, usrGreater.getId());
             ResultSet result = statement.executeQuery();
-            if (!result.next()) answer = false;
-            else answer = true;
+            if (result.next()) answer = true;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

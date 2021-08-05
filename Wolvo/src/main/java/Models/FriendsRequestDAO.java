@@ -5,7 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * this class is for connection to 'friends_request' table
@@ -35,17 +37,20 @@ public class FriendsRequestDAO {
         statement.setInt(1, usr.getId());
         ResultSet result = statement.executeQuery();
         if(result.next()){
-            usr.setAddress(result.getString("adress"));
             usr.setCity(result.getString("city"));
             usr.setDistrict(result.getString("district"));
             usr.setEmail(result.getString("email"));
             usr.setFirstName(result.getString("first_name"));
             usr.setLastName(result.getString("last_name"));
             usr.setPassword(result.getString("password"));
-            usr.setAddress(result.getString("building_adress"));
-            usr.setUserType(result.getInt("usert_type"));
+            usr.setAddress(result.getString("building_address"));
+            UserStatus us = new UserStatus();
+            us.setStatus(result.getString("user_type"));
+            usr.setUserType(us);
             usr.setPhoneNumber(result.getString("phone_number"));
-            usr.setPrivacyType(result.getInt("privacy"));
+            PrivacyStatus ps = new PrivacyStatus();
+            ps.setStatus(result.getString("privacy"));
+            usr.setPrivacyType(ps);
         }
         return usr;
     }
@@ -55,19 +60,19 @@ public class FriendsRequestDAO {
      * @param usr User type we want to get list of requests.
      * @return list of users.
      */
-    public List<User> recievedRequsets(User usr) {
-        List<User> recieved = new ArrayList<>();
+    public List<User> receivedRequets(User usr) {
+        List<User> received = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select from_id from friend_requests where to_id = ?;");
             statement.setInt(1, usr.getId());
             ResultSet result = statement.executeQuery();
             while(result.next()){
-                recieved.add(convertToUser(result, result.getInt("from_id")));
+                received.add(convertToUser(result, result.getInt("from_id")));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return recieved;
+        return received;
     }
 
     /**
@@ -76,17 +81,42 @@ public class FriendsRequestDAO {
      * @return list of users requests are sent.
      */
     public List<User> sentRequests(User usr) {
-        List<User> recieved = new ArrayList<>();
+        List<User> received = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select to_id from friend_requests where from_id = ?;");
             statement.setInt(1, usr.getId());
             ResultSet result = statement.executeQuery();
             while(result.next()){
-                recieved.add(convertToUser(result, result.getInt("to_id")));
+                received.add(convertToUser(result, result.getInt("to_id")));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return recieved;
+        return received;
+    }
+
+    /**
+     * gets two user and returns status of request,
+     * returns "NotSent" if request is not sent.
+     * @param usr1 User type.
+     * @param usr2 User type.
+     * @return RequestStatus type represents status of sent request.
+     */
+    public RequestStatus requestStatus(User usr1, User usr2) {
+        RequestStatus status = new RequestStatus();
+        try {
+            PreparedStatement statement = connection.prepareStatement("select request_status from friend_requests where from_id = ? and to_id = ?;");
+            statement.setInt(1, usr1.getId());
+            statement.setInt(2, usr2.getId());
+            ResultSet result = statement.executeQuery();
+            if(result.next()){
+                status.setStatus(result.getString("request_status"));
+            } else {
+                status.setStatus("NotSent");
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return status;
     }
 }

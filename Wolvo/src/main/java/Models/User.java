@@ -8,8 +8,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
-    private int userType;
-    private int privacyType;
+    private UserStatus userType;
+    private PrivacyStatus privacyType;
     private String city;
     private String district;
     private String address;
@@ -54,11 +54,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPrivacyType(int privacyType) {
+    public void setPrivacyType(PrivacyStatus privacyType) {
         this.privacyType = privacyType;
     }
 
-    public void setUserType(int userType) {
+    public void setUserType(UserStatus userType) {
         this.userType = userType;
     }
 
@@ -66,11 +66,11 @@ public class User {
         return id;
     }
 
-    public int getPrivacyType() {
+    public PrivacyStatus getPrivacyType() {
         return privacyType;
     }
 
-    public int getUserType() {
+    public UserStatus getUserType() {
         return userType;
     }
 
@@ -121,7 +121,7 @@ public class User {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber
-                + id + " " + city + " " + district + " " + address + " " + userType + " " + privacyType;
+        return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber + ", "
+                + id + " " + city + " " + district + " " + address + " " + userType.getStatus() + " " + privacyType.getStatus();
     }
 }

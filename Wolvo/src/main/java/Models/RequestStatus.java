@@ -10,7 +10,7 @@ public class RequestStatus implements Status {
      * constructor, default value of request status is notResponded.
      */
     public RequestStatus() {
-        Status = "notResponded";
+        Status = "NotResponded";
     }
 
     /**
@@ -20,7 +20,8 @@ public class RequestStatus implements Status {
      */
     @Override
     public boolean setStatus(String Status) {
-        if (Status.equals("Accepted") || Status.equals("Rejected") || Status.equals("NotResponded")) {
+        if (Status.equals("Accepted") || Status.equals("Rejected")
+                || Status.equals("NotResponded") || Status.equals("NotSent")) {
            this.Status = Status;
            return true;
         }
@@ -35,4 +36,15 @@ public class RequestStatus implements Status {
         return Status;
     }
 
+    /**
+     * compares object to RequestStatus object.
+     * @param obj Object type which is compared to this class type.
+     * @return boolean representing if both are equal RequestStatus.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof RequestStatus)) return false;
+        return ((RequestStatus) obj).getStatus().equals(Status);
+    }
 }

@@ -1,12 +1,13 @@
 package Models;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * this class is for user's friends
  */
 public class Friends {
-    private List<User> friends;
+    private Set<User> friends;
     private User usr;
 
     /**
@@ -28,7 +29,7 @@ public class Friends {
      * gets nothing, returns List of friends (usr's friends).
      * @return List<User> type.
      */
-    public List<User> getFriends() {
+    public Set<User> getFriends() {
         return friends;
     }
 
@@ -37,7 +38,7 @@ public class Friends {
      * returns nothing.
      * @param friends List of Users.
      */
-    public void setFriends(List<User> friends) {
+    public void setFriends(Set<User> friends) {
         this.friends = friends;
     }
 
@@ -48,6 +49,17 @@ public class Friends {
      */
     public void setUser(User usr) {
         this.usr = usr;
+    }
+
+    /**
+     * compares if Object is equal to Friends type object.
+     * @param obj which is compared to Friends.
+     * @return boolean false if are not equal, true if are equal.
+     */
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Friends)) return false;
+        return ((Friends) obj).getUser().equals(usr) && ((Friends) obj).getFriends().equals(friends);
     }
 
     /**

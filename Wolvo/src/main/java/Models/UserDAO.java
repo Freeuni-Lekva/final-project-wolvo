@@ -22,8 +22,11 @@ public class UserDAO {
             user.setFirstName(resultSet.getString("first_name"));
             user.setLastName(resultSet.getString("last_name"));
             user.setId(resultSet.getInt("user_id"));
-            user.setUserType(resultSet.getInt("user_type"));
-            user.setPrivacyType(resultSet.getInt("privacy"));
+            UserStatus us = new UserStatus();
+            us.setStatus(resultSet.getString("user_type"));
+            user.setUserType(us);            PrivacyStatus ps = new PrivacyStatus();
+            ps.setStatus(resultSet.getString("privacy"));
+            user.setPrivacyType(ps);
             user.setPhoneNumber(resultSet.getBigDecimal("phone_number").toPlainString());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
