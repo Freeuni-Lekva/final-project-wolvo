@@ -50,7 +50,7 @@ public class TestFriendRequestDAO extends TestCase {
             UserStatus us = new UserStatus();
             us.setStatus(UserType[i]);
             usr.setUserType(us);
-            PrivacyStatus ps = new PrivacyStatus();
+            Status ps = new PrivacyStatus();
             ps.setStatus(privacyTypes[i]);
             usr.setPrivacyType(ps);
             users[i] = usr;
@@ -140,10 +140,10 @@ public class TestFriendRequestDAO extends TestCase {
      */
     public void testRequestStatus() {
         FriendsRequestDAO FDAO = new FriendsRequestDAO(connection);
-        RequestStatus rsAcc = new RequestStatus();
-        RequestStatus rsRej = new RequestStatus();
-        RequestStatus rsNR = new RequestStatus();
-        RequestStatus rsNS = new RequestStatus();
+        Status rsAcc = new RequestStatus();
+        Status rsRej = new RequestStatus();
+        Status rsNR = new RequestStatus();
+        Status rsNS = new RequestStatus();
         rsAcc.setStatus("Accepted");
         rsRej.setStatus("Rejected");
         rsNR.setStatus("NotResponded");

@@ -12,7 +12,7 @@ public class TestFriendRequest extends TestCase {
         FriendRequest fr = new FriendRequest();
         fr.setFrom(usrFr);
         fr.setTo(usrTo);
-        RequestStatus rs = new RequestStatus();
+        Status rs = new RequestStatus();
         rs.setStatus("NotResponded");
         fr.setStatus(rs);
         assertEquals(fr.getFrom().getId(), 1);
@@ -35,7 +35,7 @@ public class TestFriendRequest extends TestCase {
         FriendRequest fr = new FriendRequest();
         fr.setFrom(usr1);
         fr.setTo(usr2);
-        RequestStatus rs = new RequestStatus();
+        Status rs = new RequestStatus();
         rs.setStatus("Accepted");
         fr.setStatus(rs);
         assertEquals(s, fr.toString());

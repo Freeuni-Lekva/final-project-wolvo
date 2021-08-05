@@ -10,7 +10,7 @@ public class UserStatus implements Status {
      * constructor. default user status is Normal user.
      */
     public UserStatus() {
-        Status = "NormalUser";
+        Status = "Customer";
     }
 
     /**
@@ -29,7 +29,7 @@ public class UserStatus implements Status {
      */
     @Override
     public boolean setStatus(String Status) {
-        if (Status.equals("Admin") || Status.equals("NormalUser")
+        if (Status.equals("Admin") || Status.equals("Customer")
                 || Status.equals("Courier") || Status.equals("Manager")) {
           this.Status = Status;
           return true;

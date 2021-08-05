@@ -5,19 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/HomeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/HomeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wolvo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../wolvo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/FriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/FriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/FriendsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/FriendsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/FriendsRequestDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/FriendsRequestDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriendRequestDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriendRequestDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriendsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriendsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/UserStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +45,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1wBwI5KxugkRbA3d4qkYPFtBXLS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,6 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -112,8 +123,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
       <item itemvalue="JUnit.TestUserDAO" />
+      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
     </list>
     <recent_temporary>
       <list>
@@ -146,5 +157,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

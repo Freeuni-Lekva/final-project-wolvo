@@ -28,7 +28,7 @@ public class FriendRequest {
      * gets nothing and returns status of request.
      * @return RequestStatus type which represents request status.
      */
-    public RequestStatus getStatus() {
+    public Status getStatus() {
         return Status;
     }
 

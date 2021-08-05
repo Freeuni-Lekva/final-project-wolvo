@@ -49,11 +49,11 @@ public class FriendsDAO {
             usr.setFirstName(result.getString("first_name"));
             usr.setLastName(result.getString("last_name"));
             usr.setPassword(result.getString("password"));
-            UserStatus us = new UserStatus();
+            Status us = new UserStatus();
             us.setStatus(result.getString("user_type"));
             usr.setUserType(us);
             usr.setPhoneNumber(result.getString("phone_number"));
-            PrivacyStatus ps = new PrivacyStatus();
+            Status ps = new PrivacyStatus();
             ps.setStatus(result.getString("privacy"));
             usr.setPrivacyType(ps);
         }

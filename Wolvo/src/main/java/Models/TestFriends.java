@@ -17,10 +17,10 @@ public class TestFriends extends TestCase {
         users = new User[20];
         User usr0 = new User();
         usr0.setId(0);
-        PrivacyStatus ps = new PrivacyStatus();
+        Status ps = new PrivacyStatus();
         ps.setStatus("Public");
         usr0.setPrivacyType(ps);
-        UserStatus us = new UserStatus();
+        Status us = new UserStatus();
         us.setStatus("NormalUser");
         usr0.setUserType(us);
         usr0.setAddress("fanjikidzis 22a");
@@ -35,10 +35,10 @@ public class TestFriends extends TestCase {
         for (int i = 1; i < 10; i++) {
             User usr = new User();
             usr.setId(i);
-            PrivacyStatus p = new PrivacyStatus();
+            Status p = new PrivacyStatus();
             p.setStatus("Public");
             usr.setPrivacyType(p);
-            UserStatus u = new UserStatus();
+            Status u = new UserStatus();
             u.setStatus("NormalUser");
             usr.setUserType(u);
             usr.setAddress("fanjikidzis 22a");
@@ -54,10 +54,10 @@ public class TestFriends extends TestCase {
         }
         User usr10 = new User();
         usr10.setId(0);
-        PrivacyStatus ps1 = new PrivacyStatus();
+        Status ps1 = new PrivacyStatus();
         ps.setStatus("Public");
         usr10.setPrivacyType(ps1);
-        UserStatus us1 = new UserStatus();
+        Status us1 = new UserStatus();
         us1.setStatus("NormalUser");
         usr10.setUserType(us1);
         usr10.setAddress("fanjikidzis 22a");

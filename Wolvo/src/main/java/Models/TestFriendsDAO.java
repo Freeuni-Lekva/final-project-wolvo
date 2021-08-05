@@ -18,7 +18,7 @@ public class TestFriendsDAO extends TestCase {
     private String[] last_name = {"Babunashvili","Arustashvili","Chukhua", "Babunashvili(1)","Arustashvili(1)"};
     private String[] password = {"c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356",
             "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a", "c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356"};
-    private String[] UserType = {"Admin","Courier","Admin", "NormalUser", "Manager"};
+    private String[] UserType = {"Admin","Courier","Admin", "Customer", "Manager"};
     private String[] privacyTypes = {"Private","Friends","Private", "Public", "Private"};
     private String[] cities = {"Tbilisi","Tbilisi","Tbilisi","Tbilisi","Tbilisi"};
     private String[] districts = {"Didube","Saburtalo","Gldani","Didube","Saburtalo"};
@@ -47,10 +47,10 @@ public class TestFriendsDAO extends TestCase {
             usr.setDistrict(districts[i]);
             usr.setAddress(addresses[i]);
             usr.setPhoneNumber(phoneNumbers[i]);
-            UserStatus us = new UserStatus();
+            Status us = new UserStatus();
             us.setStatus(UserType[i]);
             usr.setUserType(us);
-            PrivacyStatus ps = new PrivacyStatus();
+            Status ps = new PrivacyStatus();
             ps.setStatus(privacyTypes[i]);
             usr.setPrivacyType(ps);
             users[i] = usr;

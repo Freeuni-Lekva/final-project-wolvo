@@ -44,11 +44,11 @@ public class FriendsRequestDAO {
             usr.setLastName(result.getString("last_name"));
             usr.setPassword(result.getString("password"));
             usr.setAddress(result.getString("building_address"));
-            UserStatus us = new UserStatus();
+            Status us = new UserStatus();
             us.setStatus(result.getString("user_type"));
             usr.setUserType(us);
             usr.setPhoneNumber(result.getString("phone_number"));
-            PrivacyStatus ps = new PrivacyStatus();
+            Status ps = new PrivacyStatus();
             ps.setStatus(result.getString("privacy"));
             usr.setPrivacyType(ps);
         }
