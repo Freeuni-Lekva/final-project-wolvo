@@ -5,4 +5,3 @@ public interface Status {
     boolean setStatus(String Status);
     boolean equals(Object obj);
 }
-

@@ -6,6 +6,7 @@ package Models;
 public class PrivacyStatus implements Status {
     private String status;
 
+
     /**
      * constructor. default privacy status is Public.
      */
@@ -35,7 +36,6 @@ public class PrivacyStatus implements Status {
         }
         return false;
     }
-
     /**
      * compares object to PrivacyStatus object.
      * @param obj Object type which is compared to this class type.
