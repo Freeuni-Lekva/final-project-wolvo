@@ -106,4 +106,59 @@ public class FriendsDAO {
         }
         return answer;
     }
+
+    /**
+     * removes friendship between two users.
+     * @param usr1 User type.
+     * @param usr2 User type.
+     * @return boolean type represents if row deleted.
+     */
+    public boolean removeFriendship(User usr1, User usr2) {
+        User usrLess = usr1;
+        User usrGreater = usr2;
+        boolean answer = false;
+        int removed = 0;
+        if (usr1.getId() > usr2.getId()) {
+            usrLess = usr2;
+            usrGreater = usr1;
+        }
+        try {
+            PreparedStatement statement = connection.prepareStatement("delete from Friends where first_id = ? and second_id = ?;");
+            statement.setInt(1, usrLess.getId());
+            statement.setInt(2, usrGreater.getId());
+            removed = statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        if (removed != 0) answer = true;
+        return answer;
+    }
+
+    /**
+     * inserts pair of friends in database.
+     * less indexed user always is inserted as first_id.
+     * @param usr1 User type.
+     * @param usr2 User type.
+     * @return returns boolean represents if row was inserted successfully.
+     */
+    public boolean insertFriends(User usr1, User usr2) {
+        User usrLess = usr1;
+        User usrGreater = usr2;
+        boolean answer = false;
+        int inserted = 0;
+        if (usr1.getId() > usr2.getId()) {
+            usrLess = usr2;
+            usrGreater = usr1;
+        }
+        try {
+            PreparedStatement statement = connection.prepareStatement("insert into Friends(first_id, second_id) values(?, ?);");
+            statement.setInt(1, usrLess.getId());
+            statement.setInt(2, usrGreater.getId());
+            inserted = statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        if (inserted != 0) answer = true;
+        return answer;
+    }
 }

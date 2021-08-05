@@ -101,8 +101,8 @@ public class FriendsRequestDAO {
      * @param usr2 User type.
      * @return RequestStatus type represents status of sent request.
      */
-    public RequestStatus requestStatus(User usr1, User usr2) {
-        RequestStatus status = new RequestStatus();
+    public Status requestStatus(User usr1, User usr2) {
+        Status status = new RequestStatus();
         try {
             PreparedStatement statement = connection.prepareStatement("select request_status from friend_requests where from_id = ? and to_id = ?;");
             statement.setInt(1, usr1.getId());
@@ -117,5 +117,42 @@ public class FriendsRequestDAO {
             throwables.printStackTrace();
         }
         return status;
+    }
+
+    /**
+     * removes sent friend request.
+     * @param usr1 User type.
+     * @param usr2 User type.
+     * @return boolean represents if request was removed.
+     */
+    public boolean removeFriendsRequest(User usr1, User usr2) {
+        boolean answer = false;
+        int removed = 0;
+        try {
+            PreparedStatement statement = connection.prepareStatement("delete from Friend_requests where from_id = ? and to_id = ?;");
+            statement.setInt(1, usr1.getId());
+            statement.setInt(2, usr2.getId());
+            removed = statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        if (removed != 0) answer = true;
+        return answer;
+    }
+
+    public boolean insertFriendRequest(User usr1, User usr2, Status status) {
+        boolean answer = false;
+        int inserted = 0;
+        try {
+            PreparedStatement statement = connection.prepareStatement("insert into Friend_requests(from_id, to_id, request_status) values(?, ?, ?);");
+            statement.setInt(1, usr1.getId());
+            statement.setInt(2, usr2.getId());
+            statement.setString(3, status.getStatus());
+            inserted = statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        if (inserted != 0) answer = true;
+        return answer;
     }
 }

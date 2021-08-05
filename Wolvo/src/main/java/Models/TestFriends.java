@@ -21,7 +21,7 @@ public class TestFriends extends TestCase {
         ps.setStatus("Public");
         usr0.setPrivacyStatus(ps);
         Status us = new UserStatus();
-        us.setStatus("NormalUser");
+        us.setStatus("Customer");
         usr0.setUserStatus(us);
         usr0.setAddress("fanjikidzis 22a");
         usr0.setPassword("qwerty");
@@ -56,7 +56,7 @@ public class TestFriends extends TestCase {
         ps.setStatus("Public");
         usr10.setPrivacyStatus(ps1);
         Status us1 = new UserStatus();
-        us1.setStatus("NormalUser");
+        us1.setStatus("Customer");
         usr10.setUserStatus(us1);
         usr10.setAddress("fanjikidzis 22a");
         usr10.setPassword("qwerty");

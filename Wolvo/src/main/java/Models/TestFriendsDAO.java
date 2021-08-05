@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +35,7 @@ public class TestFriendsDAO extends TestCase {
     protected void setUp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/test_db?user=root&password=root");
+                "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         users = new User[5];
         for (int i = 0; i < 5; i++) {
             User usr = new User();
@@ -129,5 +131,44 @@ public class TestFriendsDAO extends TestCase {
         assertTrue(FDAO.friendship(users[4], users[1]));
         assertTrue(FDAO.friendship(users[2], users[3]));
         assertFalse(FDAO.friendship(users[2], users[4]));
+    }
+
+    /**
+     * tests friendship removal.
+     */
+    public void testUpdateFriendship() throws SQLException {
+        FriendsDAO FDAO = new FriendsDAO(connection);
+        boolean b1 = FDAO.removeFriendship(users[0], users[1]);
+        assertTrue(b1);
+        assertFalse(FDAO.friendship(users[0], users[1]));
+        PreparedStatement statement1 = connection.prepareStatement("insert into Friends values(?, ?)");
+        statement1.setInt(1, users[0].getId());
+        statement1.setInt(2, users[1].getId());
+        boolean b2 = FDAO.removeFriendship(users[3], users[0]);
+        assertTrue((b2));
+        assertFalse(FDAO.friendship(users[3], users[0]));
+        PreparedStatement statement2 = connection.prepareStatement("insert into Friends values(?, ?)");
+        statement2.setInt(1, users[0].getId());
+        statement2.setInt(2, users[3].getId());
+        boolean b3 = FDAO.removeFriendship(users[0], users[1]);
+        assertFalse(b3);
+        boolean b4 = FDAO.removeFriendship(users[2], users[2]);
+        assertFalse(b4);
+        assertFalse(FDAO.friendship(users[2], users[2]));
+        statement1.executeUpdate();
+        statement2.executeUpdate();
+    }
+
+    /**
+     * tests friends insertion.
+     */
+    public void testFriendsInsertion() {
+        FriendsDAO FDAO = new FriendsDAO(connection);
+        assertFalse(FDAO.insertFriends(users[0], users[1]));
+        assertFalse(FDAO.insertFriends(users[2], users[0]));
+        boolean b1 = FDAO.insertFriends(users[0], users[4]);
+        assertTrue(b1);
+        assertTrue(FDAO.friendship(users[0], users[4]));
+        FDAO.removeFriendship(users[0], users[4]);
     }
 }
