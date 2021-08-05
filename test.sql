@@ -1,8 +1,8 @@
 drop database if exists test_db;
 
-create database test_db;
+create database wolvo_db;
 
-use test_db;
+use wolvo_db;
 
 drop table if exists users;
 
