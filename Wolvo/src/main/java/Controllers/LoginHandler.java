@@ -57,7 +57,7 @@ public class LoginHandler extends HttpServlet {
         respectivePages.put("Manager","WEB-INF/Views/ManagerPage.jsp");
         respectivePages.put("Courier","WEB-INF/Views/CourierPage.jsp");
 
-        httpServletRequest.getSession().setAttribute("userType",currentUser.getUserType());
-        httpServletRequest.getRequestDispatcher(respectivePages.get(currentUser.getUserType())).forward(httpServletRequest,httpServletResponse);
+        httpServletRequest.getSession().setAttribute("userType",currentUser.getUserStatus().getStatus());
+        httpServletRequest.getRequestDispatcher(respectivePages.get(currentUser.getUserStatus().getStatus())).forward(httpServletRequest,httpServletResponse);
     }
 }

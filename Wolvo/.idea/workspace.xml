@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestUserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/SignUpPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/SignUpPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,7 +57,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.TestUserDAO">
+  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
@@ -136,6 +147,7 @@
       <updated>1627945208651</updated>
       <workItem from="1627945211005" duration="35176000" />
       <workItem from="1628069989181" duration="1111000" />
+      <workItem from="1628172367266" duration="1549000" />
     </task>
     <servers />
   </component>
