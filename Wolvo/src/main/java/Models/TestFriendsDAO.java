@@ -20,7 +20,6 @@ public class TestFriendsDAO extends TestCase {
             "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a", "c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356"};
     private String[] UserType = {"Admin","Courier","Admin", "Customer", "Manager"};
     private String[] privacyTypes = {"Private","Friends","Private", "Public", "Private"};
-    private String[] cities = {"Tbilisi","Tbilisi","Tbilisi","Tbilisi","Tbilisi"};
     private String[] districts = {"Didube","Saburtalo","Gldani","Didube","Saburtalo"};
     private String[] addresses = {"Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26","3 MD Naneishvili str 20/8","Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26"};
     private String[] phoneNumbers = {"555685305","595055777","555725362","555685305","595055777"};
@@ -43,16 +42,15 @@ public class TestFriendsDAO extends TestCase {
             usr.setLastName(last_name[i]);
             usr.setEmail(email[i]);
             usr.setPassword(password[i]);
-            usr.setCity(cities[i]);
             usr.setDistrict(districts[i]);
             usr.setAddress(addresses[i]);
             usr.setPhoneNumber(phoneNumbers[i]);
             Status us = new UserStatus();
             us.setStatus(UserType[i]);
-            usr.setUserType(us);
+            usr.setUserStatus(us);
             Status ps = new PrivacyStatus();
             ps.setStatus(privacyTypes[i]);
-            usr.setPrivacyType(ps);
+            usr.setPrivacyStatus(ps);
             users[i] = usr;
         }
     }

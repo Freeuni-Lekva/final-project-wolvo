@@ -17,7 +17,7 @@ public class TestUserDAO extends TestCase {
     private String[] passwords = {"c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356",
                                             "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a"};
     private String[] types = {"Admin","Admin","Admin"};
-    private String[] privacyTypes = {"No one","No one","No one"};
+    private String[] privacyTypes = {"Private","Private","Private"};
     private String[] districts = {"Didube","Saburtalo","Gldani"};
     private String[] addresses = {"Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26","3 MD Naneishvili str 20/8"};
     private String[] phoneNumbers = {"555685305","595055777","555725362"};
@@ -31,7 +31,7 @@ public class TestUserDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=inmess10nante");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         } catch (SQLException throwables) {
         }
     }

@@ -5,33 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/final-project-wolvo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__javax_javaee_api_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__junit_junit_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/FriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Friends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/FriendsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/FriendsRequestDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/RequestStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/PrivacyStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/PrivacyStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/UserStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/FriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/FriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/FriendsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/FriendsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/FriendsRequestDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/FriendsRequestDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriendRequestDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriendRequestDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestFriendsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestFriendsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TestUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/SignUpPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/SignUpPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/HomeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/HomeHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RegisterHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/FriendRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/FriendRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/FriendsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/FriendsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/FriendsRequestDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/FriendsRequestDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Initializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Initializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/TestFriendRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/TestFriendRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/TestFriendRequestDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/TestFriendRequestDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/TestFriends.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/TestFriends.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/TestFriendsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/TestFriendsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/TestStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/TestStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/TestUserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/TestUserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/UserStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/UserStatus.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +79,73 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
+  <component name="RunManager" selected="JUnit.TestUserDAO">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFriendRequestDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.TestFriendRequestDAO" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFriends" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.TestFriends" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFriendsDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.TestFriendsDAO" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.TestStatus" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,22 +162,6 @@
       <option name="PACKAGE_NAME" value="Models" />
       <option name="MAIN_CLASS_NAME" value="Models.TestUserDAO" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestUserDAO.testgetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.TestUserDAO" />
-      <option name="METHOD_NAME" value="testgetAll" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,14 +192,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestUserDAO" />
-      <item itemvalue="JUnit.TestUserDAO.testgetAll" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
+      <item itemvalue="JUnit.TestFriendRequestDAO" />
+      <item itemvalue="JUnit.TestFriends" />
+      <item itemvalue="JUnit.TestFriendsDAO" />
+      <item itemvalue="JUnit.TestStatus" />
+      <item itemvalue="JUnit.TestUserDAO" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestUserDAO" />
-        <item itemvalue="JUnit.TestUserDAO.testgetAll" />
+        <item itemvalue="JUnit.TestFriendsDAO" />
+        <item itemvalue="JUnit.TestStatus" />
+        <item itemvalue="JUnit.TestFriends" />
+        <item itemvalue="JUnit.TestFriendRequestDAO" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +239,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO.ic" NAME="TestUserDAO Coverage Results" MODIFIED="1628015259643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequest.ic" NAME="TestFriendRequest Coverage Results" MODIFIED="1628194593722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendsDAO.ic" NAME="TestFriendsDAO Coverage Results" MODIFIED="1628194661775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriends.ic" NAME="TestFriends Coverage Results" MODIFIED="1628194651738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequestDAO.ic" NAME="TestFriendRequestDAO Coverage Results" MODIFIED="1628194618177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO.ic" NAME="TestUserDAO Coverage Results" MODIFIED="1628194763984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestStatus.ic" NAME="TestStatus Coverage Results" MODIFIED="1628194706864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.*</FILTER>
     </SUITE>
   </component>

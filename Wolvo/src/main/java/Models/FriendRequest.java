@@ -6,7 +6,7 @@ package Models;
 public class FriendRequest {
     private User From;
     private User To;
-    private RequestStatus Status;
+    private Status Status;
 
     /**
      * gets nothing and returns User from which is sent request.
@@ -54,7 +54,7 @@ public class FriendRequest {
      * returns nothing.
      * @param Status String type.
      */
-    public void setStatus(RequestStatus Status) {
+    public void setStatus(Status Status) {
         this.Status = Status;
     }
 

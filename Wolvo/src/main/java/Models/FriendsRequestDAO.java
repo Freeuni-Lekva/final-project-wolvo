@@ -37,7 +37,6 @@ public class FriendsRequestDAO {
         statement.setInt(1, usr.getId());
         ResultSet result = statement.executeQuery();
         if(result.next()){
-            usr.setCity(result.getString("city"));
             usr.setDistrict(result.getString("district"));
             usr.setEmail(result.getString("email"));
             usr.setFirstName(result.getString("first_name"));
@@ -46,11 +45,11 @@ public class FriendsRequestDAO {
             usr.setAddress(result.getString("building_address"));
             Status us = new UserStatus();
             us.setStatus(result.getString("user_type"));
-            usr.setUserType(us);
+            usr.setUserStatus(us);
             usr.setPhoneNumber(result.getString("phone_number"));
             Status ps = new PrivacyStatus();
             ps.setStatus(result.getString("privacy"));
-            usr.setPrivacyType(ps);
+            usr.setPrivacyStatus(ps);
         }
         return usr;
     }

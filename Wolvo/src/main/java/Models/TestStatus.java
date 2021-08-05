@@ -10,8 +10,8 @@ public class TestStatus extends TestCase {
         Status st = new UserStatus();
         st.setStatus("Admin");
         assertEquals("Admin", st.getStatus());
-        st.setStatus("NormalUser");
-        assertEquals("NormalUser", st.getStatus());
+        st.setStatus("Customer");
+        assertEquals("Customer", st.getStatus());
         st.setStatus("Courier");
         assertEquals("Courier", st.getStatus());
         st.setStatus("Manager");

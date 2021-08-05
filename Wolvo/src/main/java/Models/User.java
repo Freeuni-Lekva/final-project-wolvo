@@ -8,8 +8,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
-    private UserStatus userStatus;
-    private PrivacyStatus privacyStatus;
+    private Status userStatus;
+    private Status privacyStatus;
     private String district;
     private String address;
     private String phoneNumber;
@@ -49,11 +49,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPrivacyStatus(PrivacyStatus privacyStatus) {
+    public void setPrivacyStatus(Status privacyStatus) {
         this.privacyStatus = privacyStatus;
     }
 
-    public void setUserStatus(UserStatus userStatus) {
+    public void setUserStatus(Status userStatus) {
         this.userStatus = userStatus;
     }
 
@@ -61,11 +61,11 @@ public class User {
         return id;
     }
 
-    public PrivacyStatus getPrivacyStatus() {
+    public Status getPrivacyStatus() {
         return privacyStatus;
     }
 
-    public UserStatus getUserStatus() {
+    public Status getUserStatus() {
         return userStatus;
     }
 
@@ -111,7 +111,7 @@ public class User {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber
+        return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber + ", "
                 + id + " " + district + " " + address + " " + userStatus + " " + privacyStatus;
     }
 }
