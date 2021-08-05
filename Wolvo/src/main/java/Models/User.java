@@ -8,8 +8,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
-    private String userType;
-    private String privacyType;
+    private UserStatus userStatus;
+    private PrivacyStatus privacyStatus;
     private String district;
     private String address;
     private String phoneNumber;
@@ -49,24 +49,24 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPrivacyType(String privacyType) {
-        this.privacyType = privacyType;
+    public void setPrivacyStatus(PrivacyStatus privacyStatus) {
+        this.privacyStatus = privacyStatus;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
+    public void setUserStatus(UserStatus userStatus) {
+        this.userStatus = userStatus;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getPrivacyType() {
-        return privacyType;
+    public PrivacyStatus getPrivacyStatus() {
+        return privacyStatus;
     }
 
-    public String getUserType() {
-        return userType;
+    public UserStatus getUserStatus() {
+        return userStatus;
     }
 
     public String getAddress() {
@@ -106,12 +106,12 @@ public class User {
                 && Objects.equals(lastName, that.lastName) && Objects.equals(email,that.email)
                     && Objects.equals(password,that.password) && Objects.equals(district,that.district)
                         && Objects.equals(address,that.address) && Objects.equals(phoneNumber,that.phoneNumber)
-                            && Objects.equals(userType,that.userType) && Objects.equals(privacyType,that.privacyType);
+                            && Objects.equals(userStatus,that.userStatus) && Objects.equals(privacyStatus,that.privacyStatus);
     }
 
     @Override
     public String toString() {
         return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber
-                + id + " " + district + " " + address + " " + userType + " " + privacyType;
+                + id + " " + district + " " + address + " " + userStatus + " " + privacyStatus;
     }
 }
