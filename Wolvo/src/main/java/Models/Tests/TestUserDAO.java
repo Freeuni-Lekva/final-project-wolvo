@@ -34,7 +34,7 @@ public class TestUserDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/test_db?user=root&password=inmess10nante");
+                    "jdbc:mysql://localhost/test_db?user=root&password=");
         } catch (SQLException throwables) {
         }
     }
