@@ -3,7 +3,6 @@ package Models.Tests;
 import Models.*;
 import junit.framework.TestCase;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -22,7 +21,7 @@ public class TestFriends extends TestCase {
         ps.setStatus("Public");
         usr0.setPrivacyStatus(ps);
         Status us = new UserStatus();
-        us.setStatus("NormalUser");
+        us.setStatus("Customer");
         usr0.setUserStatus(us);
         usr0.setAddress("fanjikidzis 22a");
         usr0.setPassword("qwerty");
@@ -57,7 +56,7 @@ public class TestFriends extends TestCase {
         ps.setStatus("Public");
         usr10.setPrivacyStatus(ps1);
         Status us1 = new UserStatus();
-        us1.setStatus("NormalUser");
+        us1.setStatus("Customer");
         usr10.setUserStatus(us1);
         usr10.setAddress("fanjikidzis 22a");
         usr10.setPassword("qwerty");
@@ -69,7 +68,7 @@ public class TestFriends extends TestCase {
         users[10] = usr10;
     }
 
-    @Test
+  //  @Test
     public void testFriends0() {
         Friends friends0 = new Friends();
         Friends friends1 = new Friends();
@@ -77,7 +76,7 @@ public class TestFriends extends TestCase {
         friendsRC = new Friends();
     }
 
-    @Test
+ //   @Test
     public void testFriends1() {
         //setup();
         Friends friends0 = new Friends();
@@ -102,7 +101,7 @@ public class TestFriends extends TestCase {
         assertEquals(s, friends1.toString());
     }
 
-    @Test
+//    @Test
     public void testFriends2() {
         //setup();
         Friends friends0 = new Friends();

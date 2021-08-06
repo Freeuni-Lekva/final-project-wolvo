@@ -5,11 +5,10 @@ import Models.RequestStatus;
 import Models.Status;
 import Models.UserStatus;
 import junit.framework.TestCase;
-import org.junit.jupiter.api.Test;
 
 public class TestStatus extends TestCase {
 
-    @Test
+  //  @Test
     public void testUserStatus() {
         Status st = new UserStatus();
         st.setStatus("Admin");
@@ -32,7 +31,7 @@ public class TestStatus extends TestCase {
         assertFalse(st.equals(str));
     }
 
-    @Test
+//    @Test
     public void testPrivacyStatus() {
         Status st = new PrivacyStatus();
         st.setStatus("Private");
