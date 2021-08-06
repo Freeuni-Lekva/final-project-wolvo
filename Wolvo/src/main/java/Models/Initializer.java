@@ -1,5 +1,7 @@
 package Models;
 
+import Models.DAO.FriendsDAO;
+import Models.DAO.FriendsRequestDAO;
 import Models.DAO.UserDAO;
 
 import javax.servlet.ServletContext;
@@ -27,6 +29,10 @@ public class Initializer implements ServletContextListener, HttpSessionListener 
         UserDAO userDAO = new UserDAO(connection);
         ServletContext servletContext = servletContextEvent.getServletContext();
         servletContext.setAttribute("users",userDAO);
+        FriendsRequestDAO friendsRequestDAO = new FriendsRequestDAO(connection);
+        servletContext.setAttribute("friend_requests",friendsRequestDAO);
+        FriendsDAO friendsDAO = new FriendsDAO(connection);
+        servletContext.setAttribute("friends",friendsDAO);
     }
 
     @Override

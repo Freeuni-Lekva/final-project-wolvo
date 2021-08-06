@@ -8,24 +8,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel = "stylesheet" href = "../../Resources/style.css" />
     <title>Welcome</title>
 </head>
 <body>
+<div class = "introduction">
     <h1>Welcome To Wolvo</h1>
 
     <p>Please Log in</p>
 
     <form action = "login" method = "post">
-        <label for="emailField">Email: </label>
+        <label for="emailField">Email:      </label>
         <input type = "email" id = "emailField" required="required" name = "email" /> <br> <br>
         <label for = "passwordField">Password: </label>
-        <input type = "password" id = "passwordField" required="required" name = "password" />
-        <button>Login</button>
+        <input type = "password" id = "passwordField" required="required" name = "password" /> <br> <br> <br>
+        <button id = "loginBut">Login</button>
     </form>
 
+    <div class = "buttonHolder">
     <form action="register" method="get">
-        <input type="submit" value="Sign Up" />
+        <input type="submit" value="Sign Up" id = "signUpBut"/>
     </form>
-
+    </div>
+</div>
 </body>
 </html>
