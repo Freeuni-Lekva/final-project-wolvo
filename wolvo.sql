@@ -25,7 +25,7 @@ insert into users (email,first_name,last_name,password,user_type,privacy,distric
 
 insert into users (email,first_name,last_name,password,user_type,privacy,district,building_address,phone_number)
  values ('tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili', '5ed092a75b55d250d7cf19448ff66601d254d356', 
-		'Courier', 'Friends', 'Saburtalo', 'Fanjikidze str 22a/26', '595055777');
+		'Customer', 'Friends', 'Saburtalo', 'Fanjikidze str 22a/26', '595055777');
         
 insert into users (email,first_name,last_name,password,user_type,privacy,district,building_address,phone_number)
  values ('achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
@@ -37,7 +37,7 @@ insert into users (email,first_name,last_name,password,user_type,privacy,distric
 
 insert into users (email,first_name,last_name,password,user_type,privacy,district,building_address,phone_number)
  values ('tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', '5ed092a75b55d250d7cf19448ff66601d254d356', 
-		'Manager', 'Private', 'Saburtalo', 'Fanjikidze str 22a/26',  '595055777');
+		'Admin', 'Private', 'Saburtalo', 'Fanjikidze str 22a/26',  '595055777');
         
 drop table if exists friends;
 

@@ -29,8 +29,7 @@ public class UserStatus implements Status {
      */
     @Override
     public boolean setStatus(String status) {
-        if (status.equals("Admin") || status.equals("Customer")
-                || status.equals("Courier") || status.equals("Manager")) {
+        if (status.equals("Admin") || status.equals("Customer")) {
           this.status = status;
           return true;
         }

@@ -24,8 +24,16 @@ label {
     transform: translate(-50%, -50%);
 }
 
-#signUpBut {
+#signUpCust {
     padding: 4px 25px;
+}
+
+#signUpMan {
+    padding: 4px 28px;
+}
+
+#signUpCour {
+    padding: 4px 32px;
 }
 
 .buttonHolder {
@@ -40,6 +48,57 @@ label {
     transform: translate(-50%, -50%);
 }
 
+
+#signUpCustBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
+}
+
+#signUpCourBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
+}
+
+#signUpManBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
+}
+
+.custSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+}
+
+.courSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+}
+
+.manSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+}
 #userLogin {
 
 }

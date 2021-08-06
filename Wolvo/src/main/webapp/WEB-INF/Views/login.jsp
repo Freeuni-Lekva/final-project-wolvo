@@ -27,7 +27,9 @@
 
     <div class = "buttonHolder">
     <form action="register" method="get">
-        <input type="submit" value="Sign Up" id = "signUpBut"/>
+        <input type="submit" value="Sign Up as a Customer" id = "signUpCust" name = "custReg"/> <br> <br>
+        <input type="submit" value="Sign Up as a Manager" id = "signUpMan" name = "manReg"> <br> <br>
+        <input type="submit" value="Sign Up as a Courier" id = "signUpCour" name = "courReg"> <br> <br>
     </form>
     </div>
 </div>

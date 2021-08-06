@@ -18,7 +18,7 @@ public class TestFriendRequestDAO extends TestCase {
     private String[] last_name = {"Babunashvili","Arustashvili","Chukhua", "Babunashvili(1)","Arustashvili(1)"};
     private String[] password = {"c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356",
             "db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a", "c80adfeea5a0af6d3ab04a8dba3a8769064f0d90","5ed092a75b55d250d7cf19448ff66601d254d356"};
-    private String[] UserType = {"Admin","Courier","Admin", "Customer", "Manager"};
+    private String[] UserType = {"Admin","Customer","Admin", "Customer", "Admin"};
     private String[] privacyTypes = {"Private","Friends","Private", "Public", "Private"};
     private String[] districts = {"Didube","Saburtalo","Gldani","Didube","Saburtalo"};
     private String[] addresses = {"Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26","3 MD Naneishvili str 20/8","Dighmis Masivi V kvartali 1a","Fanjikidze str 22a/26"};
