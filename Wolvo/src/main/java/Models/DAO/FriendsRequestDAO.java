@@ -152,7 +152,6 @@ public class FriendsRequestDAO {
             statement.setString(3, status.getStatus());
             inserted = statement.executeUpdate();
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
         if (inserted != 0) answer = true;
         return answer;

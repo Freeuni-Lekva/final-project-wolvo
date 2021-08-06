@@ -43,7 +43,6 @@ public class UserDAO {
                 users.add(convertToUser(resultSet));
             }
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
 
     }

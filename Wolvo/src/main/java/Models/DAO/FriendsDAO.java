@@ -161,7 +161,6 @@ public class FriendsDAO {
             statement.setInt(2, usrGreater.getId());
             inserted = statement.executeUpdate();
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
         if (inserted != 0) answer = true;
         return answer;

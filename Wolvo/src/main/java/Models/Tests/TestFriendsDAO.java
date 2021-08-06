@@ -87,17 +87,13 @@ public class TestFriendsDAO extends TestCase {
         f5.add(users[1]);
         FriendsDAO FDAO = new FriendsDAO(connection);
         List<User> s1 = FDAO.getFriends(users[0]);
-        System.out.println(s1);
-        System.out.println(f1);
         for (User usr : f1) {
             assertTrue(s1.contains(usr));
             s1.remove(usr);
         }
         assertTrue(s1.isEmpty());
         List<User> s2 = FDAO.getFriends(users[1]);
-        System.out.println(s2);
         for (User usr : f2) {
-            System.out.println(usr);
             assertTrue(s2.contains(usr));
             s2.remove(usr);
         }

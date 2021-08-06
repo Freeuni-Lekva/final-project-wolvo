@@ -3,11 +3,9 @@ package Models.Tests;
 import Models.*;
 import Models.DAO.FriendsRequestDAO;
 import junit.framework.TestCase;
+import org.junit.Assert;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,8 +118,6 @@ public class TestFriendRequestDAO extends TestCase {
         List<User> sent5 = new ArrayList<>();
         List<User> lst1 = FRDAO.sentRequests(users[0]);
         boolean b1 = lst1.containsAll(sent1) && sent1.containsAll(lst1);
-        System.out.println(lst1);
-        System.out.println(sent1);
         assertTrue(b1);
         List<User> lst2 = FRDAO.sentRequests(users[1]);
         boolean b2 = lst2.containsAll(sent2) && sent2.containsAll(lst2);
