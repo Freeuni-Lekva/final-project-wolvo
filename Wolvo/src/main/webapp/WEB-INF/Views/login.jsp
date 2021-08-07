@@ -21,7 +21,13 @@
         <label for="emailField">Email:      </label>
         <input type = "email" id = "emailField" required="required" name = "email" /> <br> <br>
         <label for = "passwordField">Password: </label>
-        <input type = "password" id = "passwordField" required="required" name = "password" /> <br> <br> <br>
+        <input type = "password" id = "passwordField" required="required" name = "password" /> <br> <br>
+        <label for = "typeLog">Sign in as a: </label>
+        <select id="typeLog" name="typeLogin">
+            <option value="Customer">Customer</option>
+            <option value="Manager">Manager</option>
+            <option value="Courier">Courier</option>
+        </select> <br> <br> <br>
         <button id = "loginBut">Login</button>
     </form>
 

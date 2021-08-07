@@ -36,8 +36,7 @@ public class LoginHandler extends HttpServlet {
         return hexToString(messageDigest.digest());
     }
 
-    @Override
-    protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+    private void logInCustomer(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         String email = httpServletRequest.getParameter("email");
         String password = httpServletRequest.getParameter("password");
         UserDAO userDAO = (UserDAO) getServletContext().getAttribute("users");
@@ -51,13 +50,18 @@ public class LoginHandler extends HttpServlet {
         }
         httpServletRequest.getSession().setAttribute("name",currentUser.getFirstName());
         httpServletRequest.getSession().setAttribute("surname",currentUser.getLastName());
-        HashMap<String,String> respectivePages = new HashMap<>();
-        respectivePages.put("Admin","WEB-INF/Views/AdminPage.jsp");
-        respectivePages.put("Customer","WEB-INF/Views/CustomerPage.jsp");
-        respectivePages.put("Manager","WEB-INF/Views/ManagerPage.jsp");
-        respectivePages.put("Courier","WEB-INF/Views/CourierPage.jsp");
 
         httpServletRequest.getSession().setAttribute("userType",currentUser.getUserStatus().getStatus());
-        httpServletRequest.getRequestDispatcher(respectivePages.get(currentUser.getUserStatus().getStatus())).forward(httpServletRequest,httpServletResponse);
+        System.out.println("WEB-INF/Views/" + currentUser.getUserStatus().getStatus() + "Page.jsp");
+        httpServletRequest.getRequestDispatcher("WEB-INF/Views/" + currentUser.getUserStatus().getStatus() + "Page.jsp")
+                .forward(httpServletRequest,httpServletResponse);
+
     }
+
+    @Override
+    protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        if (httpServletRequest.getParameter("typeLogin").equals("Customer")) {
+            logInCustomer(httpServletRequest,httpServletResponse);
+        }
+       }
 }
