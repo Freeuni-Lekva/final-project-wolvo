@@ -22,12 +22,14 @@
         <input type = "email" id = "emailField" required="required" name = "email" /> <br> <br>
         <label for = "passwordField">Password: </label>
         <input type = "password" id = "passwordField" required="required" name = "password" /> <br> <br>
-        <label for = "typeLog">Sign in as a: </label>
-        <select id="typeLog" name="typeLogin">
-            <option value="Customer">Customer</option>
-            <option value="Manager">Manager</option>
-            <option value="Courier">Courier</option>
-        </select> <br> <br> <br>
+        <label>Sign in as a: </label>
+        <input type = "radio" id = "userTCust" name = "userTLog" value="Customer" required>
+        <label for = "userTCust">Customer</label>
+        <input type = "radio" id = "userTMan" name = "userTLog" value="Manager">
+        <label for = "userTMan">Manager</label>
+        <input type = "radio" id = "userTCour" name = "userTLog" value="Courier">
+        <label for = "userTCour">Courier</label>
+        <br> <br> <br>
         <button id = "loginBut">Login</button>
     </form>
 

@@ -36,7 +36,8 @@
             <option value="Digomi">Digomi</option>
         </select> <br> <br>
         <Label for = "phonenumberCour">Phone number:        </Label>
-        <input type = "number" id = "phonenumberCour" required="required" name = "phoneCour"> <br> <br> <br>
+        <input type = "tel" id = "phonenumberCour" required="required" name = "phoneCour" placeholder="555-12-34-56"
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"> <br> <br> <br>
         <input type = "submit" id = "signUpCourBut" name = "signUpCourPressed" value="Sign Up">
     </form>
 </div>

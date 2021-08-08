@@ -38,7 +38,8 @@
         <label for = "addressMan">Restaurant address:</label>
         <input type = "text" id = "addressMan" required="required" name = "AddressMan"/> <br> <br>
         <Label for = "phonenumberMan">Phone number:        </Label>
-        <input type = "number" id = "phonenumberMan" required="required" name = "phoneMan"> <br> <br> <br>
+        <input type = "tel" id = "phonenumberMan" required="required" name = "phoneMan" placeholder="555-12-34-56"
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"> <br> <br> <br>
         <input type = "submit" id = "signUpManBut" name = "signUpManPressed" value="Sign Up">
     </form>
 </div>

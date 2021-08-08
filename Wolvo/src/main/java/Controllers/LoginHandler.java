@@ -60,7 +60,7 @@ public class LoginHandler extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        if (httpServletRequest.getParameter("typeLogin").equals("Customer")) {
+        if (httpServletRequest.getParameter("userTLog").equals("Customer")) {
             logInCustomer(httpServletRequest,httpServletResponse);
         }
        }

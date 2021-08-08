@@ -45,7 +45,8 @@
     <input type = "radio" id = "thirdTCust" name = "privacyTCust" value="Public">
     <label for = "thirdTCust">Anyone can see my order history</label> <br> <br>
     <Label for = "phonenumberCust">Phone number:        </Label>
-    <input type = "number" id = "phonenumberCust" required="required" name = "phoneCust"> <br> <br> <br>
+    <input type = "tel" id = "phonenumberCust" required="required" name = "phoneCust" placeholder="555-12-34-56"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"> <br> <br> <br>
     <input type = "submit" id = "signUpCustBut" name = "signUpCustPressed" value = "Sign Up">
 </form>
 </div>
