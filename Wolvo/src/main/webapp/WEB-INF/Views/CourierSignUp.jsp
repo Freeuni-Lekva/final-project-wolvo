@@ -37,7 +37,7 @@
         </select> <br> <br>
         <Label for = "phonenumberCour">Phone number:        </Label>
         <input type = "tel" id = "phonenumberCour" required="required" name = "phoneCour" placeholder="555-12-34-56"
-               pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"> <br> <br> <br>
+               pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"> <br> <br> <br>
         <input type = "submit" id = "signUpCourBut" name = "signUpCourPressed" value="Sign Up">
     </form>
 </div>
