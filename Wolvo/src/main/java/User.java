@@ -8,9 +8,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
-    private int userType;
-    private int privacyType;
-    private String city;
+    private Status userStatus;
+    private Status privacyStatus;
     private String district;
     private String address;
     private String phoneNumber;
@@ -24,10 +23,6 @@ public class User {
 
     public void setDistrict(String district) {
         this.district = district;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     public void setEmail(String email) {
@@ -54,32 +49,28 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPrivacyType(int privacyType) {
-        this.privacyType = privacyType;
+    public void setPrivacyStatus(Status privacyStatus) {
+        this.privacyStatus = privacyStatus;
     }
 
-    public void setUserType(int userType) {
-        this.userType = userType;
+    public void setUserStatus(Status userStatus) {
+        this.userStatus = userStatus;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getPrivacyType() {
-        return privacyType;
+    public Status getPrivacyStatus() {
+        return privacyStatus;
     }
 
-    public int getUserType() {
-        return userType;
+    public Status getUserStatus() {
+        return userStatus;
     }
 
     public String getAddress() {
         return address;
-    }
-
-    public String getCity() {
-        return city;
     }
 
     public String getDistrict() {
@@ -111,17 +102,17 @@ public class User {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         User that = (User) obj;
-        return Objects.equals(id, that.id) && Objects.equals(firstName, that.firstName)
+        return Objects.equals(firstName, that.firstName)
                 && Objects.equals(lastName, that.lastName) && Objects.equals(email,that.email)
-                    && Objects.equals(password,that.password) && Objects.equals(city,that.city) &&
-                        Objects.equals(district,that.district) && Objects.equals(address,that.address) &&
-                            Objects.equals(phoneNumber,that.phoneNumber) && Objects.equals(userType,that.userType) &&
-                                Objects.equals(privacyType,that.privacyType);
+                    && Objects.equals(password,that.password) && Objects.equals(district,that.district)
+                        && Objects.equals(address,that.address) && Objects.equals(phoneNumber,that.phoneNumber)
+                            && Objects.equals(userStatus.getStatus(),that.userStatus.getStatus())
+                                    && Objects.equals(privacyStatus.getStatus(),that.privacyStatus.getStatus());
     }
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber
-                + id + " " + city + " " + district + " " + address + " " + userType + " " + privacyType;
+        return firstName + " " + lastName + ", " + id + ", " + email + ", " + phoneNumber + ", "
+                 + district + " " + address + " " + userStatus.getStatus() + " " + privacyStatus.getStatus();
     }
 }

@@ -1,2 +1,7 @@
+Controllers\RegisterHandler.class
+Models\DAO\UserDAO.class
 Models\User.class
 Models\Initializer.class
+Models\DAO\FriendsDAO.class
+Models\DAO\FriendsRequestDAO.class
+Controllers\LoginHandler.class

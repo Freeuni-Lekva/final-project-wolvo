@@ -1,0 +1,142 @@
+body {
+    background-image: url("back.jfif");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+h1 {
+    font-size: 50px;
+    color: goldenrod;
+    font-family: "Informal Roman", cursive;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    color: goldenrod;
+    font-size: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#loginBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 4px 30px;
+    transform: translate(-50%, -50%);
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+#signUpCust {
+    padding: 4px 25px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+#signUpMan {
+    padding: 4px 28px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+#signUpCour {
+    padding: 4px 32px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+.buttonHolder {
+    text-align: center;
+    position: relative;
+}
+
+.introduction {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+#signUpCustBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+#signUpCourBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+#signUpManBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+.custSignUp {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    color: white;
+}
+
+.courSignUp {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    color: white;
+}
+
+.manSignUp {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    color: white;
+}
+#userLogin {
+
+}

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/HomeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/HomeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wolvo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../wolvo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierSignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerSignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -54,18 +51,88 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.TestUserDAO">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFriendRequestDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendRequestDAO" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFriendRequestDAO.testInsertFriendRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendRequestDAO" />
+      <option name="METHOD_NAME" value="testInsertFriendRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFriendsDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendsDAO" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserDAO (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,11 +179,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
       <item itemvalue="JUnit.TestUserDAO" />
+      <item itemvalue="JUnit.TestFriendRequestDAO" />
+      <item itemvalue="JUnit.TestFriendsDAO" />
+      <item itemvalue="JUnit.TestUserDAO (1)" />
+      <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
+      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestFriendRequestDAO" />
+        <item itemvalue="JUnit.TestFriendsDAO" />
+        <item itemvalue="JUnit.TestUserDAO (1)" />
+        <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
         <item itemvalue="JUnit.TestUserDAO" />
       </list>
     </recent_temporary>
@@ -129,7 +204,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627945208651</updated>
-      <workItem from="1627945211005" duration="12681000" />
+      <workItem from="1627945211005" duration="34882000" />
+      <workItem from="1628232855266" duration="1581000" />
+      <workItem from="1628256584269" duration="20828000" />
+      <workItem from="1628285444103" duration="68000" />
+      <workItem from="1628312813444" duration="10786000" />
     </task>
     <servers />
   </component>
@@ -146,5 +225,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO.ic" NAME="TestUserDAO Coverage Results" MODIFIED="1628015259643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.*</FILTER>
+    </SUITE>
   </component>
 </project>

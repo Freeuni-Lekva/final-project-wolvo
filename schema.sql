@@ -32,9 +32,7 @@ CREATE TABLE restaurants(
 	manager_id int foreign key not null,
 	district varchar(30) not null,
 	address varchar(100) not null,
-	raters_number int default 0,
-	is_added boolean default false,
-	rating float(3, 2) default 0.0
+	rating float(3, 2)
 );
 
 DROP TABLE IF EXISTS dishes;
@@ -45,9 +43,7 @@ CREATE TABLE dishes(
 	rest_id int foreign key not null,
 	price float(7, 2) not null,
 	category varchar(100) not null,
-	raters_number int default 0,
-	is_added boolean default false,
-	rating float(3, 2) default 0.0
+	rating float(3, 2)
 );
 	
 drop table if exists friend_requests;
@@ -65,7 +61,7 @@ create table messages(
 	message_id int AUTO_INCREMENT primary key,
 	from_id int foreign key NOT NULL,
 	to_id int foreign key NOT NULL,
-	date_sent timestamp,
+	date_sent datetime,
 	seen BOOLEAN default false, 
 	body varchar(8000) NOT NULL
 );
@@ -80,27 +76,25 @@ create table friends(
 
 drop table if exists couriers;
 
-create table couriers(
-	user_id int auto_increment primary key,
+create table couriers{
+	user_id primary key;
     email varchar(100) unique,
     first_name varchar(100) not null,
     last_name varchar(100) not null,
     password varchar(100) not null,
     phone_number varchar(30) not null,
-	rating float(3,2) default 0.0,
-	completed_orders int default 0,
-	raters_number int default 0,
-	is_added boolean default false,
-	is_free boolean default true
+	rating float(3,2),
+	completed_orders int,
+	is_free boolean not null
 );
 	
 drop table if exists orders;
 
 create table orders(
-	order_id int auto_increment primary key,
+	order_id auto_increment primary key,
 	user_id int foreign key not null,
 	dish_id int foreign key not null,
-	order_date timestamp not null,
+	order_date datetime not null,
 	district varchar(30) not null,
 	courier_id int not null,
 	location varchar(100) not null
@@ -111,7 +105,6 @@ drop table if exists reviews;
 create table reviews(
 	user_id int foreign key NOT NULL,
 	dish_id int foreign key NOT NULL,
-	courier_id int foreign key not null,
 	rating int,
 	courier_rating int,
 	review varchar(8000)
