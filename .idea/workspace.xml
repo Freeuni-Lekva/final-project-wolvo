@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050f64f5-57bb-4fd5-97d9-dcd728c9d6fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/DishDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestFriendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestFriendRequestDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestFriends.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestFriendsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Wolvo/src/main/java/Models/Tests/TestUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,5 +68,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
