@@ -122,8 +122,8 @@ public class UserDAO {
             statement.setString(2,lastName);
             return convertToUser(statement.executeQuery());
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
+        return null;
     }
 
 }
