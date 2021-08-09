@@ -13,8 +13,8 @@ public class Courier{
     private float rating;
     private int raters;
     private int completedOrders;
-    private boolean isAdded;
-    private boolean isFree;
+    private String isAdded;
+    private String isFree;
 
     public Courier(){}
 
@@ -57,11 +57,11 @@ public class Courier{
         this.completedOrders = completedOrders;
     }
 
-    public void setAdded(boolean isAdded){
+    public void setAdded(String isAdded){
         this.isAdded = isAdded;
     }
 
-    public void setFree(boolean isFree){
+    public void setFree(String isFree){
         this.isFree = isFree;
     }
 
@@ -104,11 +104,11 @@ public class Courier{
         return completedOrders;
     }
 
-    public boolean isAdded(){
+    public String isAdded(){
         return isAdded;
     }
 
-    public boolean isFree(){
+    public String isFree(){
         return isFree;
     }
     public boolean equals(Object obj) {

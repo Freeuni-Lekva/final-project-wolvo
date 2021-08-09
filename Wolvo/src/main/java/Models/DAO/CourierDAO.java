@@ -1,8 +1,11 @@
 package Models.DAO;
 
-import Models.Courier;
+import Models.*;
+
 import java.sql.*;
 import java.util.*;
+
+import static Models.Constants.*;
 
 public class CourierDAO {
     private Connection connection;
@@ -24,7 +27,7 @@ public class CourierDAO {
     public Courier getCourierByEmail(String email){
         try {
             PreparedStatement statement = connection.prepareStatement("select * from couriers where email = ?");
-            statement.setInt(1,id);
+            statement.setString(1, email);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 return convertToCourier(resultSet);
@@ -49,6 +52,7 @@ public class CourierDAO {
         }
         return couriers;
     }
+
     public void addCourier(String email, String firstName, String lastName, String district, String password, String phoneNumber){
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -64,41 +68,47 @@ public class CourierDAO {
             throwables.printStackTrace();
         }
     }
-    public void approveCourier(int id){
+
+    public void approveCourier(Courier courier){
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE restaurants set is_added = ? where user_id = ?;");
-            statement.setBoolean(1, true);
-            statement.setInt(2, id);
+            Status status = new RequestStatus();
+            status.setStatus(APPROVED);
+            statement.setString(1, status.getStatus());
+            statement.setInt(2, courier.getId());
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 
-    public void acceptOrder(int id) {
+    public void acceptOrder(Courier courier) {
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE couriers set is_free = ? where user_id = ?;");
-            statement.setBoolean(1, false);
-            statement.setInt(2, id);
+            Status status = new AddStatus();
+            status.setStatus(OCCUPIED);
+            statement.setString(1, status.getStatus());
+            statement.setInt(2, courier.getId());
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 
-    public void updateCourier(int id, int rate){
+    public void updateCourier(Courier courier, int rate){
         int rated = 0;
-        if(rate != 0)rated = 1;
-        Courier c = getCourierById(id);
+        if (rate >= 0) rated = 1;
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE couriers set rating = ?, raters_number = ?, completed_orders = ?, is_free = ? where user_id = ?;");
-            statement.setFloat(1, (c.getRating()*c.getRaters() + 1.0*rate)/(1.0*(c.getRaters() + rated)));
-            statement.setInt(2, c.getRaters() + rated);
-            statement.setInt(3, c.getCompletedOrders() + 1);
-            statement.setBoolean(4, true);
+            statement.setFloat(1, (courier.getRating() * courier.getRaters() + (float)rate) / (courier.getRaters() + rated));
+            statement.setInt(2, courier.getRaters() + rated);
+            statement.setInt(3, courier.getCompletedOrders() + 1);
+            Status status = new AddStatus();
+            status.setStatus(FREE);
+            statement.setString(4, status.getStatus());
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -109,7 +119,9 @@ public class CourierDAO {
         List<Courier> couriers = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select * from couriers where is_added = ?");
-            statement.setBoolean(1, true);
+            Status status = new RequestStatus();
+            status.setStatus(PENDING);
+            statement.setString(1, status.getStatus());
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
                 couriers.add(convertToCourier(resultSet));
@@ -146,8 +158,8 @@ public class CourierDAO {
         c.setRating(rs.getFloat("rating"));
         c.setCompletedOrders(rs.getInt("completed_orders"));
         c.setRaters(rs.getInt("raters_number"));
-        c.setAdded(rs.getBoolean("is_added"));
-        c.setFree(rs.getBoolean("is_free"));
+        c.setAdded(rs.getString("is_added"));
+        c.setFree(rs.getString("is_free"));
         return c;
     }
 }

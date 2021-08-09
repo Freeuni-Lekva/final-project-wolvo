@@ -1,8 +1,13 @@
 package Models.DAO;
 
+import Models.Courier;
+import Models.Dish;
 import Models.Order;
+import Models.User;
+
 import java.sql.*;
 import java.util.*;
+import java.util.Date;
 
 public class OrderDAO {
     private Connection connection;
@@ -27,10 +32,10 @@ public class OrderDAO {
         List<Order> orders = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select * from orders where user_id = ?");
-            statement.setInt(1,id);
+            statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                orders.add(convertToRestaurant(resultSet));
+                orders.add(convertToOrder(resultSet));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -38,23 +43,18 @@ public class OrderDAO {
         return orders;
     }
 
-    public String addOrder(int user, int dish, String district, String address){
+    public String addOrder(User user, Dish dish, String district, String address, Courier courier){
         CourierDAO cDao = new CourierDAO(connection);
-        int courier = -1;
-        for(Courier c : cDao.getCouriers()){
-            if(c.isAdded() && c.isFree() && c.getDistrict().equals(district))courier = c.getId();
-        }
-        if(courier == -1)return "None of the couriers are available";
         Date date = new Date();
-        Timestamp ts=new Timestamp(date.getTime());
+        Timestamp ts = new Timestamp(date.getTime());
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "insert into orders (user_id, dish_id, order_date, district, courier_id, location) values (?,?,?,?,?,?);");
-            statement.setInt(1, user);
-            statement.setInt(2,dish);
+            statement.setInt(1, user.getId());
+            statement.setInt(2,dish.getDish_id());
             statement.setTimestamp(3,ts);
             statement.setString(4,district);
-            statement.setInt(5,courier);
+            statement.setInt(5,courier.getId());
             statement.setString(6,address);
             statement.executeUpdate();
         } catch (SQLException throwables) {

@@ -1,6 +1,10 @@
 package Models.DAO;
 
+import Models.Courier;
+import Models.Dish;
 import Models.Review;
+import Models.User;
+
 import java.sql.*;
 import java.util.*;
 
@@ -11,11 +15,11 @@ public class ReviewDAO{
         this.connection = connection;
     }
 
-    public List<Review> getDishReviews(int dish){
+    public List<Review> getDishReviews(Dish dish){
         List<Review> reviews = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select * from reviews where dish_id = ?");
-            statement.setInt(1, dish);
+            statement.setInt(1, dish.getDish_id());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 reviews.add(convertToReview(resultSet));
@@ -24,7 +28,7 @@ public class ReviewDAO{
         return reviews;
     }
 
-    public void addReview(int user, int dish, int courier, int dishRating, int courierRating, String text){
+    public void addReview(User user, Dish dish, Courier courier, int dishRating, int courierRating, String text){
         CourierDAO cDao = new CourierDAO(connection);
         cDao.updateCourier(courier, courierRating);
         DishDAO dDao = new DishDAO(connection);
@@ -32,9 +36,9 @@ public class ReviewDAO{
         try{
             PreparedStatement statement = connection.prepareStatement(
                     "insert into reviews (user_id, dish_id, courier_id, rating, courier_rating, review) values (?,?,?,?,?,?);");
-            statement.setInt(1, user);
-            statement.setInt(2,dish);
-            statement.setInt(3, courier);
+            statement.setInt(1, user.getId());
+            statement.setInt(2, dish.getDish_id());
+            statement.setInt(3, courier.getId());
             statement.setInt(4, dishRating);
             statement.setInt(5, courierRating);
             statement.setString(6, text);

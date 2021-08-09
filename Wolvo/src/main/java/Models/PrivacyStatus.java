@@ -1,4 +1,5 @@
 package Models;
+import static Models.Constants.*;
 
 /**
  * this status is for privacy status.
@@ -10,7 +11,7 @@ public class PrivacyStatus implements Status {
      * constructor. default privacy status is Public.
      */
     public PrivacyStatus() {
-        this.status = "Public";
+        this.status = PUBLIC;
     }
 
     /**
@@ -24,12 +25,12 @@ public class PrivacyStatus implements Status {
 
     /**
      * gets Status and sets to active. status is set to private variable.
-     * @param Status String representing status.
+     * @param status String representing status.
      * @return if status been set successfully.
      */
     @Override
     public boolean setStatus(String status) {
-        if (status.equals("Public") || status.equals("Private") || status.equals("Friends")) {
+        if (status.equals(PUBLIC) || status.equals(PRIVATE) || status.equals(FRIENDS)) {
             this.status = status;
             return true;
         }

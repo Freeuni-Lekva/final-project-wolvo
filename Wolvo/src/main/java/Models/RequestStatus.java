@@ -1,5 +1,7 @@
 package Models;
 
+import static Models.Constants.*;
+
 /**
  * this class is to represent status of request.
  */
@@ -10,7 +12,7 @@ public class RequestStatus implements Status {
      * constructor, default value of request status is notResponded.
      */
     public RequestStatus() {
-        status = "NotResponded";
+        status = PENDING;
     }
 
     /**
@@ -20,8 +22,8 @@ public class RequestStatus implements Status {
      */
     @Override
     public boolean setStatus(String status) {
-        if (status.equals("Accepted") || status.equals("Rejected")
-                || status.equals("NotResponded") || status.equals("NotSent")) {
+        if (status.equals(APPROVED) || status.equals(REJECTED)
+                || status.equals(PENDING) || status.equals(NOTSENT)) {
            this.status = status;
            return true;
         }

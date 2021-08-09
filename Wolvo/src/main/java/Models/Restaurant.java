@@ -9,6 +9,8 @@ public class Restaurant{
     private String district;
     private String address;
     private float rating;
+    private int raters;
+    private Status status;
 
     public Restaurant(){}
 
@@ -27,6 +29,7 @@ public class Restaurant{
     public void setManager_id(int id){
         manager_id = id;
     }
+
     public void setRating(float rating){
         this.rating = rating;
     }
@@ -35,15 +38,26 @@ public class Restaurant{
         this.name = name;
     }
 
+    public void setRaters(int raters) {
+        this.raters = raters;
+    }
+
+    public void setAdded(Status status) {
+        this.status = status;
+    }
+
     public int getId(){
         return rest_id;
     }
+
     public int getManager_id(){
         return manager_id;
     }
+
     public String getDistrict(){
         return district;
     }
+
     public String getAddress(){
         return address;
     }
@@ -56,6 +70,14 @@ public class Restaurant{
         return name;
     }
 
+    public int getRaters() {
+        return raters;
+    }
+
+    public Status getAdded() {
+        return status;
+    }
+
     public boolean equals(Object obj){
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
@@ -63,6 +85,7 @@ public class Restaurant{
         return rest_id == o.getId() && manager_id == o.getManager_id() && rating == o.getRating() &&
                 address.equals(o.getAddress()) && district.equals(o.getDistrict()) && name.equals(o.getName());
     }
+
     public String toString(){
         return "Id: "+ rest_id + "n/ name: "+name+ "/n manager id: " + manager_id +"/n district: "+
                 district+ "/n address: " + address + "n/ rating: " + rating;

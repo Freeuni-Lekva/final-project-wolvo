@@ -7,6 +7,8 @@ public class Dish {
     private String name;
     private int rest_id;
     private String category;
+    private Status added;
+    private int raters;
     private float price;
     private float rating;
 
@@ -36,6 +38,14 @@ public class Dish {
         return name;
     }
 
+    public Status getAdded() {
+        return added;
+    }
+
+    public int getRaters() {
+        return raters;
+    }
+
     public void setDish_id(int dish_id) {
         this.dish_id = dish_id;
     }
@@ -60,16 +70,25 @@ public class Dish {
         this.rest_id = rest_id;
     }
 
+    public void setAdded(Status s) {
+        this.added = s;
+    }
+
+    public void setRaters(int raters) {
+        this.raters = raters;
+    }
+
     public boolean equals(Object obj){
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Dish d = (Dish) obj;
-        return dish_id == d.getDish_id() && rest_id ==d.getRest_id() && name.equals(d.getName()) &&
-                price == d.getPrice() == rating ==d.getRating();
+        return dish_id == d.getDish_id() && rest_id == d.getRest_id() && name.equals(d.getName()) &&
+                price == d.getPrice() && rating == d.getRating() && category.equals(d.getCategory());
     }
 
-    public toString(){
-        return "Id: "+ dish_id + "n/ name: "+name+ "/n restaurant id: " + rest_id +
-                "/n price: " + price + "n/ rating: " + rating;
+    public String toString(){
+        String s =  "Id: " + dish_id + "\n name: " + name + "\n restaurant id: " + rest_id +
+                "\n price: " + price + "\n rating: " + rating + "\nCategory: " + category;
+        return s;
     }
 }
