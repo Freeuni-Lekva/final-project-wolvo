@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -65,7 +63,20 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
+  <component name="RunManager" selected="Application.UserDAO">
+    <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Models.DAO.UserDAO" />
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -138,21 +149,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.TestUserDAO" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Wolvo [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -179,20 +175,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestUserDAO" />
       <item itemvalue="JUnit.TestFriendRequestDAO" />
       <item itemvalue="JUnit.TestFriendsDAO" />
       <item itemvalue="JUnit.TestUserDAO (1)" />
       <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
+      <item itemvalue="Application.UserDAO" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserDAO" />
         <item itemvalue="JUnit.TestFriendRequestDAO" />
         <item itemvalue="JUnit.TestFriendsDAO" />
         <item itemvalue="JUnit.TestUserDAO (1)" />
         <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
-        <item itemvalue="JUnit.TestUserDAO" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +204,10 @@
       <workItem from="1628232855266" duration="1581000" />
       <workItem from="1628256584269" duration="20828000" />
       <workItem from="1628285444103" duration="68000" />
-      <workItem from="1628312813444" duration="10786000" />
+      <workItem from="1628312813444" duration="11478000" />
+      <workItem from="1628439096530" duration="1347000" />
+      <workItem from="1628539334867" duration="863000" />
+      <workItem from="1628540331547" duration="676000" />
     </task>
     <servers />
   </component>

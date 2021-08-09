@@ -98,7 +98,7 @@ public class UserDAO {
     public int removeUser(String email) {
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "delete from users where email = ?;");
+                    "delete * from users where email = ?;");
             statement.setString(1,email);
             return statement.executeUpdate();
         } catch (SQLException throwables) {
@@ -106,4 +106,24 @@ public class UserDAO {
         }
         return 0;
     }
+
+    public User getByName(String name) {
+        StringTokenizer tok = new StringTokenizer(name," ");
+        String firstName,lastName;
+        if (!tok.hasMoreTokens()) return null;
+        firstName = tok.nextToken();
+        if (!tok.hasMoreTokens()) return null;
+        lastName = tok.nextToken();
+        if (tok.hasMoreTokens()) return null;
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "select * from users where first_name = ? and last_name = ?;");
+            statement.setString(1,firstName);
+            statement.setString(2,lastName);
+            return convertToUser(statement.executeQuery());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
 }
