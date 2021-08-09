@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +208,7 @@
       <workItem from="1628312813444" duration="11478000" />
       <workItem from="1628439096530" duration="1347000" />
       <workItem from="1628539334867" duration="863000" />
-      <workItem from="1628540331547" duration="676000" />
+      <workItem from="1628540331547" duration="1171000" />
     </task>
     <servers />
   </component>

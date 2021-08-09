@@ -59,7 +59,8 @@ public class LoginHandler extends HttpServlet {
     }
 
     private void logInCourier(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) {
-
+        String email = httpServletRequest.getParameter("email");
+        String password = httpServletRequest.getParameter("password");
     }
 
 
