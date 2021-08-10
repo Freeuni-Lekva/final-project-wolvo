@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/RestaurantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/RestaurantDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,17 +77,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,12 +168,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.UserDAO" />
       <item itemvalue="JUnit.TestFriendRequestDAO" />
       <item itemvalue="JUnit.TestFriendsDAO" />
       <item itemvalue="JUnit.TestUserDAO (1)" />
       <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
-      <item itemvalue="Application.UserDAO" />
     </list>
     <recent_temporary>
       <list>
@@ -209,6 +201,7 @@
       <workItem from="1628439096530" duration="1347000" />
       <workItem from="1628539334867" duration="863000" />
       <workItem from="1628540331547" duration="1312000" />
+      <workItem from="1628614900090" duration="2384000" />
     </task>
     <servers />
   </component>

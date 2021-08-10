@@ -15,6 +15,10 @@ public class DishDAO{
         this.connection = connection;
     }
 
+    /**
+     *
+     * @return the list of all the dishes currently registered in every restaurant
+     */
     public List<Dish> getDishes(){
         List<Dish> dishes = new ArrayList<>();
         try {
@@ -26,6 +30,12 @@ public class DishDAO{
         } catch (SQLException throwables) {}
         return dishes;
     }
+
+    /**
+     *
+     * @param id dish_id
+     * @return Dish object with that particular dish_id
+     */
 
     public Dish getDishById(int id){
         try {
@@ -41,6 +51,12 @@ public class DishDAO{
         return null;
     }
 
+    /**
+     *
+     * @param restaurant
+     * @return the list of all the dishes in the particular restaurant (taken as a parameter)
+     */
+
     public List<Dish> getRestaurantDishes(Restaurant restaurant){
         List<Dish> dishes = new ArrayList<>();
         try {
@@ -54,6 +70,14 @@ public class DishDAO{
         return dishes;
     }
 
+    /**
+     *
+     * @param name
+     * @param restaurant
+     * @param category
+     * @param price
+     * Inserts new dish in the database with data taken as a parameters
+     */
     public void addDish(String name, int restaurant, String category, float price){
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -67,6 +91,11 @@ public class DishDAO{
             throwables.printStackTrace();
         }
     }
+
+    /**
+     *
+     * @return the list of all the dishes pending admin approval (every change made by managers must be approved by admin)
+     */
 
     public List<Dish> getPendingDishes(){
         List<Dish> dishes = new ArrayList<>();
@@ -83,6 +112,13 @@ public class DishDAO{
         return dishes;
     }
 
+    /**
+     *
+     * @param d
+     * @param rate
+     * updates the rating of the particular dish with the new value (called when user rates dish after the delivery)
+     */
+
     public void updateDish(Dish d, int rate){
         if(rate == 0)return;
         DishDAO DDAO = new DishDAO(connection);
@@ -98,6 +134,12 @@ public class DishDAO{
         }
     }
 
+    /**
+     *
+     * @param id dish_id
+     * approves addition of the particular dish (will be called by Admin)
+     */
+
     public void approveDish(int id){
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -110,6 +152,13 @@ public class DishDAO{
         }
     }
 
+    /**
+     *
+     * @param rs
+     * @return Dish object created with the data taken from the database
+     * i.e. it takes a resultset of query and converts it to Dish object
+     * @throws SQLException
+     */
     private Dish convertToDish(ResultSet rs) throws SQLException {
         Dish d = new Dish();
         d.setDish_id(rs.getInt("dish_id"));

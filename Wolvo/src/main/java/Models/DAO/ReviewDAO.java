@@ -15,6 +15,12 @@ public class ReviewDAO{
         this.connection = connection;
     }
 
+    /**
+     *
+     * @param dish
+     * @return list of all the reviews about the particular dish (taken as a parameter)
+     */
+
     public List<Review> getDishReviews(Dish dish){
         List<Review> reviews = new ArrayList<>();
         try {
@@ -27,6 +33,17 @@ public class ReviewDAO{
         } catch (SQLException throwables) {}
         return reviews;
     }
+
+    /**
+     *
+     * @param user
+     * @param dish
+     * @param courier
+     * @param dishRating
+     * @param courierRating
+     * @param text
+     * inserts new review in the database (called when user rates either courier, dish or restaurant after the delivery)
+     */
 
     public void addReview(User user, Dish dish, Courier courier, int dishRating, int courierRating, String text){
         CourierDAO cDao = new CourierDAO(connection);
@@ -48,6 +65,13 @@ public class ReviewDAO{
         }
     }
 
+    /**
+     *
+     * @param rs
+     * @return Review object created with the data taken from the database
+     * i.e. it takes a resultset of query and converts it to Review object
+     * @throws SQLException
+     */
     private Review convertToReview(ResultSet rs) throws SQLException{
         Review r = new Review();
         r.setUser(rs.getInt("user_id"));
