@@ -150,7 +150,7 @@ public class Order {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Order o = (Order) obj;
-        return id == o.getId() && userId == o.getUserID() && dishIds.equals(o.getDish())
+        return id == o.getId() && userId == o.getUserID() && dishId == getDish()
                 && courierID == o.getCourierID() && address.equals(o.getAddress()) && district.equals(o.getDistrict()) && orderDate.equals(o.getOrderDate());
     }
 
