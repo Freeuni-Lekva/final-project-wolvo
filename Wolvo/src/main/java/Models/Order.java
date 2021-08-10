@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 public class Order {
     private int id;
     private int userId;
-    private List<Integer> dishIds;
+    private int dishId;
     private Timestamp orderDate;
     private String district;
     private String address;
@@ -27,8 +27,8 @@ public class Order {
      *
      * @return id of the dish in this order
      */
-    public List<Integer> getDish() {
-        return dishIds;
+    public int getDish() {
+        return dishId;
     }
 
     /**
@@ -92,8 +92,8 @@ public class Order {
      * sets list of dishes ordered
      */
 
-    public void setDish(List<Integer> dish) {
-        this.dishIds = dish;
+    public void setDish(int dishId) {
+        this.dishId = dishId;
     }
 
 
@@ -159,7 +159,7 @@ public class Order {
      * @return order converted to String
      */
     public String toString(){
-        return id + " " + userId + " " + dishIds.toString() + " " + courierID + " "+ address + " " + " "+ district + " "+ orderDate.toString();
+        return id + " " + userId + " " + dishId + " " + courierID + " "+ address + " " + " "+ district + " "+ orderDate.toString();
     }
 }
 
