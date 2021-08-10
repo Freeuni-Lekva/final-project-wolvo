@@ -1,7 +1,6 @@
 package Models.Tests;
 
-import Models.AddStatus;
-import Models.Constants;
+import Models.CourierStatus;
 import Models.Dish;
 import Models.Status;
 import junit.framework.TestCase;
@@ -32,7 +31,7 @@ public class TestDish extends TestCase {
             dish[i].setRest_id(rest_id[i]);
             dish[i].setCategory(category[i]);
             dish[i].setName(name[i]);
-            Status st = new AddStatus();
+            Status st = new CourierStatus();
             st.setStatus(status[i]);
             dish[i].setAdded(st);
             dish[i].setRaters(raters[i]);
@@ -44,7 +43,7 @@ public class TestDish extends TestCase {
             assertEquals(rest_id[i], dish[i].getRest_id());
             assertEquals(category[i], dish[i].getCategory());
             assertEquals(name[i], dish[i].getName());
-            Status st = new AddStatus();
+            Status st = new CourierStatus();
             st.setStatus(status[i]);
             assertEquals(st, dish[i].getAdded());
             assertEquals(raters[i], dish[i].getRaters());
@@ -61,7 +60,7 @@ public class TestDish extends TestCase {
             dish[i].setRest_id(rest_id[i]);
             dish[i].setCategory(category[i]);
             dish[i].setName(name[i]);
-            Status st = new AddStatus();
+            Status st = new CourierStatus();
             st.setStatus(status[i]);
             dish[i].setAdded(st);
             dish[i].setRaters(raters[i]);
@@ -80,7 +79,7 @@ public class TestDish extends TestCase {
             EQ[i].setRest_id(rest_id[i]);
             EQ[i].setCategory(category[i]);
             EQ[i].setName(name[i]);
-            Status st = new AddStatus();
+            Status st = new CourierStatus();
             st.setStatus(status[i]);
             EQ[i].setAdded(st);
             EQ[i].setRaters(raters[i]);
@@ -101,7 +100,7 @@ public class TestDish extends TestCase {
             dish[i].setRest_id(rest_id[i]);
             dish[i].setCategory(category[i]);
             dish[i].setName(name[i]);
-            Status st = new AddStatus();
+            Status st = new CourierStatus();
             st.setStatus(status[i]);
             dish[i].setAdded(st);
             dish[i].setRaters(raters[i]);

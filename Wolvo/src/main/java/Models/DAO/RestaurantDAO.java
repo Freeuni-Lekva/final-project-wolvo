@@ -1,6 +1,6 @@
 package Models.DAO;
 
-import Models.AddStatus;
+import Models.CourierStatus;
 import Models.Restaurant;
 import Models.Status;
 
@@ -57,7 +57,7 @@ public class RestaurantDAO{
      * @param manager
      * @param district
      * @param address
-     * Inserts new restaurant in the database with data taken as a parameters
+     * Inserts new restaurant in the database with data received as a parameters
      */
 
     public void addRestaurant(String name, int manager, String district, String address){
@@ -144,7 +144,7 @@ public class RestaurantDAO{
         r.setRating(rs.getFloat("rating"));
         r.setDistrict(rs.getString("district"));
         r.setAddress(rs.getString("address"));
-        Status status = new AddStatus();
+        Status status = new CourierStatus();
         status.setStatus(rs.getString("is_added"));
         r.setAdded(status);
         r.setRaters(rs.getInt("raters_number"));

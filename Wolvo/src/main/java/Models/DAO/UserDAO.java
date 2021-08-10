@@ -44,7 +44,7 @@ public class UserDAO {
     /**
      *
      * @param users
-     * inserts all of the currently registered users in the set (taken as a parameter)
+     * inserts all of the currently registered users in the set (received as a parameter)
      */
     private void fetchUsers(Set<User> users) {
         try {
@@ -104,7 +104,7 @@ public class UserDAO {
      * @param district
      * @param address
      * @param phoneNumber
-     * inserts new user in the database with the data taken as parameters
+     * inserts new user in the database with the data received as parameters
      * @return number of rows affected; (if everything goes well, returned value should be 1)
      */
     public int addUser(String email, String firstName, String lastName, String password, String userType, String privacyType,

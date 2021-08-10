@@ -1,6 +1,6 @@
 package Models.DAO;
 
-import Models.AddStatus;
+import Models.CourierStatus;
 import Models.Dish;
 import Models.Restaurant;
 import Models.Status;
@@ -54,7 +54,7 @@ public class DishDAO{
     /**
      *
      * @param restaurant
-     * @return the list of all the dishes in the particular restaurant (taken as a parameter)
+     * @return the list of all the dishes in the particular restaurant (received as a parameter)
      */
 
     public List<Dish> getRestaurantDishes(Restaurant restaurant){
@@ -167,7 +167,7 @@ public class DishDAO{
         d.setRating(rs.getFloat("rating"));
         d.setCategory(rs.getString("category"));
         d.setPrice(rs.getFloat("price"));
-        Status status = new AddStatus();
+        Status status = new CourierStatus();
         status.setStatus(rs.getString("is_added"));
         d.setAdded(status);
         d.setRaters(rs.getInt("raters_number"));

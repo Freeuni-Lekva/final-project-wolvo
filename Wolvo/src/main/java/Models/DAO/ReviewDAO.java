@@ -18,7 +18,7 @@ public class ReviewDAO{
     /**
      *
      * @param dish
-     * @return list of all the reviews about the particular dish (taken as a parameter)
+     * @return list of all the reviews about the particular dish (received as a parameter)
      */
 
     public List<Review> getDishReviews(Dish dish){
@@ -81,5 +81,24 @@ public class ReviewDAO{
         r.setCourierRating(rs.getInt("courier_rating"));
         r.setText(rs.getString("review"));
         return r;
+    }
+
+    /**
+     *
+     * @param courier
+     * @return list of reviews made about the particular courier
+     */
+
+    public List<Review> getCourierReviews(Courier courier) {
+        List<Review> reviews = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from reviews where courier_id = ? and courier_rating is not null;");
+            statement.setInt(1, courier.getId());
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                reviews.add(convertToReview(resultSet));
+            }
+        } catch (SQLException throwables) {}
+        return reviews;
     }
 }

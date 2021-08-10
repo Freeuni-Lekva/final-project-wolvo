@@ -1,85 +1,165 @@
 package Models;
 
+import java.util.List;
 import java.util.Objects;
 import java.sql.Timestamp;
 
 public class Order {
     private int id;
-    private int user;
-    private int dish;
+    private int userId;
+    private List<Integer> dishIds;
     private Timestamp orderDate;
     private String district;
     private String address;
-    private int courier;
+    private int courierID;
 
     public Order(){}
 
-    public int getUser() {
-        return user;
+    /**
+     *
+     * @return id of the user who made this order
+     */
+    public int getUserID() {
+        return userId;
     }
 
-    public int getDish() {
-        return dish;
+    /**
+     *
+     * @return id of the dish in this order
+     */
+    public List<Integer> getDish() {
+        return dishIds;
     }
+
+    /**
+     *
+     * @return district in which this order is made in
+     */
 
     public String getDistrict() {
         return district;
     }
 
+    /**
+     *
+     * @return order id
+     */
+
     public int getId() {
         return id;
     }
 
-    public int getCourier() {
-        return courier;
+    /**
+     *
+     * @return id of the courier delivering this order
+     */
+    public int getCourierID() {
+        return courierID;
     }
+
+    /**
+     *
+     * @return address of user who made this order
+     */
 
     public String getAddress() {
         return address;
     }
 
+    /**
+     *
+     * @return exact time the order was made
+     */
+
     public Timestamp getOrderDate() {
         return orderDate;
     }
+
+    /**
+     *
+     * @param id
+     * sets id for order
+     */
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setDish(int dish) {
-        this.dish = dish;
+
+    /**
+     *
+     * @param dish
+     * sets list of dishes ordered
+     */
+
+    public void setDish(List<Integer> dish) {
+        this.dishIds = dish;
     }
 
+
+    /**
+     * sets id of user who made this order
+     * @param user
+     */
     public void setUser(int user) {
-        this.user = user;
+        this.userId = user;
     }
+
+    /**
+     * sets address of this order
+     * @param address
+     */
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    /**
+     * sets district of this order
+     * @param district
+     */
     public void setDistrict(String district) {
         this.district = district;
     }
 
+
+    /**
+     * assigns courier for this order
+     * @param courier
+     */
     public void setCourier(int courier) {
-        this.courier = courier;
+        this.courierID = courier;
     }
 
+    /**
+     * sets time of the order
+     * @param orderDate
+     */
     public void setOrderDate(Timestamp orderDate) {
         this.orderDate = orderDate;
     }
 
 
+    /**
+     *
+     * @param obj
+     * @return true if the object received as a parameter is equal to this order
+     */
+
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Order o = (Order) obj;
-        return id == o.getId() && user == o.getUser() && dish == o.getDish()
-                && courier == o.getCourier() && address.equals(o.getAddress()) && district.equals(o.getDistrict()) && orderDate.equals(o.getOrderDate());
+        return id == o.getId() && userId == o.getUserID() && dishIds.equals(o.getDish())
+                && courierID == o.getCourierID() && address.equals(o.getAddress()) && district.equals(o.getDistrict()) && orderDate.equals(o.getOrderDate());
     }
+
+    /**
+     *
+     * @return order converted to String
+     */
     public String toString(){
-        return id + " " + user + " " + dish + " " + courier + " "+ address + " " + " "+ district + " "+ orderDate.toString();
+        return id + " " + userId + " " + dishIds.toString() + " " + courierID + " "+ address + " " + " "+ district + " "+ orderDate.toString();
     }
 }
 

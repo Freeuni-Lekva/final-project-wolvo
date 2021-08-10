@@ -1,9 +1,6 @@
 package Models.DAO;
 
-import Models.Courier;
-import Models.Dish;
-import Models.Order;
-import Models.User;
+import Models.*;
 
 import java.sql.*;
 import java.util.*;
@@ -59,7 +56,7 @@ public class OrderDAO {
      * @param district
      * @param address
      * @param courier
-     * Inserts new order in the database with data taken as a parameters
+     * Inserts new order in the database with data received as a parameters
      * @return "accepted" if everything goes well
      */
 
@@ -101,4 +98,6 @@ public class OrderDAO {
         o.setAddress(rs.getString("location"));
         return o;
     }
+
+
 }

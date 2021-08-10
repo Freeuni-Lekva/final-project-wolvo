@@ -78,7 +78,7 @@ public class CourierDAO {
      * @param district
      * @param password
      * @param phoneNumber
-     * Inserts new courier in the database with data taken as a parameters
+     * Inserts new courier in the database with data received as a parameters
      */
     public void addCourier(String email, String firstName, String lastName, String district, String password, String phoneNumber){
         try {
@@ -126,7 +126,7 @@ public class CourierDAO {
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE couriers set is_free = ? where user_id = ?;");
-            Status status = new AddStatus();
+            Status status = new CourierStatus();
             status.setStatus(OCCUPIED);
             statement.setString(1, status.getStatus());
             statement.setInt(2, courier.getId());
@@ -151,7 +151,7 @@ public class CourierDAO {
             statement.setFloat(1, (courier.getRating() * courier.getRaters() + (float)rate) / (courier.getRaters() + rated));
             statement.setInt(2, courier.getRaters() + rated);
             statement.setInt(3, courier.getCompletedOrders() + 1);
-            Status status = new AddStatus();
+            Status status = new CourierStatus();
             status.setStatus(FREE);
             statement.setString(4, status.getStatus());
             statement.executeUpdate();
