@@ -42,8 +42,6 @@ create table friend_requests(
 
 drop table if exists couriers;
 
-drop table if exists couriers;
-
 create table couriers(
 	courier_id int auto_increment primary key,
     email varchar(100) unique,
@@ -116,6 +114,7 @@ create table managers (
 drop table if exists reviews;
 
 create table reviews(
+	review_id int auto_increment primary key,
 	user_id int NOT NULL,
 	dish_id int NOT NULL,
     courier_id int NOT NULL,
