@@ -229,6 +229,7 @@ public class Courier{
      * @param obj
      * @return true if object received as a parameter is equal to this particular courier
      */
+    @Override
     public boolean equals(Object obj) {
             if (this == obj) return true;
             if (obj == null || getClass() != obj.getClass()) return false;
@@ -237,11 +238,18 @@ public class Courier{
                     && lastName.equals(o.getLastName()) && password.equals(o.getPassword()) &&
                      district.equals(o.getDistrict()) && phoneNumber.equals(o.getPhoneNumber()) &&
                      rating == o.getRating() && raters == getRaters() && completedOrders == o.getCompletedOrders()
-                     && isAdded == o.isAdded() && o.isFree() == isFree;
-        }
-        public String toString(){
-            return id + " " + email + " " + firstName + " " + lastName + " "+ password + " " + " "+ district
-            + " "+ phoneNumber + " " + rating + " " + raters + " " +completedOrders + " " + isAdded + " " + isFree;
-        }
+                     && isAdded.equals(o.isAdded()) && o.isFree().equals(isFree);
+    }
+
+
+    /**
+     *
+     * @return courier object converted to string
+     */
+    @Override
+    public String toString(){
+        return id + " " + email + " " + firstName + " " + lastName + " "+ password + " " + " "+ district
+        + " "+ phoneNumber + " " + rating + " " + raters + " " +completedOrders + " " + isAdded + " " + isFree;
+    }
 }
 

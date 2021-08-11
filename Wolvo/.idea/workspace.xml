@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../FullDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FullTestDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullTestDB.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestDishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestDishDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/RequestStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/RequestStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Courier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,7 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDishDAO.testAddApproveUpdate">
+  <component name="RunManager" selected="JUnit.TestManager.testToString">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -94,38 +89,6 @@
       <option name="PACKAGE_NAME" value="Models.Tests" />
       <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
       <option name="METHOD_NAME" value="testAddApproveUpdate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDishDAO.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
-      <option name="METHOD_NAME" value="testGetAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDishDAO.testGetByIDNoEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
-      <option name="METHOD_NAME" value="testGetByIDNoEntry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,6 +126,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestManager.testEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManager" />
+      <option name="METHOD_NAME" value="testEqual" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestManager.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManager" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Wolvo [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -190,19 +185,19 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
-      <item itemvalue="JUnit.TestDishDAO.testGetAll" />
-      <item itemvalue="JUnit.TestDishDAO.testGetByIDNoEntry" />
       <item itemvalue="JUnit.TestDishDAO.testGetPending" />
       <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
       <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
+      <item itemvalue="JUnit.TestManager.testEqual" />
+      <item itemvalue="JUnit.TestManager.testToString" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestManager.testToString" />
+        <item itemvalue="JUnit.TestManager.testEqual" />
         <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
         <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
         <item itemvalue="JUnit.TestDishDAO.testGetPending" />
-        <item itemvalue="JUnit.TestDishDAO.testGetAll" />
-        <item itemvalue="JUnit.TestDishDAO.testGetByIDNoEntry" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +217,7 @@
       <workItem from="1628439096530" duration="1347000" />
       <workItem from="1628539334867" duration="863000" />
       <workItem from="1628540331547" duration="1312000" />
-      <workItem from="1628614900090" duration="28307000" />
+      <workItem from="1628614900090" duration="32299000" />
     </task>
     <servers />
   </component>

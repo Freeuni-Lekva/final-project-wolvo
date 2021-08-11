@@ -208,23 +208,23 @@ insert into dishes (dish_id,name,rest_id,price,category, raters_number, rating)
 
 ---------------------------------------------------------------------------------------------------
 
-insert into managers
+insert into managers (manager_id, email, first_name, last_name, password, rest_id, phone_number)
 	values (501, 'tbabu19@freeuni.edu.ge', 'Tsotne', 'Babunashvili', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
 		1001, '555-68-53-05');
 
-insert into managers
+insert into managers (manager_id, email, first_name, last_name, password, rest_id, phone_number)
 	values (502, 'tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili', '5ed092a75b55d250d7cf19448ff66601d254d356', 
 		1002, '595-05-57-77');
         
-insert into managers
+insert into managers (manager_id, email, first_name, last_name, password, rest_id, phone_number)
 	values (503, 'achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
 		1003, '555-72-53-62');
         
-insert into managers
+insert into managers (manager_id, email, first_name, last_name, password, rest_id, phone_number)
 	values (504, 'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
 		1004, '555-68-53-05');
 
-insert into managers
+insert into managers (manager_id, email, first_name, last_name, password, rest_id, phone_number)
 	values (505, 'tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', '5ed092a75b55d250d7cf19448ff66601d254d356', 
 		1005, '595-05-57-77');
         
