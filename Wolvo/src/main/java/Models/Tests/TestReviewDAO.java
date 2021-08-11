@@ -11,6 +11,7 @@ import junit.framework.TestCase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.List;
@@ -26,7 +27,7 @@ public class TestReviewDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=inmess10nante");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         } catch (SQLException throwables) {
         }
     }
@@ -120,7 +121,7 @@ public class TestReviewDAO extends TestCase {
         assert(revs.isEmpty());
     }
 
-    public void testAddReview() {
+    public void testAddReview() throws SQLException {
         ReviewDAO reviewDAO = new ReviewDAO(connection);
         UserDAO userDAO = new UserDAO(connection);
         CourierDAO courierDAO = new CourierDAO(connection);
@@ -140,5 +141,11 @@ public class TestReviewDAO extends TestCase {
         review.setCourierRating(2);
         review.setText("cool");
         assertEquals(review,revs.get(0));
+        PreparedStatement ps = connection.prepareStatement("delete from couriers where email = \"test@test.com\";");
+        ps.executeUpdate();
+        PreparedStatement pss = connection.prepareStatement("delete from reviews where dish_id = 212 and user_id = ? and courier_id = ?;");
+        pss.setInt(1, userDAO.getByEmail("tarus19@freeuni.edu.ge").getId());
+        pss.setInt(2, review.getCourier());
+        pss.executeUpdate();
     }
 }

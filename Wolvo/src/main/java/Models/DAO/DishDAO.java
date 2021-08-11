@@ -93,11 +93,14 @@ public class DishDAO{
     public void addDish(String name, int restaurant, String category, float price){
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "insert into dishes (name, rest_id, category,price) values (?,?,?,?);");
+                    "insert into dishes (name, rest_id, category,price,rating,raters,add_status) values (?,?,?,?,?,?,?);");
             statement.setString(1, name);
             statement.setInt(2, restaurant);
             statement.setString(3,category);
             statement.setFloat(4, price);
+            statement.setFloat(5, 0F);
+            statement.setFloat(6, 0);
+            statement.setString(7, "Pending");
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -112,8 +115,8 @@ public class DishDAO{
     public List<Dish> getPendingDishes(){
         List<Dish> dishes = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select * from dishes where is_added = ?");
-            statement.setBoolean(1, false);
+            PreparedStatement statement = connection.prepareStatement("select * from dishes where add_status = ?");
+            statement.setString(1, "Pending");
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()) {
                 dishes.add(convertToDish(resultSet));
@@ -132,12 +135,12 @@ public class DishDAO{
      */
 
     public void updateDish(Dish d, int rate){
-        if(rate == 0)return;
+        if(rate < 0)return;
         DishDAO DDAO = new DishDAO(connection);
     //    DDAO.updateDish(d, rate);
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE dishes set rating = ?, raters_number = ? where dish_id = ?;");
+                    "UPDATE dishes set rating = ?, raters = ? where dish_id = ?;");
             statement.setFloat(1, (float) (d.getRating() * d.getRaters() + 1.0*rate) / (d.getRaters() + 1));
             statement.setInt(2, d.getRaters() + 1);
             statement.setInt(3,d.getDish_id());
@@ -156,7 +159,7 @@ public class DishDAO{
     public void approveDish(int id){
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE dishes set is_added = ? where dish_id = ?;");
+                    "UPDATE dishes set add_status = ? where dish_id = ?;");
             statement.setString(1, Constants.APPROVED);
             statement.setInt(2, id);
             statement.executeUpdate();
@@ -197,9 +200,9 @@ public class DishDAO{
         d.setCategory(rs.getString("category"));
         d.setPrice(rs.getFloat("price"));
         Status status = new RequestStatus();
-        status.setStatus(rs.getString("is_added"));
+        status.setStatus(rs.getString("add_status"));
         d.setAdded(status);
-        d.setRaters(rs.getInt("raters_number"));
+        d.setRaters(rs.getInt("raters"));
         return d;
     }
 }

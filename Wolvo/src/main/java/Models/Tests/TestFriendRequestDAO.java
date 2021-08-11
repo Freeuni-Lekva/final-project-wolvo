@@ -3,7 +3,7 @@ package Models.Tests;
 import Models.*;
 import Models.DAO.FriendsRequestDAO;
 import junit.framework.TestCase;
-import org.junit.Assert;
+import static Models.Constants.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class TestFriendRequestDAO extends TestCase {
     protected void setUp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/test_db?user=root&password=");
+                "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         users = new User[5];
         for (int i = 0; i < 5; i++) {
             User usr = new User();
@@ -142,10 +142,10 @@ public class TestFriendRequestDAO extends TestCase {
         Status rsRej = new RequestStatus();
         Status rsNR = new RequestStatus();
         Status rsNS = new RequestStatus();
-        rsAcc.setStatus("Accepted");
-        rsRej.setStatus("Rejected");
-        rsNR.setStatus("NotResponded");
-        rsNS.setStatus("NotSent");
+        rsAcc.setStatus(APPROVED);
+        rsRej.setStatus(REJECTED);
+        rsNR.setStatus(PENDING);
+        rsNS.setStatus(NOTSENT);
         assertEquals(FDAO.requestStatus(users[0], users[2]), rsAcc);
         assertEquals(FDAO.requestStatus(users[0], users[1]), rsAcc);
         assertEquals(FDAO.requestStatus(users[0], users[4]), rsRej);
@@ -163,21 +163,21 @@ public class TestFriendRequestDAO extends TestCase {
         FriendsRequestDAO FDAO = new FriendsRequestDAO(connection);
         boolean b1 = FDAO.removeFriendsRequest(users[0], users[1]);
         assertTrue(b1);
-        assertEquals(FDAO.requestStatus(users[0], users[1]).getStatus(), "NotSent");
-        PreparedStatement statement1 = connection.prepareStatement("insert into friend_requests(from_id, to_id, request_status) values(?, ?, \"Accepted\");");
+        assertEquals(FDAO.requestStatus(users[0], users[1]).getStatus(), NOTSENT);
+        PreparedStatement statement1 = connection.prepareStatement("insert into friend_requests(from_id, to_id, request_status) values(?, ?, \"Approved\");");
         statement1.setInt(1, users[0].getId());
         statement1.setInt(2, users[1].getId());
         boolean b2 = FDAO.removeFriendsRequest(users[3], users[0]);
         assertTrue((b2));
-        assertEquals(FDAO.requestStatus(users[3], users[0]).getStatus(), "NotSent");
-        PreparedStatement statement2 = connection.prepareStatement("insert into Friend_requests(from_id, to_id, request_status) values(?, ?, \"Accepted\");");
+        assertEquals(FDAO.requestStatus(users[3], users[0]).getStatus(), NOTSENT);
+        PreparedStatement statement2 = connection.prepareStatement("insert into Friend_requests(from_id, to_id, request_status) values(?, ?, \"Approved\");");
         statement2.setInt(1, users[3].getId());
         statement2.setInt(2, users[0].getId());
         boolean b3 = FDAO.removeFriendsRequest(users[0], users[1]);
         assertFalse(b3);
         boolean b4 = FDAO.removeFriendsRequest(users[2], users[2]);
         assertFalse(b4);
-        assertEquals(FDAO.requestStatus(users[2], users[2]).getStatus(), "NotSent");
+        assertEquals(FDAO.requestStatus(users[2], users[2]).getStatus(), NOTSENT);
         statement1.executeUpdate();
         statement2.executeUpdate();
     }
@@ -188,16 +188,16 @@ public class TestFriendRequestDAO extends TestCase {
     public void testInsertFriendRequest() {
         FriendsRequestDAO FDAO = new FriendsRequestDAO(connection);
         Status stAcc = new RequestStatus();
-        stAcc.setStatus("Accepted");
+        stAcc.setStatus(APPROVED);
         assertFalse(FDAO.insertFriendRequest(users[0], users[1], stAcc));
         Status stRej = new RequestStatus();
-        stRej.setStatus("Rejected");
+        stRej.setStatus(REJECTED);
         assertFalse(FDAO.insertFriendRequest(users[0], users[2], stRej));
         Status stNR = new RequestStatus();
-        stNR.setStatus("NotResponded");
+        stNR.setStatus(PENDING);
         boolean b1 = FDAO.insertFriendRequest(users[2], users[4], stNR);
         assertTrue(b1);
-        assertEquals(FDAO.requestStatus(users[2], users[4]).getStatus(), "NotResponded");
+        assertEquals(FDAO.requestStatus(users[2], users[4]).getStatus(), PENDING);
         FDAO.removeFriendsRequest(users[2], users[4]);
     }
 }

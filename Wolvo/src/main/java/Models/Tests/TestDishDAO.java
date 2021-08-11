@@ -34,7 +34,7 @@ public class TestDishDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=inmess10nante");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         } catch (SQLException throwables) {
         }
     }
@@ -69,6 +69,7 @@ public class TestDishDAO extends TestCase {
         DishDAO dishDAO = new DishDAO(connection);
         Dish dish = dishDAO.getDishById(212);
         Dish newDish = new Dish();
+        newDish.setDish_id(212);
         newDish.setName(names[2]);
         newDish.setRest_id(rest_ids[2]);
         newDish.setPrice(prices[2]);
@@ -106,10 +107,10 @@ public class TestDishDAO extends TestCase {
         restaurant.setManager_id(502);
         restaurant.setDistrict("Didube");
         restaurant.setAddress("Some Adress2");
-        restaurant.setRaters(1);
+        restaurant.setRaters(2001);
         restaurant.setRating((float) 3.20);
         RequestStatus requestStatus = new RequestStatus();
-        requestStatus.setStatus("Pending");
+        requestStatus.setStatus("Rejected");
         restaurant.setAdded(requestStatus);
         List<Dish> dishRest = dishDAO.getRestaurantDishes(restaurant);
         assertEquals(1,dishRest.size());
@@ -126,10 +127,14 @@ public class TestDishDAO extends TestCase {
         assertEquals(newDish,dishRest.get(0));
     }
 
-    public void testGetByNameAndRestID() {
+    public void testGetByNameAndRestID() throws SQLException {
         DishDAO dishDAO = new DishDAO(connection);
         assertNull(dishDAO.getDishByRestAndName(1005,"Test"));
         dishDAO.addDish("TestDish",1005,"Test",(float) 3.50);
+        PreparedStatement ps = connection.prepareStatement("delete from dishes where name = ? and rest_id = ?");
+        ps.setString(1, "TestDish");
+        ps.setInt(2, 1005);
+        assertEquals(1, ps.executeUpdate());
     }
 
 

@@ -139,7 +139,7 @@ public class UserDAO {
     public int removeUser(String email) {
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "delete * from users where email = ?;");
+                    "delete from users where email = ?;");
             statement.setString(1,email);
             return statement.executeUpdate();
         } catch (SQLException throwables) {
@@ -153,23 +153,27 @@ public class UserDAO {
      * @param name (First name and last name concatenated)
      * @return User with that particular name and surname
      */
-    public User getByName(String name) {
+    public List<User> getByName(String name) {
         StringTokenizer tok = new StringTokenizer(name," ");
         String firstName,lastName;
-        if (!tok.hasMoreTokens()) return null;
+        List<User> l = new ArrayList<>();
+        if (!tok.hasMoreTokens()) return l;
         firstName = tok.nextToken();
-        if (!tok.hasMoreTokens()) return null;
+        if (!tok.hasMoreTokens()) return l;
         lastName = tok.nextToken();
-        if (tok.hasMoreTokens()) return null;
+        if (tok.hasMoreTokens()) return l;
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "select * from users where first_name = ? and last_name = ?;");
             statement.setString(1,firstName);
             statement.setString(2,lastName);
-            return convertToUser(statement.executeQuery());
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                l.add(convertToUser(resultSet));
+            }
         } catch (SQLException throwables) {
         }
-        return null;
+        return l;
     }
 
 }

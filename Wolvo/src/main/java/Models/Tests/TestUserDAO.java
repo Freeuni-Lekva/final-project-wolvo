@@ -34,7 +34,7 @@ public class TestUserDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/test_db?user=root&password=");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         } catch (SQLException throwables) {
         }
     }
@@ -155,5 +155,21 @@ public class TestUserDAO extends TestCase {
         assertEquals(1,removed);
 
         assertNull(userDAO.getByEmail(newUser.getEmail()));
+    }
+
+    /**
+     * tests getByName.
+     */
+    public void testGetByName() {
+        UserDAO UDAO = new UserDAO(connection);
+        List<User> l0 = UDAO.getByName("Tsotne Babunashvili");
+        assertEquals(1, l0.size());
+        assertTrue(l0.get(0).getFirstName().equals("Tsotne"));
+        assertTrue(l0.get(0).getLastName().equals("Babunashvili"));
+        List<User> l1 = UDAO.getByName("bla bla bla");
+        assertTrue(l1.isEmpty());
+        List<User> l2 = UDAO.getByName("Akaki Chukhua");
+        assertEquals(1, l2.size());
+        assertEquals("Akaki", l2.get(0).getFirstName());
     }
 }

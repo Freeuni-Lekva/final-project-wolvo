@@ -79,7 +79,6 @@ public class TestRestaurantsDAO extends TestCase {
     public void testAddRestaurant() throws SQLException {
         RestaurantDAO RDAO = new RestaurantDAO(connection);
         Restaurant r = new Restaurant();
-        r.setId(1006);
         r.setName("n");
         r.setDistrict("d");
         r.setManager_id(504);
@@ -92,10 +91,17 @@ public class TestRestaurantsDAO extends TestCase {
         List<Restaurant> l = RDAO.getRestaurants();
         assertFalse(l.contains(r));
         RDAO.addRestaurant("n", 504, "d", "a");
+        PreparedStatement statement = connection.prepareStatement("select * from restaurants where name = \"n\"" +
+                "and manager_id = 504 and district = \"d\" and address = \"a\";");
+        ResultSet resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+            r.setId(resultSet.getInt("rest_id"));
+        }
         l = RDAO.getRestaurants();
         assertTrue(l.contains(r));
-        PreparedStatement statement = connection.prepareStatement("delete from restaurants where rest_id = 1006");
-        assertEquals(1, statement.executeUpdate());
+        PreparedStatement statement0 = connection.prepareStatement("delete from restaurants where name = \"n\"" +
+                "and manager_id = 504 and district = \"d\" and address = \"a\";");
+        assertEquals(1, statement0.executeUpdate());
     }
 
     /**
@@ -119,16 +125,18 @@ public class TestRestaurantsDAO extends TestCase {
     public void testUpdateRestaurant() throws SQLException {
         RestaurantDAO RDAO = new RestaurantDAO(connection);
         for (int i = 0; i < 5; i++) {
-            RDAO.updateRestaurant(restaurants[i], 5);
+            RDAO.updateRestaurant(restaurants[i], 100);
             Restaurant r = RDAO.getRestaurantById(rest_id[i]);
             assertTrue(r.getRaters() == raters[i] + 1);
-            float nr = (float)(rating[i] * raters[i] + 1.0 * 5)/(raters[i] + 1);
-            assertEquals(r.getRating(), nr);
+            float nr = (float)(rating[i] * raters[i] + 1.0 * 100)/(raters[i] + 1);
+            String resultNR = String.format("%.2f", nr);
+            assertEquals(String.format("%.2f",r.getRating()), resultNR);
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE restaurants set rating = ?, raters_number = ? where res_id = ?;");
+                    "UPDATE restaurants set rating = ?, raters = ? where rest_id = ?;");
             statement.setFloat(1, rating[i]);
             statement.setInt(2, raters[i]);
             statement.setInt(3, rest_id[i]);
+            statement.executeUpdate();
         }
     }
 

@@ -108,4 +108,25 @@ public class OrderDAO {
         o.setQuantity(rs.getInt("quantity"));
         return o;
     }
+
+    /**
+     * returns courrier current order.
+     * @param courier_id int.
+     * @return Order type.
+     */
+    public Order getCouriersCurrentOrder(int courier_id) {
+        Order ord = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from orders where courier_id = ? and order_status =" +
+                    "'OnWay'");
+            statement.setInt(1, courier_id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                ord = convertToOrder(resultSet);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return ord;
+    }
 }

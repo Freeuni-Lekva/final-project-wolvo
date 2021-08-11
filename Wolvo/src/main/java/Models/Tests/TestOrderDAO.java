@@ -101,4 +101,19 @@ public class TestOrderDAO extends TestCase {
         l = ODAO.getUserOrders(1);
         assertEquals(1, l.size());
     }
+
+    /**
+     * tests getCouriersCurrentOrder.
+     */
+    public void testGetCouriersCurrentOrder() {
+        OrderDAO ODAO = new OrderDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            Order order = ODAO.getCouriersCurrentOrder(courier[i]);
+            if (!orderStatus[i].equals("OnWay")) {
+                assertEquals(null, order);
+            } else {
+                assertEquals(orders[i], order);
+            }
+        }
+    }
 }

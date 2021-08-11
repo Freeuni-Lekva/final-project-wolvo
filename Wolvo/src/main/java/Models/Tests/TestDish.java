@@ -108,8 +108,9 @@ public class TestDish extends TestCase {
             dish[i].setPrice((price[i]));
         }
         for (int i = 0; i < 3; i++) {
-            String s =  "Id: " + dish[i].getDish_id() + "\n name: " + dish[i].getName() + "\n restaurant id: " + dish[i].getRest_id() +
-                    "\n price: " + dish[i].getPrice() + "\n rating: " + dish[i].getRating() + "\nCategory: " + dish[i].getCategory();
+            String s =  "Id: " + dish[i].getDish_id() + " name: " + dish[i].getName() + " restaurant id: " + dish[i].getRest_id() +
+                    " price: " + dish[i].getPrice() + " raters: " + dish[i].getRaters() + " rating: " + dish[i].getRating() +
+                      " Category: " + dish[i].getCategory() + " Status: " + dish[i].getAdded().getStatus();
             assertEquals(dish[i].toString(), s);
         }
     }

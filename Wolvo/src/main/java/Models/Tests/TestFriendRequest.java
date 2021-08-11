@@ -5,6 +5,7 @@ import Models.RequestStatus;
 import Models.Status;
 import Models.User;
 import junit.framework.TestCase;
+import static Models.Constants.*;
 
 public class TestFriendRequest extends TestCase {
 
@@ -17,17 +18,17 @@ public class TestFriendRequest extends TestCase {
         fr.setFrom(usrFr);
         fr.setTo(usrTo);
         Status rs = new RequestStatus();
-        rs.setStatus("NotResponded");
+        rs.setStatus(PENDING);
         fr.setStatus(rs);
         assertEquals(fr.getFrom().getId(), 1);
         assertEquals(fr.getTo().getId(), 2);
-        assertEquals(fr.getStatus().getStatus(), "NotResponded");
+        assertEquals(fr.getStatus().getStatus(), PENDING);
     }
 
     public void testRequest2() {
         String s = "Request is sent from 1(first name \"Tsotne\" last name \"Babunashvili\") to " +
                 "2(first name \"Akaki\" last name \"Chukhua\")" +
-                "\nrequest status is Accepted";
+                "\nrequest status is Approved";
         User usr1 = new User();
         usr1.setId(1);
         usr1.setFirstName("Tsotne");
@@ -40,7 +41,7 @@ public class TestFriendRequest extends TestCase {
         fr.setFrom(usr1);
         fr.setTo(usr2);
         Status rs = new RequestStatus();
-        rs.setStatus("Accepted");
+        rs.setStatus(APPROVED);
         fr.setStatus(rs);
         assertEquals(s, fr.toString());
     }
