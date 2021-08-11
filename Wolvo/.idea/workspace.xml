@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../FullDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FullTestDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullTestDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Initializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Initializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +211,7 @@
       <workItem from="1628439096530" duration="1347000" />
       <workItem from="1628539334867" duration="863000" />
       <workItem from="1628540331547" duration="1312000" />
-      <workItem from="1628614900090" duration="19673000" />
+      <workItem from="1628614900090" duration="19745000" />
     </task>
     <servers />
   </component>
