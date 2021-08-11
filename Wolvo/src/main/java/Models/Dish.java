@@ -155,7 +155,7 @@ public class Dish {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Dish d = (Dish) obj;
-        return dish_id == d.getDish_id() && rest_id == d.getRest_id() && name.equals(d.getName()) &&
+        return rest_id == d.getRest_id() && name.equals(d.getName()) &&
                 price == d.getPrice() && rating == d.getRating() && category.equals(d.getCategory());
     }
 
@@ -164,8 +164,9 @@ public class Dish {
      * @return dish converted to string
      */
     public String toString(){
-        String s =  "Id: " + dish_id + "\n name: " + name + "\n restaurant id: " + rest_id +
-                "\n price: " + price + "\n rating: " + rating + "\nCategory: " + category;
+        String s =  "Id: " + dish_id + " name: " + name + " restaurant id: " + rest_id +
+                " price: " + price + " raters: " + raters + " rating: " + rating + " Category: " + category + " Status: "
+                    + added.getStatus();
         return s;
     }
 }

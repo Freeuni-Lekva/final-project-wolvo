@@ -195,16 +195,16 @@ insert into orders
 
 -------------------------------------------------------------------------------------
 
-insert into dishes (dish_id,name,rest_id,price,category, rating)
-	values (210, "Alpen Gold", 1001, 2.6, "Candy", 3.4);
-insert into dishes (dish_id,name,rest_id,price,category, rating)
-	values (211, "Khinkali", 1002, 1.2, "Meat", 4.5);
-insert into dishes (dish_id,name,rest_id,price,category, rating)
-	values (212, "Khachapuri", 1003, 15.0, "Georgian", 5.0);
-insert into dishes (dish_id,name,rest_id,price,category, rating)
-	values (213, "Cookie", 1004, 3.4, "Candy", 5.0);
-insert into dishes (dish_id,name,rest_id,price,category, rating)
-	values (214, "Peach", 1005, 1.5, "Fruit", 4.6);
+insert into dishes (dish_id,name,rest_id,price,category, raters_number, rating)
+	values (210, "Alpen Gold", 1001, 2.6, "Candy", 1, 3.4);
+insert into dishes (dish_id,name,rest_id,price,category, raters_number, rating)
+	values (211, "Khinkali", 1002, 1.2, "Meat", 1, 4.5);
+insert into dishes (dish_id,name,rest_id,price,category, raters_number, rating)
+	values (212, "Khachapuri", 1003, 15.0, "Georgian", 1, 5.0);
+insert into dishes (dish_id,name,rest_id,price,category, raters_number, rating)
+	values (213, "Cookie", 1004, 3.4, "Candy", 1, 5.0);
+insert into dishes (dish_id,name,rest_id,price,category, raters_number, rating)
+	values (214, "Peach", 1005, 1.5, "Fruit", 1, 4.6);
 
 ---------------------------------------------------------------------------------------------------
 
@@ -230,16 +230,16 @@ insert into managers
         
 ----------------------------------------------------------------------------------------------
 
-insert into restaurants
-	values (1001, "HB", 501, "Saburtalo", "Vazha-pshavela street", 4.3);
-insert into restaurants
-	values (1002, "Machakhela", 502, "Didube", "Some Adress2", 3.2);
-insert into restaurants
-	values (1003, "Weihenstephan", 503, "Saburtalo", "Vazha-pshavela Str", 4.9);
-insert into restaurants
-	values (1004, "Bernard", 504, "Gldani", "Gldanis misamarti rame", 3.8);
-insert into restaurants
-	values (1005, "Nikora", 505, "Digomi", "FU-s win", 4.2);
+insert into restaurants (rest_id, name, manager_id, district, address, raters, rating)
+	values (1001, "HB", 501, "Saburtalo", "Vazha-pshavela street", 1, 4.3);
+insert into restaurants (rest_id, name, manager_id, district, address, raters, rating)
+	values (1002, "Machakhela", 502, "Didube", "Some Adress2", 1, 3.2);
+insert into restaurants (rest_id, name, manager_id, district, address, raters, rating)
+	values (1003, "Weihenstephan", 503, "Saburtalo", "Vazha-pshavela Str", 1, 4.9);
+insert into restaurants (rest_id, name, manager_id, district, address, raters, rating)
+	values (1004, "Bernard", 504, "Gldani", "Gldanis misamarti rame", 1, 3.8);
+insert into restaurants (rest_id, name, manager_id, district, address, raters, rating)
+	values (1005, "Nikora", 505, "Digomi", "FU-s win", 1, 4.2);
   
 ---------------------------------------------------------------------------------------------------
 

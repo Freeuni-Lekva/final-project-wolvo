@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="" />
+    <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../FullDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FullTestDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullTestDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestDishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestDishDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/RequestStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/RequestStatus.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +69,7 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestReviewDAO">
+  <component name="RunManager" selected="JUnit.TestDishDAO.testAddApproveUpdate">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -73,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestReviewDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testAddApproveUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -82,29 +92,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestReviewDAO.testAddReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
-      <option name="METHOD_NAME" value="testAddReview" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testAddApproveUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestReviewDAO.testCourierReviewNo0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +108,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
-      <option name="METHOD_NAME" value="testCourierReviewNo0" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testGetAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestReviewDAO.testCourierReviewNo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testGetByIDNoEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -129,14 +124,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
-      <option name="METHOD_NAME" value="testCourierReviewNo1" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testGetByIDNoEntry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestReviewDAO.testCourierReviewNoEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testGetPending" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -145,8 +140,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
-      <option name="METHOD_NAME" value="testCourierReviewNoEntry" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testGetPending" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDishDAO.testGetRestaurantDishes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testGetRestaurantDishes" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,19 +190,19 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
-      <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo0" />
-      <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo1" />
-      <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNoEntry" />
-      <item itemvalue="JUnit.TestReviewDAO.testAddReview" />
-      <item itemvalue="JUnit.TestReviewDAO" />
+      <item itemvalue="JUnit.TestDishDAO.testGetAll" />
+      <item itemvalue="JUnit.TestDishDAO.testGetByIDNoEntry" />
+      <item itemvalue="JUnit.TestDishDAO.testGetPending" />
+      <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
+      <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestReviewDAO" />
-        <item itemvalue="JUnit.TestReviewDAO.testAddReview" />
-        <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNoEntry" />
-        <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo1" />
-        <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo0" />
+        <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
+        <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
+        <item itemvalue="JUnit.TestDishDAO.testGetPending" />
+        <item itemvalue="JUnit.TestDishDAO.testGetAll" />
+        <item itemvalue="JUnit.TestDishDAO.testGetByIDNoEntry" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +222,7 @@
       <workItem from="1628439096530" duration="1347000" />
       <workItem from="1628539334867" duration="863000" />
       <workItem from="1628540331547" duration="1312000" />
-      <workItem from="1628614900090" duration="19745000" />
+      <workItem from="1628614900090" duration="28307000" />
     </task>
     <servers />
   </component>

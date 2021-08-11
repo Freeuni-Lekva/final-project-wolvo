@@ -94,6 +94,8 @@ CREATE TABLE restaurants(
 	manager_id int not null,
 	district varchar(30) not null,
 	address varchar(100) not null,
+	is_added varchar(30) not null default 'Pending',
+	raters int not null default 0,
 	rating float(3, 2)
 );
   

@@ -1,9 +1,6 @@
 package Models.DAO;
 
-import Models.CourierStatus;
-import Models.Dish;
-import Models.Restaurant;
-import Models.Status;
+import Models.*;
 
 import java.sql.*;
 import java.util.*;
@@ -51,6 +48,21 @@ public class DishDAO{
         return null;
     }
 
+
+    public Dish getDishByRestAndName(int restaurant_id, String name) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from dishes where rest_id = ? and name = ?");
+            statement.setInt(1,restaurant_id);
+            statement.setString(2,name);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return convertToDish(resultSet);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
     /**
      *
      * @param restaurant
@@ -81,7 +93,7 @@ public class DishDAO{
     public void addDish(String name, int restaurant, String category, float price){
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "insert into dishes (name, rest_id, category) values (?,?,?,?);");
+                    "insert into dishes (name, rest_id, category,price) values (?,?,?,?);");
             statement.setString(1, name);
             statement.setInt(2, restaurant);
             statement.setString(3,category);
@@ -145,7 +157,7 @@ public class DishDAO{
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE dishes set is_added = ? where dish_id = ?;");
-            statement.setBoolean(1, true);
+            statement.setString(1, Constants.APPROVED);
             statement.setInt(2, id);
             statement.executeUpdate();
         } catch (SQLException throwables) {
@@ -153,6 +165,22 @@ public class DishDAO{
         }
     }
 
+    /**
+     *
+     * @param id
+     * removes dish with particular id from the database
+     */
+
+    public void removeDish(int id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "Delete from dishes where dish_id = ?;");
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
     /**
      *
      * @param rs
@@ -168,7 +196,7 @@ public class DishDAO{
         d.setRating(rs.getFloat("rating"));
         d.setCategory(rs.getString("category"));
         d.setPrice(rs.getFloat("price"));
-        Status status = new CourierStatus();
+        Status status = new RequestStatus();
         status.setStatus(rs.getString("is_added"));
         d.setAdded(status);
         d.setRaters(rs.getInt("raters_number"));

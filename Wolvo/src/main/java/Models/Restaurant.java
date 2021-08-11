@@ -159,7 +159,7 @@ public class Restaurant{
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Restaurant o = (Restaurant) obj;
-        return rest_id == o.getId() && manager_id == o.getManager_id() && rating == o.getRating() &&
+        return manager_id == o.getManager_id() && rating == o.getRating() &&
                 address.equals(o.getAddress()) && district.equals(o.getDistrict()) && name.equals(o.getName());
     }
 
