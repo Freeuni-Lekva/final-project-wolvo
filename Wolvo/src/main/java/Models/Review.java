@@ -15,18 +15,23 @@ public class Review{
     public void setUser(int user){
         this.user = user;
     }
+
     public void setDish(int dish){
         this.dish = dish;
     }
+
     public void setCourier(int courier){
         this.courier = courier;
     }
+
     public void setDishRating(int dishRating){
         this.dishRating = dishRating;
     }
+
     public void setCourierRating(int courierRating){
         this.courierRating = courierRating;
     }
+
     public void setText(String text){
         this.text = text;
     }
@@ -54,6 +59,7 @@ public class Review{
     public String getText() {
         return text;
     }
+
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
@@ -61,6 +67,7 @@ public class Review{
         return courier == o.getCourier() && dishRating == o.getDishRating() && courierRating == o.getCourierRating()
                 && dish == o.getDish() && user == o.getUser() && text.equals(o.getText());
     }
+
     public String toString(){
         return user + " " + dish + " " + courier + " " + dishRating + " "+ courierRating + " " +text;
     }

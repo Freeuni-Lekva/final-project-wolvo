@@ -2,12 +2,12 @@ package Models;
 
 import static Models.Constants.*;
 
-public class AddStatus implements Status {
+public class OrderStatus implements Status {
 
     private String status;
 
-    public AddStatus() {
-        this.status = FREE;
+    public OrderStatus() {
+        status = ONWAY;
     }
 
     @Override
@@ -17,7 +17,7 @@ public class AddStatus implements Status {
 
     @Override
     public boolean setStatus(String status) {
-        if (status.equals(FREE) || status.equals(OCCUPIED)) {
+        if (status.equals(DELIVERED) || status.equals(ONWAY) || status.equals(NOTRECEIVE)) {
             this.status = status;
             return true;
         }
@@ -27,7 +27,7 @@ public class AddStatus implements Status {
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
-        if (!(obj instanceof AddStatus)) return false;
-        else return ((AddStatus) obj).getStatus().equals(status);
+        if (!(obj instanceof OrderStatus)) return false;
+        return ((OrderStatus) obj).getStatus().equals(status);
     }
 }

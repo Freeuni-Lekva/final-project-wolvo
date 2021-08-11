@@ -8,9 +8,12 @@ public class Order {
     private int user;
     private int dish;
     private Timestamp orderDate;
+    private Timestamp receiveDate;
     private String district;
     private String address;
     private int courier;
+    private int quantity;
+    private Status orderStatus;
 
     public Order(){}
 
@@ -42,6 +45,18 @@ public class Order {
         return orderDate;
     }
 
+    public Timestamp getReceiveDate() {
+        return receiveDate;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public Status getOrderStatus() {
+        return orderStatus;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -70,6 +85,17 @@ public class Order {
         this.orderDate = orderDate;
     }
 
+    public void setReceiveDate(Timestamp receiveDate) {
+        this.receiveDate = receiveDate;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setOrderStatus(Status orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -79,7 +105,8 @@ public class Order {
                 && courier == o.getCourier() && address.equals(o.getAddress()) && district.equals(o.getDistrict()) && orderDate.equals(o.getOrderDate());
     }
     public String toString(){
-        return id + " " + user + " " + dish + " " + courier + " "+ address + " " + " "+ district + " "+ orderDate.toString();
+        return id + " " + user + " " + dish + " " + courier + " "+ address + " " + " "+ district + " "+
+                orderDate.toString() + " " + receiveDate.toString() + " " + orderStatus.getStatus() + " " + quantity;
     }
 }
 

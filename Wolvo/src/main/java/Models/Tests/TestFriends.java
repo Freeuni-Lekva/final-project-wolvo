@@ -11,8 +11,11 @@ import java.util.Set;
 
 public class TestFriends extends TestCase {
 
-    User users[];
+    private User users[];
 
+    /**
+     * sets up users.
+     */
     public void setUp() {
         users = new User[20];
         User usr0 = new User();
@@ -68,7 +71,9 @@ public class TestFriends extends TestCase {
         users[10] = usr10;
     }
 
-  //  @Test
+    /**
+     * tests constructor.
+     */
     public void testFriends0() {
         Friends friends0 = new Friends();
         Friends friends1 = new Friends();
@@ -76,7 +81,9 @@ public class TestFriends extends TestCase {
         friendsRC = new Friends();
     }
 
- //   @Test
+    /**
+     * test1
+     */
     public void testFriends1() {
         //setup();
         Friends friends0 = new Friends();
@@ -101,7 +108,9 @@ public class TestFriends extends TestCase {
         assertEquals(s, friends1.toString());
     }
 
-//    @Test
+    /**
+     * test2
+     */
     public void testFriends2() {
         //setup();
         Friends friends0 = new Friends();

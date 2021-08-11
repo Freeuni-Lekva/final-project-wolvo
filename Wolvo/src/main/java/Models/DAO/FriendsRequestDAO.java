@@ -15,7 +15,7 @@ import java.util.Set;
  * this class is for connection to 'friends_request' table
  */
 public class FriendsRequestDAO {
-    Connection connection;
+    private Connection connection;
 
     /**
      * constructor, initializes connection.

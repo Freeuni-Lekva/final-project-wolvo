@@ -13,8 +13,9 @@ public class Courier{
     private float rating;
     private int raters;
     private int completedOrders;
-    private String isAdded;
-    private String isFree;
+    private Status isAdded;
+    private Status isFree;
+    private int currOrder;
 
     public Courier(){}
 
@@ -33,6 +34,7 @@ public class Courier{
     public void setLastName(String lastName){
         this.lastName = lastName;
     }
+
     public void setPassword(String password){
         this.password = password;
     }
@@ -57,12 +59,16 @@ public class Courier{
         this.completedOrders = completedOrders;
     }
 
-    public void setAdded(String isAdded){
+    public void setAdded(Status isAdded){
         this.isAdded = isAdded;
     }
 
-    public void setFree(String isFree){
+    public void setFree(Status isFree){
         this.isFree = isFree;
+    }
+
+    public void setCurrOrder(int currOrder) {
+        this.currOrder = currOrder;
     }
 
     public int getId(){
@@ -104,13 +110,18 @@ public class Courier{
         return completedOrders;
     }
 
-    public String isAdded(){
+    public Status getAdded(){
         return isAdded;
     }
 
-    public String isFree(){
+    public Status getFree(){
         return isFree;
     }
+
+    public int getCurrOrder() {
+        return currOrder;
+    }
+
     public boolean equals(Object obj) {
             if (this == obj) return true;
             if (obj == null || getClass() != obj.getClass()) return false;
@@ -119,11 +130,12 @@ public class Courier{
                     && lastName.equals(o.getLastName()) && password.equals(o.getPassword()) &&
                      district.equals(o.getDistrict()) && phoneNumber.equals(o.getPhoneNumber()) &&
                      rating == o.getRating() && raters == getRaters() && completedOrders == o.getCompletedOrders()
-                     && isAdded == o.isAdded() && o.isFree() == isFree;
+                     && isAdded.equals(o.isAdded) && isFree.equals(o.isFree);
         }
-        public String toString(){
-            return id + " " + email + " " + firstName + " " + lastName + " "+ password + " " + " "+ district
-            + " "+ phoneNumber + " " + rating + " " + raters + " " +completedOrders + " " + isAdded + " " + isFree;
-        }
+
+    public String toString(){
+        return id + " " + email + " " + firstName + " " + lastName + " "+ password + " " + " "+ district
+        + " "+ phoneNumber + " " + rating + " " + raters + " " +completedOrders + " " + currOrder + " "+ isAdded.getStatus() + " " + isFree.getStatus();
+    }
 }
 
