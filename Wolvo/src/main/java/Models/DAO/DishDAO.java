@@ -122,12 +122,13 @@ public class DishDAO{
     public void updateDish(Dish d, int rate){
         if(rate == 0)return;
         DishDAO DDAO = new DishDAO(connection);
-        DDAO.updateDish(d, rate);
+    //    DDAO.updateDish(d, rate);
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE dishes set rating = ?, raters_number = ? where dish_id = ?;");
             statement.setFloat(1, (float) (d.getRating() * d.getRaters() + 1.0*rate) / (d.getRaters() + 1));
             statement.setInt(2, d.getRaters() + 1);
+            statement.setInt(3,d.getDish_id());
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

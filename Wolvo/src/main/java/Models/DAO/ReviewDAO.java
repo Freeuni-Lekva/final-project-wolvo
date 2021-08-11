@@ -24,13 +24,16 @@ public class ReviewDAO{
     public List<Review> getDishReviews(Dish dish){
         List<Review> reviews = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select * from reviews where dish_id = ?");
+            PreparedStatement statement = connection.prepareStatement("select * from reviews where dish_id = ? " +
+                    "and dish_id is not null and dish_id != 0;");
             statement.setInt(1, dish.getDish_id());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 reviews.add(convertToReview(resultSet));
             }
-        } catch (SQLException throwables) {}
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return reviews;
     }
 
@@ -52,7 +55,7 @@ public class ReviewDAO{
         dDao.updateDish(dish, dishRating);
         try{
             PreparedStatement statement = connection.prepareStatement(
-                    "insert into reviews (user_id, dish_id, courier_id, rating, courier_rating, review) values (?,?,?,?,?,?);");
+                    "insert into reviews (user_id, dish_id, courier_id, dish_rating, courier_rating, review) values (?,?,?,?,?,?);");
             statement.setInt(1, user.getId());
             statement.setInt(2, dish.getDish_id());
             statement.setInt(3, courier.getId());
@@ -74,12 +77,18 @@ public class ReviewDAO{
      */
     private Review convertToReview(ResultSet rs) throws SQLException{
         Review r = new Review();
+        r.setReview_id(rs.getInt("review_id"));
         r.setUser(rs.getInt("user_id"));
         r.setDish(rs.getInt("dish_id"));
         r.setCourier(rs.getInt("courier_id"));
-        r.setDishRating(rs.getInt("rating"));
+        r.setDishRating(rs.getInt("dish_rating"));
         r.setCourierRating(rs.getInt("courier_rating"));
-        r.setText(rs.getString("review"));
+        if (rs.getString("review") != null) {
+            r.setText(rs.getString("review"));
+        }
+        else  {
+            r.setText("");
+        }
         return r;
     }
 
@@ -92,7 +101,8 @@ public class ReviewDAO{
     public List<Review> getCourierReviews(Courier courier) {
         List<Review> reviews = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select * from reviews where courier_id = ? and courier_rating is not null;");
+            PreparedStatement statement = connection.prepareStatement("select * from reviews where courier_id = ? " +
+                    "and courier_rating is not null and courier_rating != 0;");
             statement.setInt(1, courier.getId());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {

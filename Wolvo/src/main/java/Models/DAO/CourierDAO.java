@@ -147,13 +147,14 @@ public class CourierDAO {
         if (rate >= 0) rated = 1;
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE couriers set rating = ?, raters_number = ?, completed_orders = ?, is_free = ? where user_id = ?;");
+                    "UPDATE couriers set rating = ?, raters = ?, completed_orders = ?, curr_status = ? where courier_id = ?;");
             statement.setFloat(1, (courier.getRating() * courier.getRaters() + (float)rate) / (courier.getRaters() + rated));
             statement.setInt(2, courier.getRaters() + rated);
             statement.setInt(3, courier.getCompletedOrders() + 1);
             Status status = new CourierStatus();
             status.setStatus(FREE);
             statement.setString(4, status.getStatus());
+            statement.setInt(5,courier.getId());
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -210,7 +211,7 @@ public class CourierDAO {
      */
     private Courier convertToCourier(ResultSet rs) throws SQLException{
         Courier c = new Courier();
-        c.setId(rs.getInt("user_id"));
+        c.setId(rs.getInt("courier_id"));
         c.setEmail(rs.getString("email"));
         c.setFirstName(rs.getString("first_name"));
         c.setLastName(rs.getString("last_name"));
@@ -219,9 +220,9 @@ public class CourierDAO {
         c.setPhoneNumber(rs.getString("phone_number"));
         c.setRating(rs.getFloat("rating"));
         c.setCompletedOrders(rs.getInt("completed_orders"));
-        c.setRaters(rs.getInt("raters_number"));
-        c.setAdded(rs.getString("is_added"));
-        c.setFree(rs.getString("is_free"));
+        c.setRaters(rs.getInt("raters"));
+        c.setAdded(rs.getString("add_status"));
+        c.setFree(rs.getString("curr_status"));
         return c;
     }
 }

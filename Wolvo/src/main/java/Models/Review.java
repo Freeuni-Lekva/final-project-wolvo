@@ -3,6 +3,7 @@ package Models;
 import java.util.Objects;
 
 public class Review{
+    private int review_id;
     private int user;
     private int dish;
     private int courier;
@@ -12,6 +13,12 @@ public class Review{
 
     public Review(){}
 
+    /**
+     * sets review_id
+     * @param review_id
+     */
+
+    public void setReview_id(int review_id) {this.review_id = review_id; }
     /**
      * sets id of the user who made this review
      * @param user
@@ -38,7 +45,7 @@ public class Review{
 
     /**
      * sets rating of the dish in the order made by user
-     * USER MAY NOT HAVE RATED THE DISH (so it can be null)
+     * USER MAY NOT HAVE RATED THE DISH
      * @param dishRating
      */
     public void setDishRating(int dishRating){
@@ -47,7 +54,7 @@ public class Review{
 
     /**
      * sets rating of the courier who made the delivery of the order made by user
-     * USER MAY NOT HAVE RATED THE COURIER (so it can be null)
+     * USER MAY NOT HAVE RATED THE COURIER
      * @param courierRating
      */
     public void setCourierRating(int courierRating){
@@ -63,6 +70,11 @@ public class Review{
         this.text = text;
     }
 
+    /**
+     *
+     * @return id of review
+     */
+    public int getReview_id() {return review_id; }
     /**
      *
      * @return ID Of the courier who delivered the order user reviewed
@@ -133,7 +145,7 @@ public class Review{
      * @return review converted to string
      */
     public String toString(){
-        return user + " " + dish + " " + courier + " " + dishRating + " "+ courierRating + " " +text;
+        return review_id + " " + user + " " + dish + " " + courier + " " + dishRating + " "+ courierRating + " " +text;
     }
 }
 

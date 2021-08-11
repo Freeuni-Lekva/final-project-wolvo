@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../FullDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FullTestDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullTestDB.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/DishDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Initializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Initializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,20 +71,7 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserDAO">
-    <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Models.DAO.UserDAO" />
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestReviewDAO">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -89,7 +85,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFriendRequestDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReviewDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -98,13 +94,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendRequestDAO" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFriendRequestDAO.testInsertFriendRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReviewDAO.testAddReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +109,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendRequestDAO" />
-      <option name="METHOD_NAME" value="testInsertFriendRequest" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
+      <option name="METHOD_NAME" value="testAddReview" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFriendsDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReviewDAO.testCourierReviewNo0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -129,13 +125,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendsDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
+      <option name="METHOD_NAME" value="testCourierReviewNo0" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserDAO (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReviewDAO.testCourierReviewNo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -144,8 +141,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
+      <option name="METHOD_NAME" value="testCourierReviewNo1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestReviewDAO.testCourierReviewNoEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
+      <option name="METHOD_NAME" value="testCourierReviewNoEntry" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,20 +190,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.UserDAO" />
-      <item itemvalue="JUnit.TestFriendRequestDAO" />
-      <item itemvalue="JUnit.TestFriendsDAO" />
-      <item itemvalue="JUnit.TestUserDAO (1)" />
-      <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
+      <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo0" />
+      <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo1" />
+      <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNoEntry" />
+      <item itemvalue="JUnit.TestReviewDAO.testAddReview" />
+      <item itemvalue="JUnit.TestReviewDAO" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserDAO" />
-        <item itemvalue="JUnit.TestFriendRequestDAO" />
-        <item itemvalue="JUnit.TestFriendsDAO" />
-        <item itemvalue="JUnit.TestUserDAO (1)" />
-        <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
+        <item itemvalue="JUnit.TestReviewDAO" />
+        <item itemvalue="JUnit.TestReviewDAO.testAddReview" />
+        <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNoEntry" />
+        <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo1" />
+        <item itemvalue="JUnit.TestReviewDAO.testCourierReviewNo0" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +223,7 @@
       <workItem from="1628439096530" duration="1347000" />
       <workItem from="1628539334867" duration="863000" />
       <workItem from="1628540331547" duration="1312000" />
-      <workItem from="1628614900090" duration="7680000" />
+      <workItem from="1628614900090" duration="19673000" />
     </task>
     <servers />
   </component>

@@ -123,16 +123,16 @@ insert into users values (1, 'tbabu19@freeuni.edu.ge', 'Tsotne', 'Babunashvili',
 		"Admin", "Private", 'Didube', 'Dighmis Masivi V kvartali 1a','555685305');
 
 insert into users values (2, 'tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili', '5ed092a75b55d250d7cf19448ff66601d254d356', 
-		"Courier", "Friends", 'Saburtalo', 'Fanjikidze str 22a/26', '595055777');
+		"Customer", "Friends", 'Saburtalo', 'Fanjikidze str 22a/26', '595055777');
         
 insert into users values (3, 'achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
 		"Admin", "Private", 'Gldani', '3 MD Naneishvili str 20/8', '555725362');
         
 insert into users values (4,'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
-		"NoramlUser", "Public", 'Didube', 'Dighmis Masivi V kvartali 1a','555685305');
+		"Customer", "Public", 'Didube', 'Dighmis Masivi V kvartali 1a','555685305');
 
 insert into users values (5, 'tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', '5ed092a75b55d250d7cf19448ff66601d254d356', 
-		"Manager", "Private", 'Saburtalo', 'Fanjikidze str 22a/26', '595055777');
+		"Admin", "Private", 'Saburtalo', 'Fanjikidze str 22a/26', '595055777');
 
 -------------------------------------------------------------------------------------------------
 
@@ -166,19 +166,19 @@ values (2, 4, "NotResponded");
 -----------------------------------------------------------------------------------------
 
 insert into couriers values (1, 'tbabu19@freeuni.edu.ge', 'Tsotne', 'Babunashvili', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
-		'555-68-53-05', 0.0, 0, 100, 'Free', 'Accepted', 103);
+		'Didube','555-68-53-05', 0.0, 0, 100, 'Free', 'Accepted', 103);
 
 insert into couriers values (2, 'tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili', '5ed092a75b55d250d7cf19448ff66601d254d356', 
-		'595-05-57-77', 5.0, 10, 10, 'Occupied', 'NotResponded', 104);
+		'Gldani','595-05-57-77', 5.0, 10, 10, 'Occupied', 'NotResponded', 104);
         
 insert into couriers values (3, 'achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
-		'555-72-53-62', 5.0, 10, 9, 'Free', 'Rejected', 105);
+		'Saburtalo','555-72-53-62', 5.0, 10, 9, 'Free', 'Rejected', 105);
         
 insert into couriers values (4, 'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
-		'555-68-53-05', 3.4, 374, 1078, 'Free', 'Accepted', 106);
+		'Vake','555-68-53-05', 3.4, 374, 1078, 'Free', 'Accepted', 106);
 
 insert into couriers values (5, 'tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', '5ed092a75b55d250d7cf19448ff66601d254d356', 
-		'595-05-57-77', 2.4, 103, 1999, 'Occupied', 'Accepted', 107);
+		'Didube','595-05-57-77', 2.4, 103, 1999, 'Occupied', 'Accepted', 107);
         
 ----------------------------------------------------------------------------------------------	
 
@@ -195,15 +195,15 @@ insert into orders
 
 -------------------------------------------------------------------------------------
 
-insert into dishes
+insert into dishes (dish_id,name,rest_id,price,category, rating)
 	values (210, "Alpen Gold", 1001, 2.6, "Candy", 3.4);
-insert into dishes
+insert into dishes (dish_id,name,rest_id,price,category, rating)
 	values (211, "Khinkali", 1002, 1.2, "Meat", 4.5);
-insert into dishes
+insert into dishes (dish_id,name,rest_id,price,category, rating)
 	values (212, "Khachapuri", 1003, 15.0, "Georgian", 5.0);
-insert into dishes
+insert into dishes (dish_id,name,rest_id,price,category, rating)
 	values (213, "Cookie", 1004, 3.4, "Candy", 5.0);
-insert into dishes
+insert into dishes (dish_id,name,rest_id,price,category, rating)
 	values (214, "Peach", 1005, 1.5, "Fruit", 4.6);
 
 ---------------------------------------------------------------------------------------------------
@@ -243,13 +243,13 @@ insert into restaurants
   
 ---------------------------------------------------------------------------------------------------
 
-insert into reviews
+insert into reviews (user_id,dish_id,courier_id,dish_rating,courier_rating,review)
 	values (1, 210, 1, 4, 4, "KARGIA");
-insert into reviews
+insert into reviews (user_id,dish_id,courier_id,dish_rating,courier_rating,review)
 	values (2, 211, 2, 3, 2, "Fuf");
-insert into reviews
+insert into reviews (user_id,dish_id,courier_id,dish_rating,courier_rating,review)
 	values (3, 212, 3, 1, 1, "normie");
-insert into reviews
+insert into reviews (user_id,dish_id,courier_id,dish_rating,courier_rating,review)
 	values (4, 213, 4, null, null, null);
-insert into reviews
+insert into reviews (user_id,dish_id,courier_id,dish_rating,courier_rating,review)
 	values (5, 214, 5, 5, 5, "MAGARIA");

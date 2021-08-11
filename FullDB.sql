@@ -48,12 +48,13 @@ create table couriers(
     first_name varchar(100) not null,
     last_name varchar(100) not null,
     password varchar(100) not null,
+    district varchar(30) not null,
     phone_number varchar(30) not null,
-	rating float(3,2) not null,
-    raters int not null,
-	completed_orders int not null,
-	curr_status varchar(30) not null,
-    add_status varchar(30) not null,
+    rating float(3,2) not null default 0,
+    raters int not null default 0,
+    completed_orders int not null default 0,
+    curr_status varchar(30) not null default 'Free',
+    add_status varchar(30) not null default 'Pending',
     curr_order int
 );
 
@@ -80,7 +81,9 @@ CREATE TABLE dishes(
 	rest_id int not null,
 	price float(7, 2) not null,
 	category varchar(100) not null,
-	rating float(3, 2)
+	raters_number int not null default 0,
+	rating float(3, 2) default 0,
+	is_added varchar(30) not null default 'Pending'
 );
 
 DROP TABLE IF EXISTS restaurants;
@@ -109,6 +112,7 @@ create table managers (
 drop table if exists reviews;
 
 create table reviews(
+	review_id int auto_increment primary key,
 	user_id int NOT NULL,
 	dish_id int NOT NULL,
     courier_id int NOT NULL,
