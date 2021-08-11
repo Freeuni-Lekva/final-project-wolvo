@@ -58,10 +58,26 @@ public class LoginHandler extends HttpServlet {
 
     }
 
+    private void logInCourier(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) {
+        String email = httpServletRequest.getParameter("email");
+        String password = httpServletRequest.getParameter("password");
+    }
+
+
+    private void logInManager(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) {
+
+    }
+
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         if (httpServletRequest.getParameter("userTLog").equals("Customer")) {
             logInCustomer(httpServletRequest,httpServletResponse);
+        }
+        if (httpServletRequest.getParameter("userTLog").equals("Courier")) {
+            logInCourier(httpServletRequest,httpServletResponse);
+        }
+        if (httpServletRequest.getParameter("userTLog").equals("Manager")) {
+            logInManager(httpServletRequest,httpServletResponse);
         }
        }
 }

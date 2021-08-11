@@ -2,76 +2,98 @@ package Models.Tests;
 
 import Models.Review;
 import junit.framework.TestCase;
-import static Models.Constants.*;
+
+import static org.junit.Assert.assertNotEquals;
 
 public class TestReview extends TestCase {
 
-    private int[] user = {2, 4, 5};
-    private int[] dish = {1, 3, 6};
-    private int[] courier = {8, 9, 5};
-    private int[] dishRating = {2, 5, 2};
-    private int[] courierRating = {10, 2, 5};
-    private String[] text = {"kaia", "bravo", "sashinelebaa"};
-    private Review[] review;
-
-    /**
-     * sets up review and tests constructor.
-     * @throws Exception
-     */
-    @Override
-    protected void setUp() throws Exception {
-        review = new Review[3];
-        for (int i = 0; i < 3; i++) {
-            review[i] = new Review();
-            review[i].setUser(user[i]);
-            review[i].setDish(dish[i]);
-            review[i].setCourier(courier[i]);
-            review[i].setDishRating(dishRating[i]);
-            review[i].setCourierRating(courierRating[i]);
-            review[i].setText(text[i]);
-        }
+    public void testReviewSetters0() {
+        Review review = new Review();
+        review.setReview_id(1);
+        review.setCourier(2);
+        review.setDish(4);
+        review.setUser(2);
+        assertNotNull(review);
+        assertEquals(1,review.getReview_id());
+        assertEquals(2,review.getCourier());
+        assertEquals(4,review.getDish());
+        assertEquals(2,review.getUser());
     }
 
-    /**
-     * tests basic methods of Review class
-     */
-    public void testReview() {
-        for (int i = 0; i < 3; i++) {
-            assertEquals(user[i], review[i].getUser());
-            assertEquals(dish[i], review[i].getDish());
-            assertEquals(courier[i], review[i].getCourier());
-            assertEquals(dishRating[i], review[i].getDishRating());
-            assertEquals(courierRating[i], review[i].getCourierRating());
-            assertEquals(text[i], review[i].getText());
-        }
+    public void testReviewSetters1() {
+        Review review = new Review();
+        review.setReview_id(1);
+        review.setUser(2);
+        review.setCourier(3);
+        review.setDish(4);
+        review.setCourierRating(3);
+        review.setDishRating(2);
+        review.setText("Good");
+        assertNotNull(review);
+        assertEquals(1,review.getReview_id());
+        assertEquals(2,review.getUser());
+        assertEquals(3,review.getCourier());
+        assertEquals(4,review.getDish());
+        assertEquals(3,review.getCourierRating());
+        assertEquals(2,review.getDishRating());
+    }
+
+    public void testNotSet() {
+        Review review = new Review();
+        review.setReview_id(1);
+        review.setCourier(2);
+        review.setUser(3);
+        review.setDish(4);
+        assertNotNull(review);
+        assertEquals(0,review.getDishRating());
+        assertEquals(0,review.getCourierRating());
+        assertNull(review.getText());
     }
 
     public void testEquals() {
-        Review[] EQ = new Review[3];
-        for (int i = 0; i < 3; i++) {
-            EQ[i] = new Review();
-            EQ[i].setUser(user[i]);
-            EQ[i].setDish(dish[i]);
-            EQ[i].setCourier(courier[i]);
-            EQ[i].setDishRating(dishRating[i]);
-            EQ[i].setCourierRating(courierRating[i]);
-            EQ[i].setText(text[i]);
-        }
-
-        for (int i = 0; i < 3; i++) {
-            assertTrue(review[i].equals(review[i]));
-            assertTrue(review[i].equals(EQ[i]));
-            assertFalse(review[i].equals(null));
-            assertFalse(review[i].equals(EQ[(i + 1) % 3]));
-            assertFalse(review[i].equals("review[i]"));
-        }
+        Review review = new Review();
+        review.setReview_id(1);
+        review.setDish(2);
+        review.setCourier(3);
+        review.setUser(4);
+        review.setDishRating(3);
+        review.setCourierRating(3);
+        review.setText("");
+        Review reviewcmp = new Review();
+        reviewcmp.setReview_id(1);
+        reviewcmp.setDish(2);
+        reviewcmp.setCourier(3);
+        reviewcmp.setUser(4);
+        reviewcmp.setDishRating(3);
+        reviewcmp.setCourierRating(3);
+        reviewcmp.setText("");
+        assertEquals(reviewcmp,review);
+        reviewcmp.setText("Pretty cool");
+        assertNotEquals(reviewcmp, review);
+        reviewcmp.setText("");
+        assertEquals(reviewcmp,review);
+        reviewcmp.setDishRating(4);
+        assertNotEquals(reviewcmp,review);
     }
 
     public void testToString() {
-        for (int i = 0; i < 3; i++) {
-            String s = review[i].getUser() + " " + review[i].getDish() + " " + review[i].getCourier() + " " +
-                    review[i].getDishRating() + " "+ review[i].getCourierRating() + " " +review[i].getText();
-            assertEquals(s, review[i].toString());
-        }
+        Review review = new Review();
+        review.setText("");
+        assertEquals("0 0 0 0 0 0 ",review.toString());
+        review.setText("Cool");
+        assertEquals("0 0 0 0 0 0 Cool",review.toString());
+        review.setReview_id(1);
+        assertEquals("1 0 0 0 0 0 Cool",review.toString());
+        review.setDishRating(3);
+        assertEquals("1 0 0 0 3 0 Cool",review.toString());
+        review.setCourierRating(2);
+        assertEquals("1 0 0 0 3 2 Cool",review.toString());
+        review.setUser(4);
+        assertEquals("1 4 0 0 3 2 Cool",review.toString());
+        review.setCourier(5);
+        assertEquals("1 4 0 5 3 2 Cool",review.toString());
+        review.setDish(6);
+        assertEquals("1 4 6 5 3 2 Cool",review.toString());
     }
+
 }

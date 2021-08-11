@@ -14,6 +14,10 @@ public class CourierDAO {
         this.connection = connection;
     }
 
+    /**
+     *
+     * @return List of all the currently registered couriers
+     */
     public List<Courier> getCouriers(){
         List<Courier> couriers = new ArrayList<>();
         try {
@@ -25,6 +29,12 @@ public class CourierDAO {
         } catch (SQLException throwables) {}
         return couriers;
     }
+
+    /**
+     *
+     * @param email of courier (submitted during registration)
+     * @return Courier with that particular email address
+     */
 
     public Courier getCourierByEmail(String email){
         try {
@@ -39,6 +49,12 @@ public class CourierDAO {
         }
         return null;
     }
+
+    /**
+     *
+     * @param district
+     * @return List of all the couriers working in that particular district
+     */
 
     public List<Courier> getDistrictCouriers(String district){
         List<Courier> couriers = new ArrayList<>();
@@ -55,6 +71,16 @@ public class CourierDAO {
         return couriers;
     }
 
+    /**
+     *
+     * @param email
+     * @param firstName
+     * @param lastName
+     * @param district
+     * @param password
+     * @param phoneNumber
+     * Inserts new courier in the database with data received as a parameters
+     */
     public boolean addCourier(String email, String firstName, String lastName, String district, String password, String phoneNumber){
         boolean added = false;
         try {
@@ -78,6 +104,11 @@ public class CourierDAO {
         return added;
     }
 
+    /**
+     *
+     * @param courier
+     * approves registration of the particular courier (will be called by Admin)
+     */
     public void approveCourier(Courier courier){
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -91,6 +122,13 @@ public class CourierDAO {
             throwables.printStackTrace();
         }
     }
+
+
+    /**
+     *
+     * @param courier
+     * marks that the particular courier is no longer free (i.e. working on the order)
+     */
 
     public void acceptOrder(Courier courier) {
         try {
@@ -106,6 +144,12 @@ public class CourierDAO {
         }
     }
 
+    /**
+     *
+     * @param courier
+     * @param rate
+     * updates the rating of the particular courier with the new value (called when user rates courier after the delivery)
+     */
     public void updateCourier(Courier courier, int rate){
         int rated = 0;
         if (rate >= 0) rated = 1;
@@ -127,6 +171,11 @@ public class CourierDAO {
         }
     }
 
+    /**
+     *
+     * @return the list of couriers whose registration is pending admin approval
+     */
+
     public List<Courier> getPendingCouriers(){
         List<Courier> couriers = new ArrayList<>();
         try {
@@ -144,6 +193,11 @@ public class CourierDAO {
         return couriers;
     }
 
+    /**
+     *
+     * @param id courier_id
+     * @return the courier with that particular courier_id
+     */
     public Courier getCourierById(int id){
         try {
             PreparedStatement statement = connection.prepareStatement("select * from couriers where courier_id = ?");
@@ -158,6 +212,13 @@ public class CourierDAO {
         return null;
     }
 
+    /**
+     *
+     * @param rs
+     * @return Courier object created with the data taken from the database
+     * i.e. it takes a resultset of query and converts it to Courier object
+     * @throws SQLException
+     */
     private Courier convertToCourier(ResultSet rs) throws SQLException{
         Courier c = new Courier();
         c.setId(rs.getInt("courier_id"));

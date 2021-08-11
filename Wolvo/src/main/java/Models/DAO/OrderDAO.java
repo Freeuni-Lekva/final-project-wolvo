@@ -14,6 +14,10 @@ public class OrderDAO {
         this.connection = connection;
     }
 
+    /**
+     *
+     * @return list of all the orders ever made
+     */
     public List<Order> getOrders(){
         List<Order> orders = new ArrayList<>();
         try {
@@ -26,6 +30,11 @@ public class OrderDAO {
         return orders;
     }
 
+    /**
+     *
+     * @param id order_id
+     * @return list of all the orders made by particular user (with that user_id)
+     */
     public List<Order> getUserOrders(int id){
         List<Order> orders = new ArrayList<>();
         try {
@@ -40,6 +49,17 @@ public class OrderDAO {
         }
         return orders;
     }
+
+    /**
+     *
+     * @param user
+     * @param dish
+     * @param district
+     * @param address
+     * @param courier
+     * Inserts new order in the database with data received as a parameters
+     * @return "accepted" if everything goes well
+     */
 
     public boolean addOrder(int user, int dish, String district, String address, int courier, int quantity){
         CourierDAO cDao = new CourierDAO(connection);
@@ -65,6 +85,13 @@ public class OrderDAO {
         return b;
     }
 
+    /**
+     *
+     * @param rs
+     * @return Order object created with the data taken from the database
+     * i.e. it takes a resultset of query and converts it to Order object
+     * @throws SQLException
+     */
     private Order convertToOrder(ResultSet rs) throws SQLException{
         Order o = new Order();
         o.setId(rs.getInt("order_id"));

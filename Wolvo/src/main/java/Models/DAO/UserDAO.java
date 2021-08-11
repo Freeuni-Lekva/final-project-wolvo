@@ -12,6 +12,12 @@ import java.util.*;
 public class UserDAO {
     private Connection connection;
 
+    /**
+     *
+     * @param resultSet
+     * @return User object created with the data taken from the database
+     * i.e. it takes a resultset of query and converts it to User object
+     */
     private User convertToUser(ResultSet resultSet) {
         User user = new User();
         try {
@@ -35,6 +41,11 @@ public class UserDAO {
         return user;
     }
 
+    /**
+     *
+     * @param users
+     * inserts all of the currently registered users in the set (received as a parameter)
+     */
     private void fetchUsers(Set<User> users) {
         try {
             Statement statement = connection.createStatement();
@@ -51,6 +62,11 @@ public class UserDAO {
         this.connection = connection;
     }
 
+    /**
+     *
+     * @param email
+     * @return User with that particular email address
+     */
     public User getByEmail(String email) {
         try {
             PreparedStatement statement = connection.prepareStatement("select * from users where " +
@@ -67,12 +83,30 @@ public class UserDAO {
         return null;
     }
 
+    /**
+     *
+     * @return list of all the currently registered users (only admins and customers)
+     */
     public Set<User> getAll() {
         Set<User> userList = new HashSet<>();
         fetchUsers(userList);
         return userList;
     }
 
+    /**
+     *
+     * @param email
+     * @param firstName
+     * @param lastName
+     * @param password
+     * @param userType
+     * @param privacyType
+     * @param district
+     * @param address
+     * @param phoneNumber
+     * inserts new user in the database with the data received as parameters
+     * @return number of rows affected; (if everything goes well, returned value should be 1)
+     */
     public int addUser(String email, String firstName, String lastName, String password, String userType, String privacyType,
                                 String district, String address, String phoneNumber) {
         try {
@@ -95,10 +129,17 @@ public class UserDAO {
         return 0;
     }
 
+    /**
+     *
+     * @param email
+     * removes user with that particular email address
+     * @return number of rows affected (should be 1 if everything goes well)
+     */
+
     public int removeUser(String email) {
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "delete from users where email = ?;");
+                    "delete * from users where email = ?;");
             statement.setString(1,email);
             return statement.executeUpdate();
         } catch (SQLException throwables) {
@@ -106,4 +147,29 @@ public class UserDAO {
         }
         return 0;
     }
+
+    /**
+     *
+     * @param name (First name and last name concatenated)
+     * @return User with that particular name and surname
+     */
+    public User getByName(String name) {
+        StringTokenizer tok = new StringTokenizer(name," ");
+        String firstName,lastName;
+        if (!tok.hasMoreTokens()) return null;
+        firstName = tok.nextToken();
+        if (!tok.hasMoreTokens()) return null;
+        lastName = tok.nextToken();
+        if (tok.hasMoreTokens()) return null;
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "select * from users where first_name = ? and last_name = ?;");
+            statement.setString(1,firstName);
+            statement.setString(2,lastName);
+            return convertToUser(statement.executeQuery());
+        } catch (SQLException throwables) {
+        }
+        return null;
+    }
+
 }
