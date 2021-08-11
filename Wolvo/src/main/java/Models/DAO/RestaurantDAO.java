@@ -16,6 +16,11 @@ public class RestaurantDAO{
         this.connection = connection;
     }
 
+    /**
+     *
+     * @return list of all the restaurants currently registered in the database
+     */
+
     public List<Restaurant> getRestaurants(){
         List<Restaurant> restaurants = new ArrayList<>();
         try {
@@ -27,6 +32,12 @@ public class RestaurantDAO{
         } catch (SQLException throwables) {}
         return restaurants;
     }
+
+    /**
+     *
+     * @param id restaurant_id
+     * @return Restaurant object with that particular ID
+     */
 
     public Restaurant getRestaurantById(int id){
         try {
@@ -41,6 +52,15 @@ public class RestaurantDAO{
         }
         return null;
     }
+
+    /**
+     *
+     * @param name
+     * @param manager
+     * @param district
+     * @param address
+     * Inserts new restaurant in the database with data received as a parameters
+     */
 
     public void addRestaurant(String name, int manager, String district, String address){
         try {
@@ -59,6 +79,10 @@ public class RestaurantDAO{
         }
     }
 
+    /**
+     *
+     * @return the list of all the restaurants pending admin approval (every change made by managers must be approved by admin)
+     */
     public List<Restaurant> getPendingRestaurants(){
         List<Restaurant> restaurants = new ArrayList<>();
         try {
@@ -74,6 +98,12 @@ public class RestaurantDAO{
         return restaurants;
     }
 
+    /**
+     * @param restaurant
+     * @param rate
+     * updates the rating of the particular restaurant with the new value (called when user rates restaurant after the delivery)
+     */
+
     public void updateRestaurant(Restaurant restaurant, int rate){
         if (rate < 0) return;
         try {
@@ -88,6 +118,11 @@ public class RestaurantDAO{
         }
     }
 
+    /**
+     *
+     * @param restaurant Restaurant type object
+     * approves addition of the particular restaurant (will be called by Admin)
+     */
     public void approveRestaurant(Restaurant restaurant){
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -100,6 +135,13 @@ public class RestaurantDAO{
         }
     }
 
+    /**
+     *
+     * @param rs
+     * @return Restaurant object created with the data taken from the database
+     * i.e. it takes a resultset of query and converts it to Restaurant object
+     * @throws SQLException
+     */
     private Restaurant convertToRestaurant(ResultSet rs) throws SQLException {
         Restaurant r = new Restaurant();
         r.setId(rs.getInt("rest_id"));

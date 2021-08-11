@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Courier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -65,19 +64,21 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestManager.testToString">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFriendRequestDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testAddApproveUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -86,29 +87,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendRequestDAO" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestFriendRequestDAO.testInsertFriendRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendRequestDAO" />
-      <option name="METHOD_NAME" value="testInsertFriendRequest" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testAddApproveUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFriendsDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testGetPending" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -117,13 +103,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestFriendsDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testGetPending" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserDAO (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDishDAO.testGetRestaurantDishes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -132,23 +119,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestDishDAO" />
+      <option name="METHOD_NAME" value="testGetRestaurantDishes" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestManager.testEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Models.*" />
+          <option name="PATTERN" value="Models.Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.TestUserDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManager" />
+      <option name="METHOD_NAME" value="testEqual" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestManager.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManager" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,20 +184,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestUserDAO" />
-      <item itemvalue="JUnit.TestFriendRequestDAO" />
-      <item itemvalue="JUnit.TestFriendsDAO" />
-      <item itemvalue="JUnit.TestUserDAO (1)" />
-      <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
+      <item itemvalue="JUnit.TestDishDAO.testGetPending" />
+      <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
+      <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
+      <item itemvalue="JUnit.TestManager.testEqual" />
+      <item itemvalue="JUnit.TestManager.testToString" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestFriendRequestDAO" />
-        <item itemvalue="JUnit.TestFriendsDAO" />
-        <item itemvalue="JUnit.TestUserDAO (1)" />
-        <item itemvalue="JUnit.TestFriendRequestDAO.testInsertFriendRequest" />
-        <item itemvalue="JUnit.TestUserDAO" />
+        <item itemvalue="JUnit.TestManager.testToString" />
+        <item itemvalue="JUnit.TestManager.testEqual" />
+        <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
+        <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
+        <item itemvalue="JUnit.TestDishDAO.testGetPending" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +213,11 @@
       <workItem from="1628232855266" duration="1581000" />
       <workItem from="1628256584269" duration="20828000" />
       <workItem from="1628285444103" duration="68000" />
-      <workItem from="1628312813444" duration="10786000" />
+      <workItem from="1628312813444" duration="11478000" />
+      <workItem from="1628439096530" duration="1347000" />
+      <workItem from="1628539334867" duration="863000" />
+      <workItem from="1628540331547" duration="1312000" />
+      <workItem from="1628614900090" duration="32299000" />
     </task>
     <servers />
   </component>
