@@ -5,10 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Courier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/CourierStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/DishDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/FriendsDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/FriendsRequestDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/RestaurantDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Dish.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/OrderStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Restaurant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourierDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestDish.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequestDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriends.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendsDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestReview.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestUserDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-10" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerSignUp_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/RestaurantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/RestaurantDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +53,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -184,12 +218,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
       <item itemvalue="JUnit.TestDishDAO.testGetPending" />
       <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
       <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
       <item itemvalue="JUnit.TestManager.testEqual" />
       <item itemvalue="JUnit.TestManager.testToString" />
+      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
     </list>
     <recent_temporary>
       <list>

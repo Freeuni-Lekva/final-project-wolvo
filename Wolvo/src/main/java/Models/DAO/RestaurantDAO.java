@@ -120,7 +120,7 @@ public class RestaurantDAO{
 
     /**
      *
-     * @param id restaurant_id
+     * @param restaurant Restaurant type object
      * approves addition of the particular restaurant (will be called by Admin)
      */
     public void approveRestaurant(Restaurant restaurant){
