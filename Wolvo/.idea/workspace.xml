@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Courier.java" afterDir="false" />
-    </list>
+    <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +17,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -184,12 +182,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
       <item itemvalue="JUnit.TestDishDAO.testGetPending" />
       <item itemvalue="JUnit.TestDishDAO.testGetRestaurantDishes" />
       <item itemvalue="JUnit.TestDishDAO.testAddApproveUpdate" />
       <item itemvalue="JUnit.TestManager.testEqual" />
       <item itemvalue="JUnit.TestManager.testToString" />
+      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
     </list>
     <recent_temporary>
       <list>
