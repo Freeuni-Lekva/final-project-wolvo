@@ -6,34 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestCourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestCourierDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Resources/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Initializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Initializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourierDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequestDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequestDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/login_jsp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +213,7 @@
       <workItem from="1628614900090" duration="32299000" />
       <workItem from="1628705599256" duration="803000" />
       <workItem from="1628707797269" duration="5296000" />
-      <workItem from="1628745654076" duration="7450000" />
+      <workItem from="1628745654076" duration="8045000" />
     </task>
     <servers />
   </component>
