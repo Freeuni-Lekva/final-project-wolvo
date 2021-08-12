@@ -105,7 +105,7 @@ public class TestOrder extends TestCase {
             String s = orders[i].getId() + " " + orders[i].getUser() + " " + orders[i].getDish() +
                     " " + orders[i].getCourier() + " "+ orders[i].getAddress() + " " + " "+
                     orders[i].getDistrict() + " "+ orders[i].getOrderDate().toString() + " " +
-                    orders[i].getReceiveDate() + " " + orders[i].getOrderStatus().getStatus() + " " +orders[i].getQuantity();
+                     orders[i].getOrderStatus().getStatus() + " " +orders[i].getQuantity();
             assertEquals(s, orders[i].toString());
         }
     }

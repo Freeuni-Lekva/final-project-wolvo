@@ -240,4 +240,18 @@ public class CourierDAO {
         c.setCurrOrder(rs.getInt("curr_order"));
         return c;
     }
+
+    public void markAsFree(int courier_id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE couriers set curr_status = ? where courier_id = ?;");
+            Status status = new CourierStatus();
+            status.setStatus(FREE);
+            statement.setString(1, status.getStatus());
+            statement.setInt(2, courier_id);
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

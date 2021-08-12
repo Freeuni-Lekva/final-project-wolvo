@@ -104,9 +104,10 @@ public class Order {
         return id == o.getId() && user == o.getUser() && dish == o.getDish()
                 && courier == o.getCourier() && address.equals(o.getAddress()) && district.equals(o.getDistrict()) && orderDate.equals(o.getOrderDate());
     }
+
     public String toString(){
         return id + " " + user + " " + dish + " " + courier + " "+ address + " " + " "+ district + " "+
-                orderDate.toString() + " " + receiveDate.toString() + " " + orderStatus.getStatus() + " " + quantity;
+                orderDate.toString() + " " + orderStatus.getStatus() + " " + quantity;
     }
 }
 

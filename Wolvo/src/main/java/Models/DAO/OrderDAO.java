@@ -129,4 +129,25 @@ public class OrderDAO {
         }
         return ord;
     }
+
+    public void markAsDelivered(int courier_id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE orders set order_status = ? where courier_id=? and order_status = ?;");
+            statement.setString(1,"Delivered");
+            statement.setInt(2, courier_id);
+            statement.setString(3,"OnWay");
+            statement.executeUpdate();
+            statement = connection.prepareStatement("select * from orders where courier_id = ? and order_status = ?;");
+            statement.setInt(1,courier_id);
+            statement.setString(2,"Delivered");
+            ResultSet rs = statement.executeQuery();
+            if (!rs.next()) return;
+            Order currOrder = convertToOrder(rs);
+            CourierDAO courierDAO = new CourierDAO(connection);
+            courierDAO.markAsFree(currOrder.getCourier());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

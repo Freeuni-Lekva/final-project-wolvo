@@ -176,4 +176,20 @@ public class UserDAO {
         return l;
     }
 
+    public User getByID(int id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from users where " +
+                    "user_id = ?");
+            statement.setInt(1,id);
+            ResultSet resultSet = statement.executeQuery();
+            if (!resultSet.next()) {
+                return null;
+            }
+            return convertToUser(resultSet);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
 }
