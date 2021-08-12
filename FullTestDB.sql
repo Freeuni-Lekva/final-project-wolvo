@@ -179,7 +179,7 @@ insert into couriers values (2, 'tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili
 		'595-05-57-77', 5.0, 10, 10, 'Occupied', 'Pending', 104);
         
 insert into couriers values (3, 'achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'Gldani', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
-		'555-72-53-62', 5.0, 10, 9, 'Free', 'Rejected', 105);
+		'555-72-53-62', 5.0, 10, 9, 'Occupied', 'Rejected', 105);
         
 insert into couriers values (4, 'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'Didube', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
 		'555-68-53-05', 3.4, 374, 1078, 'Free', 'Approved', 106);
@@ -187,6 +187,7 @@ insert into couriers values (4, 'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babun
 insert into couriers values (5, 'tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', 'Saburtalo', '5ed092a75b55d250d7cf19448ff66601d254d356', 
 		'595-05-57-77', 2.4, 103, 1999, 'Occupied', 'Approved', 107);
         
+
 ----------------------------------------------------------------------------------------------	
 
 insert into orders 

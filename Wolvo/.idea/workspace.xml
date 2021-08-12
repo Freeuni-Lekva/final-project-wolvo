@@ -6,32 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ManagerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Courier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Courier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/DishDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/DishDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/FriendsRequestDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/FriendsRequestDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/RestaurantDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/RestaurantDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Dish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestCourierDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestDish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestDish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequestDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendRequestDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestFriendsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestReview.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestUserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestUserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/UserStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/UserStatus.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -78,7 +52,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -90,16 +64,14 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestManagerDAO">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestUserDAO">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestManagerDAO.testAddApprove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +100,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManagerDAO" />
-      <option name="METHOD_NAME" value="testAddApprove" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestOrderDAO" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestManagerDAO.testAddApproveRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRestaurantsDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -144,14 +115,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManagerDAO" />
-      <option name="METHOD_NAME" value="testAddApproveRemove" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestRestaurantsDAO" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestManagerDAO.testGetAllandPendings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReviewDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -160,14 +130,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManagerDAO" />
-      <option name="METHOD_NAME" value="testGetAllandPendings" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestManagerDAO.testgetByEmailandRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -176,9 +145,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManagerDAO" />
-      <option name="METHOD_NAME" value="testgetByEmailandRemove" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,19 +178,19 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
-      <item itemvalue="JUnit.TestManagerDAO.testAddApproveRemove" />
-      <item itemvalue="JUnit.TestManagerDAO.testAddApprove" />
-      <item itemvalue="JUnit.TestManagerDAO.testGetAllandPendings" />
-      <item itemvalue="JUnit.TestManagerDAO.testgetByEmailandRemove" />
       <item itemvalue="JUnit.TestManagerDAO" />
+      <item itemvalue="JUnit.TestOrderDAO" />
+      <item itemvalue="JUnit.TestRestaurantsDAO" />
+      <item itemvalue="JUnit.TestReviewDAO" />
+      <item itemvalue="JUnit.TestUserDAO" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestUserDAO" />
+        <item itemvalue="JUnit.TestReviewDAO" />
+        <item itemvalue="JUnit.TestRestaurantsDAO" />
+        <item itemvalue="JUnit.TestOrderDAO" />
         <item itemvalue="JUnit.TestManagerDAO" />
-        <item itemvalue="JUnit.TestManagerDAO.testgetByEmailandRemove" />
-        <item itemvalue="JUnit.TestManagerDAO.testGetAllandPendings" />
-        <item itemvalue="JUnit.TestManagerDAO.testAddApprove" />
-        <item itemvalue="JUnit.TestManagerDAO.testAddApproveRemove" />
       </list>
     </recent_temporary>
   </component>
@@ -245,6 +213,7 @@
       <workItem from="1628614900090" duration="32299000" />
       <workItem from="1628705599256" duration="803000" />
       <workItem from="1628707797269" duration="5296000" />
+      <workItem from="1628745654076" duration="8045000" />
     </task>
     <servers />
   </component>

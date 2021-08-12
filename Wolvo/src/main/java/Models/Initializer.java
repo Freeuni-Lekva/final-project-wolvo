@@ -21,7 +21,7 @@ public class Initializer implements ServletContextListener, HttpSessionListener 
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/test_db?user=root&password=inmess10nante");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=inmess10nante");
         } catch (SQLException throwables) {
         }
         UserDAO userDAO = new UserDAO(connection);

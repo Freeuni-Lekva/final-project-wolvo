@@ -137,6 +137,63 @@ label {
     text-align: justify-all;
     color: white;
 }
+
+.courierInfo {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.courierReviews {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.currentOrder {
+    position: absolute;
+    top: 30%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.orderconf {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
 #userLogin {
 
 }

@@ -17,6 +17,14 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>orderconfirmed</servlet-name>
+    <servlet-class>Controllers.OrderConfirmedHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>orderconfirmed</servlet-name>
+    <url-pattern>/confirmOrder</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>RegisterHandler</servlet-name>
     <servlet-class>Controllers.RegisterHandler</servlet-class>
   </servlet>

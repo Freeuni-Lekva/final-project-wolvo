@@ -27,7 +27,7 @@ public class TestCourierDAO extends TestCase {
     private int[] raters = {0, 10, 10, 375, 103};
     private int[] completedOrders = {100, 10, 9, 1078, 1999};
     private String[] isAdded = {APPROVED, PENDING, REJECTED, APPROVED, APPROVED};
-    private String[] isFree = {FREE, OCCUPIED, FREE, FREE, OCCUPIED};
+    private String[] isFree = {FREE, OCCUPIED, OCCUPIED, FREE, OCCUPIED};
     private int[] currOrder = {103, 104, 105, 106, 107};
     private Courier[] couriers;
 
