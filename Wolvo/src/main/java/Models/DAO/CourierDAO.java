@@ -254,4 +254,15 @@ public class CourierDAO {
             throwables.printStackTrace();
         }
     }
+    
+    public void removeCourier(int id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "Delete from couriers where courier_id = ?;");
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
