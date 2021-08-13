@@ -1,13 +1,13 @@
 package Models.DAO;
 
-import Models.PrivacyStatus;
-import Models.User;
-import Models.UserStatus;
+import Models.*;
 
 import javax.xml.transform.Result;
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.*;
+
+import static Models.Constants.*;
 
 public class UserDAO {
     private Connection connection;
@@ -190,6 +190,20 @@ public class UserDAO {
             throwables.printStackTrace();
         }
         return null;
+    }
+ 
+    public void makeAdmin(int id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE users set user_type = ? where user_id = ?;");
+            Status status = new UserStatus();
+            status.setStatus(ADMIN);
+            statement.setString(1, status.getStatus());
+            statement.setInt(2, id);
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
 }
