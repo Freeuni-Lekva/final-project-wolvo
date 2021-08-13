@@ -3,13 +3,7 @@
 <%@ page import="Models.DAO.ManagerDAO" %>
 <%@ page import="Models.DAO.DishDAO" %>
 <%@ page import="Models.*" %>
-<%@ page import="Models.DAO.RestaurantDAO" %><%--
-  Created by IntelliJ IDEA.
-  User: tsotn
-  Date: 8/3/2021
-  Time: 4:34 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="Models.DAO.RestaurantDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
