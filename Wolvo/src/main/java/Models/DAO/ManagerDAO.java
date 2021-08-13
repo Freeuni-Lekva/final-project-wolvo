@@ -83,7 +83,6 @@ public class ManagerDAO {
     }
 
     /**
-     *
      * @return list of all the managers
      */
     public List<Manager> getManagers() {
@@ -113,7 +112,6 @@ public class ManagerDAO {
         return null;
     }
     /**
-     *
      * @param id
      * @return Manager with the particular id
      */
@@ -132,8 +130,6 @@ public class ManagerDAO {
     }
 
     /**
-     *
-     * @param id
      * @return list of all the managers waiting for admin approval to sign up
      */
 
