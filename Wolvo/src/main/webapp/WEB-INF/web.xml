@@ -25,6 +25,105 @@
     <url-pattern>/confirmOrder</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>CourierApproval</servlet-name>
+    <servlet-class>Controllers.CourierApprovalHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourierApproval</servlet-name>
+    <url-pattern>/approveCourier</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CourierApprovalConf</servlet-name>
+    <servlet-class>Controllers.CourierApprovalConfHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourierApprovalConf</servlet-name>
+    <url-pattern>/approveCourierConf</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CourierRejection</servlet-name>
+    <servlet-class>Controllers.CourierRejectionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourierRejection</servlet-name>
+    <url-pattern>/rejectCourier</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserSearch</servlet-name>
+    <servlet-class>Controllers.UserSearchHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserSearch</servlet-name>
+    <url-pattern>/userSearch</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserFound</servlet-name>
+    <servlet-class>Controllers.UserFoundHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserFound</servlet-name>
+    <url-pattern>/userFound</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ManagerApproval</servlet-name>
+    <servlet-class>Controllers.ManagerApprovalHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerApproval</servlet-name>
+    <url-pattern>/approveManager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ManagerApprovalConf</servlet-name>
+    <servlet-class>Controllers.ManagerApprovalConfHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerApprovalConf</servlet-name>
+    <url-pattern>/approveManagerConf</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ManagerRejection</servlet-name>
+    <servlet-class>Controllers.ManagerRejectionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerRejection</servlet-name>
+    <url-pattern>/rejectManager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MakeAdmin</servlet-name>
+    <servlet-class>Controllers.MakeAdminHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeAdmin</servlet-name>
+    <url-pattern>/makeAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DishApproval</servlet-name>
+    <servlet-class>Controllers.DishApprovalHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishApproval</servlet-name>
+    <url-pattern>/approveDish</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DishApprovalConf</servlet-name>
+    <servlet-class>Controllers.DishApprovalConfHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishApprovalConf</servlet-name>
+    <url-pattern>/approveDishConf</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DishRejection</servlet-name>
+    <servlet-class>Controllers.DishRejectionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishRejection</servlet-name>
+    <url-pattern>/rejectDish</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
     <servlet-name>RegisterHandler</servlet-name>
     <servlet-class>Controllers.RegisterHandler</servlet-class>
   </servlet>

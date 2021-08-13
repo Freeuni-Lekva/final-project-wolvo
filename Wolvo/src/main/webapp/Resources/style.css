@@ -194,6 +194,250 @@ label {
     background-color: darkgoldenrod;
 }
 
+.adminInfo {
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.pendingCouriers {
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.pendingManagers {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.pendingDishes {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 20px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.divCourierApprove {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.courregapproved {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.divManagerApprove {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.manregapproved {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.divDishApprove {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.dishregapproved {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.courregrejected {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.dishregrejected{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.manregrejected{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.searchUsers{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.usersFound {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.userFF{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.userFOrders{
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.madeadm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
 #userLogin {
 
 }
