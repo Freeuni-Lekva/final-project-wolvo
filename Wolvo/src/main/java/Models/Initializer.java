@@ -41,6 +41,8 @@ public class Initializer implements ServletContextListener, HttpSessionListener 
         servletContext.setAttribute("orders",orderDAO);
         ReviewDAO reviewDAO = new ReviewDAO(connection);
         servletContext.setAttribute("reviews",reviewDAO);
+        ManagerDAO managerDAO = new ManagerDAO(connection);
+        servletContext.setAttribute("managers",managerDAO);
     }
 
     @Override
