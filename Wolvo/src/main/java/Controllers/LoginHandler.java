@@ -2,6 +2,7 @@ package Controllers;
 
 import Models.Courier;
 import Models.DAO.CourierDAO;
+import Models.DAO.ManagerDAO;
 import Models.DAO.OrderDAO;
 import Models.User;
 import Models.DAO.UserDAO;
@@ -103,6 +104,14 @@ public class LoginHandler extends HttpServlet {
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         if (httpServletRequest.getSession().getAttribute("userType").equals("Courier")) {
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/CourierPage.jsp")
+                    .forward(httpServletRequest,httpServletResponse);
+        }
+        if (httpServletRequest.getSession().getAttribute("userType").equals("Admin")) {
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/AdminPage.jsp")
+                    .forward(httpServletRequest,httpServletResponse);
+        }
+        if (httpServletRequest.getSession().getAttribute("userType").equals("Manager")) {
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/Manager.jsp")
                     .forward(httpServletRequest,httpServletResponse);
         }
     }
