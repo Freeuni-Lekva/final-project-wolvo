@@ -1,0 +1,24 @@
+package Controllers;
+
+import Models.DAO.ManagerDAO;
+import Models.Manager;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class ManagerRejectionHandler extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        if (!httpServletRequest.getSession().getAttribute("userType").equals("Admin")) {
+            return;
+        }
+        Manager manager = ((ManagerDAO) getServletContext().getAttribute("managers")).
+                getManagerByID(Integer.parseInt(httpServletRequest.getParameter("id")));
+        ManagerDAO managers = (ManagerDAO) getServletContext().getAttribute("managers");
+        managers.removeManager(manager.getId());
+        httpServletRequest.getRequestDispatcher("WEB-INF/Views/ManagerRejection.jsp").forward(httpServletRequest,httpServletResponse);
+    }
+}
