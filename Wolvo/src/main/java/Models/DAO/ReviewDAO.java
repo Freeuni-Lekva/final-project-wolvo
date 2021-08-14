@@ -52,7 +52,7 @@ public class ReviewDAO{
         dDao.updateDish(dish, dishRating);
         try{
             PreparedStatement statement = connection.prepareStatement(
-            "insert into reviews (user_id, dish_id, courier_id, dish_rating, courier_rating, courier_review, dish_review, order_id)" +
+                    "insert into reviews (user_id, dish_id, courier_id, dish_rating, courier_rating, courier_review, dish_review, order_id)" +
                             " values (?,?,?,?,?,?,?,?);");
             statement.setInt(1, user.getId());
             statement.setInt(2, dish.getDish_id());
