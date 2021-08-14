@@ -1,16 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: tsotn
-  Date: 8/14/2021
-  Time: 4:51 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <link rel = "stylesheet" href = "../../Resources/style.css" />
+    <title>Wolvo</title>
+</head>
+<body>
+<div class="reqsent">
+    <label>Your request is sent.</label> <br>
+    <a href="login">Go Back to My Page</a>
+</div>
+</body>
 </html>

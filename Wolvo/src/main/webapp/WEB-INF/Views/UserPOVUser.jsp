@@ -1,16 +1,65 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: tsotn
-  Date: 8/14/2021
-  Time: 4:52 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="Models.User" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Models.Order" %>
+<%@ page import="Models.DAO.OrderDAO" %>
+<%@ page import="Models.DAO.UserDAO" %>
+<%@ page import="Models.DAO.DishDAO" %>
+<%@ page import="Models.Dish" %>
+<%@ page import="Models.DAO.RestaurantDAO" %>
+<%@ page import="Models.Restaurant" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <link rel = "stylesheet" href = "../../Resources/style.css" />
+    <title>Wolvo</title>
+</head>
+<body>
+<div class = "userFF">
+    <label>First Name: <%= ((User) request.getAttribute("foundUser")).getFirstName()%></label> <br>
+    <label>Last Name: <%= ((User) request.getAttribute("foundUser")).getLastName()%></label> <br>
+    <label>Email: <%= ((User) request.getAttribute("foundUser")).getEmail()%></label> <br>
+    <label>Phone Number: <%= ((User) request.getAttribute("foundUser")).getPhoneNumber()%> </label> <br>
+    <label>District: <%= ((User) request.getAttribute("foundUser")).getDistrict()%></label> <br>
+    <label>Address: <%= ((User) request.getAttribute("foundUser")).getAddress()%></label> <br>
+    <%  if (((Integer) request.getAttribute("arefriends")).equals(0))
+    {
+        if (((Integer) request.getAttribute("hasRequest")).equals(1)) { %>
+    <a href="confirmRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Confirm Request</a>
+    <a href="rejectRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Reject Request</a>
+    <% }
+    else { %>
+    <a href = "sendFRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Send Friend Request</a>
+    <% } %>
+    <% } %>
+</div>
+
+<% if (((User) request.getAttribute("foundUser")).getPrivacyStatus().getStatus().equals("Public")
+        || (((User) request.getAttribute("foundUser")).getPrivacyStatus().getStatus().equals("Friends") &&
+        ((Integer) (request.getAttribute("arefriends"))).equals(1))) { %>
+<div class = "userFOrders">
+    <label>Order History</label> <br>
+    <% List<Order> courOrds = ((OrderDAO) application.getAttribute("orders")).
+            getUserOrders(((User) request.getAttribute("foundUser")).getId());
+        if (courOrds.isEmpty()) {
+    %>
+    <label>User doesn't have any orders.</label>
+    <% }
+    else { %>
+    <% for (Order ord : courOrds) {
+        Dish currDish = ((DishDAO) application.getAttribute("dishes")).getDishById(ord.getDish());
+        Restaurant currRest = ((RestaurantDAO) application.getAttribute("restaurants")).getRestaurantById(currDish.getRest_id());
+    %>
+    <li>
+        <label>Dish: <%=currDish.getName()%> <br>
+            <label>Price: <%=currDish.getPrice()%></label>
+            <label>Restaurant: <%=currRest.getName()%></label> <br>
+            <label>Restaurant address: <%=currRest.getDistrict()%>, <%=currRest.getAddress()%></label> <br>
+    </li>
+    <% } %>
+    <%
+        }
+    %>
+</div>
+<% } %>
+</body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
@@ -112,6 +112,7 @@
     <servlet-name>DishApprovalConf</servlet-name>
     <url-pattern>/approveDishConf</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>DishRejection</servlet-name>
     <servlet-class>Controllers.DishRejectionHandler</servlet-class>
@@ -119,22 +120,6 @@
   <servlet-mapping>
     <servlet-name>DishRejection</servlet-name>
     <url-pattern>/rejectDish</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>DishDeletion</servlet-name>
-    <servlet-class>Controllers.DishDeletionHandler</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DishDeletion</servlet-name>
-    <url-pattern>/removeDish</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>DishAddition</servlet-name>
-    <servlet-class>Controllers.DishAdditionHandler</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DishAddition</servlet-name>
-    <url-pattern>/dishRequest</url-pattern>
   </servlet-mapping>
 
 
@@ -153,6 +138,70 @@
   <servlet-mapping>
     <servlet-name>HomeHandler</servlet-name>
     <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RestOrder</servlet-name>
+    <servlet-class>Controllers.OrderFromRestaurantHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestOrder</servlet-name>
+    <url-pattern>/orderFromRestaurant</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OrderReview</servlet-name>
+    <servlet-class>Controllers.OrderReviewHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderReview</servlet-name>
+    <url-pattern>/reviewOrd</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OrderDish</servlet-name>
+    <servlet-class>Controllers.OrderDishHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderDish</servlet-name>
+    <url-pattern>/orderDish</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OrderDishConf</servlet-name>
+    <servlet-class>Controllers.OrderDishConfHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderDishConf</servlet-name>
+    <url-pattern>/orderDishConf</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OrderReviewConf</servlet-name>
+    <servlet-class>Controllers.OrderReviewConfHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderReviewConf</servlet-name>
+    <url-pattern>/reviewOrdConf</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SendFriendRequest</servlet-name>
+    <servlet-class>Controllers.SendRequestHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendFriendRequest</servlet-name>
+    <url-pattern>/sendFRequest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConfirmRequest</servlet-name>
+    <servlet-class>Controllers.ConfirmRequestHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConfirmRequest</servlet-name>
+    <url-pattern>/confirmRequest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RejectRequest</servlet-name>
+    <servlet-class>Controllers.RejectRequestHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RejectRequest</servlet-name>
+    <url-pattern>/rejectRequest</url-pattern>
   </servlet-mapping>
   <listener>
     <listener-class>Models.Initializer</listener-class>

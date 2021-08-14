@@ -1,6 +1,8 @@
 package Controllers;
 
 import Models.DAO.DishDAO;
+import Models.DAO.FriendsDAO;
+import Models.DAO.FriendsRequestDAO;
 import Models.DAO.UserDAO;
 import Models.Dish;
 import Models.User;
@@ -23,6 +25,20 @@ public class UserFoundHandler extends HttpServlet {
         httpServletRequest.setAttribute("foundUser",user);
         if (httpServletRequest.getSession().getAttribute("userType").equals("Admin")) {
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/UserPOVAdmin.jsp").forward(httpServletRequest, httpServletResponse);
+        }   else {
+            FriendsDAO friendsDAO = (FriendsDAO) ((getServletContext().getAttribute("friends")));
+            FriendsRequestDAO friendsRequestDAO = (FriendsRequestDAO) (getServletContext().getAttribute("friend_requests"));
+            if (friendsDAO.getFriends((User) httpServletRequest.getSession().getAttribute("customer")).contains(user)) {
+                httpServletRequest.setAttribute("arefriends", 1);
+            }   else {
+                httpServletRequest.setAttribute("arefriends",0);
+            }
+            if (friendsRequestDAO.receivedRequets((User) httpServletRequest.getSession().getAttribute("customer")).contains(user)) {
+                httpServletRequest.setAttribute("hasRequest",1);
+            }   else {
+                httpServletRequest.setAttribute("hasRequest",0);
+            }
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/UserPOVUser.jsp").forward(httpServletRequest,httpServletResponse);
         }
     }
 }

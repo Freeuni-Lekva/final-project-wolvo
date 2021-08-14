@@ -1,16 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: tsotn
-  Date: 8/14/2021
-  Time: 4:47 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <link rel = "stylesheet" href = "../../Resources/style.css" />
+    <title>Wolvo</title>
+</head>
+<body>
+<div class="noCouriers">
+    <label>Unfortunately, all of our couriers are occupied <br> in the moment. You can't place your order.</label> <br>
+    <a href="login">Go Back to My Page</a>
+</div>
+</body>
 </html>
