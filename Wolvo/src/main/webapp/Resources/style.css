@@ -18,6 +18,13 @@ p {
     font-size: 30px;
 }
 
+p1 {
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+    font-size: 30px;
+}
+
 label {
     font-weight: bold;
 }
@@ -438,6 +445,104 @@ label {
     -moz-border-radius: 5px;
     background-color: darkgoldenrod;
 }
+
 #userLogin {
 
+}
+
+.managerInfo{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.managerRests{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.managerRestDishes{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.dishRemoved{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.addNewDish {
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    top: 75%;
+    left: 20%;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+#dishSubmit {
+    padding: 4px 25px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dishAddition{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 30px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
 }

@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,28 +64,13 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestUserDAO">
+  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestManagerDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestManagerDAO" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,6 +102,22 @@
       <option name="PACKAGE_NAME" value="Models.Tests" />
       <option name="MAIN_CLASS_NAME" value="Models.Tests.TestRestaurantsDAO" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRestaurantsDAO.testGetManagerRestaurants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestRestaurantsDAO" />
+      <option name="METHOD_NAME" value="testGetManagerRestaurants" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,20 +178,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
-      <item itemvalue="JUnit.TestManagerDAO" />
       <item itemvalue="JUnit.TestOrderDAO" />
       <item itemvalue="JUnit.TestRestaurantsDAO" />
       <item itemvalue="JUnit.TestReviewDAO" />
       <item itemvalue="JUnit.TestUserDAO" />
+      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
+      <item itemvalue="JUnit.TestRestaurantsDAO.testGetManagerRestaurants" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRestaurantsDAO" />
+        <item itemvalue="JUnit.TestRestaurantsDAO.testGetManagerRestaurants" />
         <item itemvalue="JUnit.TestUserDAO" />
         <item itemvalue="JUnit.TestReviewDAO" />
-        <item itemvalue="JUnit.TestRestaurantsDAO" />
         <item itemvalue="JUnit.TestOrderDAO" />
-        <item itemvalue="JUnit.TestManagerDAO" />
       </list>
     </recent_temporary>
   </component>
@@ -233,8 +234,71 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO.ic" NAME="TestUserDAO Coverage Results" MODIFIED="1628015259643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Models.*</FILTER>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequest.ic" NAME="TestFriendRequest Coverage Results" MODIFIED="1628697271712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestManagerDAO.ic" NAME="TestManagerDAO Coverage Results" MODIFIED="1628716083954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestDishDAO.ic" NAME="TestDishDAO Coverage Results" MODIFIED="1628697126586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendsDAO.ic" NAME="TestFriendsDAO Coverage Results" MODIFIED="1628697987347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriends.ic" NAME="TestFriends Coverage Results" MODIFIED="1628697907509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequestDAO.ic" NAME="TestFriendRequestDAO Coverage Results" MODIFIED="1628697863470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO.ic" NAME="TestUserDAO Coverage Results" MODIFIED="1628703473632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestDish.ic" NAME="TestDish Coverage Results" MODIFIED="1628693662241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestOrderDAO.ic" NAME="TestOrderDAO Coverage Results" MODIFIED="1628704553879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestDishDAO_testAddApproveUpdate.ic" NAME="TestDishDAO.testAddApproveUpdate Coverage Results" MODIFIED="1628696055866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestCourier.ic" NAME="TestCourier Coverage Results" MODIFIED="1628692230672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestRestaurantsDAO.ic" NAME="TestRestaurantsDAO Coverage Results" MODIFIED="1628701526520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestOrder.ic" NAME="TestOrder Coverage Results" MODIFIED="1628698037179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestRestaurant.ic" NAME="TestRestaurant Coverage Results" MODIFIED="1628698099281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestReviewDAO.ic" NAME="TestReviewDAO Coverage Results" MODIFIED="1628703033891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestUser.ic" NAME="TestUser Coverage Results" MODIFIED="1628703085731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestManager.ic" NAME="TestManager Coverage Results" MODIFIED="1628698012249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestStatus.ic" NAME="TestStatus Coverage Results" MODIFIED="1628703065490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestDish_testToString.ic" NAME="TestDish.testToString Coverage Results" MODIFIED="1628692765140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestReview.ic" NAME="TestReview Coverage Results" MODIFIED="1628701547966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO_testGetByName.ic" NAME="TestUserDAO.testGetByName Coverage Results" MODIFIED="1628704155587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestCourierDAO.ic" NAME="TestCourierDAO Coverage Results" MODIFIED="1628692260409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
     </SUITE>
   </component>
 </project>

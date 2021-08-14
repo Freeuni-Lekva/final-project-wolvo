@@ -112,7 +112,6 @@
     <servlet-name>DishApprovalConf</servlet-name>
     <url-pattern>/approveDishConf</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <servlet-name>DishRejection</servlet-name>
     <servlet-class>Controllers.DishRejectionHandler</servlet-class>
@@ -120,6 +119,22 @@
   <servlet-mapping>
     <servlet-name>DishRejection</servlet-name>
     <url-pattern>/rejectDish</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DishDeletion</servlet-name>
+    <servlet-class>Controllers.DishDeletionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishDeletion</servlet-name>
+    <url-pattern>/removeDish</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DishAddition</servlet-name>
+    <servlet-class>Controllers.DishAdditionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishAddition</servlet-name>
+    <url-pattern>/dishRequest</url-pattern>
   </servlet-mapping>
 
 
