@@ -18,13 +18,6 @@ p {
     font-size: 30px;
 }
 
-p1 {
-    text-align: center;
-    font-weight: bold;
-    color: brown;
-    font-size: 30px;
-}
-
 label {
     font-weight: bold;
 }
@@ -59,6 +52,19 @@ label {
 
 #signUpCour {
     padding: 4px 32px;
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+
+#orderBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
     background-color: goldenrod;
     border: 1px solid #223445;
     border-radius: 18px;
@@ -385,8 +391,8 @@ label {
 
 .searchUsers{
     position: absolute;
-    top: 10%;
-    left: 70%;
+    top: 7%;
+    left: 85%;
     transform: translate(-50%, -50%);
 }
 
@@ -446,17 +452,13 @@ label {
     background-color: darkgoldenrod;
 }
 
-#userLogin {
-
-}
-
-.managerInfo{
+.customerInfo {
     position: absolute;
-    top: 30%;
+    top: 23%;
     left: 20%;
     transform: translate(-50%, -50%);
     text-align: justify-all;
-    font-size: 30px;
+    font-size: 23px;
     color: brown;
     border: 1px dashed #223445;
     border-radius: 18px;
@@ -464,13 +466,41 @@ label {
     background-color: darkgoldenrod;
 }
 
-.managerRests{
+.customerFriends{
     position: absolute;
-    top: 30%;
+    top: 55%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 23px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.customerFriendRequests{
+    position: absolute;
+    top: 55%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 23px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.OrderHistory{
+    position: absolute;
+    top: 40%;
     left: 80%;
     transform: translate(-50%, -50%);
     text-align: justify-all;
-    font-size: 30px;
+    font-size: 23px;
     color: brown;
     border: 1px dashed #223445;
     border-radius: 18px;
@@ -478,13 +508,13 @@ label {
     background-color: darkgoldenrod;
 }
 
-.managerRestDishes{
+.newOrder {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: justify-all;
-    font-size: 30px;
+    font-size: 23px;
     color: brown;
     border: 1px dashed #223445;
     border-radius: 18px;
@@ -492,13 +522,20 @@ label {
     background-color: darkgoldenrod;
 }
 
-.dishRemoved{
+.userSearchBar {
     position: absolute;
-    top: 40%;
+    top: 7%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.restaurantDishes {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: justify-all;
-    font-size: 30px;
+    font-size: 25px;
     color: brown;
     border: 1px dashed #223445;
     border-radius: 18px;
@@ -506,40 +543,110 @@ label {
     background-color: darkgoldenrod;
 }
 
-.addNewDish {
-    text-align: center;
+.orderContainer{
     position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    top: 75%;
-    left: 20%;
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
     border: 1px dashed #223445;
     border-radius: 18px;
     -moz-border-radius: 5px;
     background-color: darkgoldenrod;
 }
 
-#dishSubmit {
-    padding: 4px 25px;
+.noCouriers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.doneReview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.reqsent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.reviewCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+#reviewBut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 50px;
     background-color: goldenrod;
     border: 1px solid #223445;
     border-radius: 18px;
     -moz-border-radius: 5px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.dishAddition{
+.reqApp {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: justify-all;
-    font-size: 30px;
+    font-size: 25px;
+    color: brown;
+    border: 1px dashed #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+
+.reqRej {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify-all;
+    font-size: 25px;
     color: brown;
     border: 1px dashed #223445;
     border-radius: 18px;
