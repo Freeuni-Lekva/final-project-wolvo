@@ -38,7 +38,8 @@ public class OrderDAO {
     public List<Order> getUserOrders(int id){
         List<Order> orders = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select * from orders where user_id = ?");
+            PreparedStatement statement = connection.prepareStatement("select * from orders where user_id = ? order by " +
+                    "order_date desc;");
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -149,5 +150,20 @@ public class OrderDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    public Order getByID(int order_id) {
+        Order ord = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from orders where order_id = ?;");
+            statement.setInt(1, order_id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                ord = convertToOrder(resultSet);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return ord;
     }
 }

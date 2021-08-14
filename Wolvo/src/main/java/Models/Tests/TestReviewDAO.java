@@ -27,7 +27,7 @@ public class TestReviewDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=inmess10nante");
         } catch (SQLException throwables) {
         }
     }
@@ -38,13 +38,15 @@ public class TestReviewDAO extends TestCase {
         dish.setDish_id(211);
         List<Review> revs = reviewDAO.getDishReviews(dish);
         Review firstRev = new Review();
-        firstRev.setReview_id(2);
+        firstRev.setReview_id(301);
+        firstRev.setOrder_id(104);
         firstRev.setUser(2);
         firstRev.setDish(211);
         firstRev.setCourier(2);
         firstRev.setDishRating(3);
         firstRev.setCourierRating(2);
-        firstRev.setText("Fuf");
+        firstRev.setCourierText("Fuf");
+        firstRev.setDishText("Fuf");
         assertEquals(1,revs.size());
         assertEquals(firstRev,revs.get(0));
     }
@@ -55,11 +57,15 @@ public class TestReviewDAO extends TestCase {
         dish.setDish_id(213);
         List<Review> revs = reviewDAO.getDishReviews(dish);
         Review firstRev = new Review();
-        firstRev.setReview_id(4);
+        firstRev.setReview_id(303);
         firstRev.setUser(4);
+        firstRev.setOrder_id(106);
         firstRev.setDish(213);
         firstRev.setCourier(4);
-        firstRev.setText("");
+        firstRev.setCourierRating(-1);
+        firstRev.setDishRating(-1);
+        firstRev.setCourierText("");
+        firstRev.setDishText("");
         assertEquals(1,revs.size());
         assertEquals(firstRev,revs.get(0));
     }
@@ -82,13 +88,15 @@ public class TestReviewDAO extends TestCase {
         List<Review> revs = reviewDAO.getCourierReviews(courier);
         assertEquals(1,revs.size());
         Review firstRev = new Review();
-        firstRev.setReview_id(3);
+        firstRev.setReview_id(302);
+        firstRev.setOrder_id(105);
         firstRev.setUser(3);
         firstRev.setDish(212);
         firstRev.setCourier(3);
         firstRev.setDishRating(1);
         firstRev.setCourierRating(1);
-        firstRev.setText("normie");
+        firstRev.setCourierText("normie");
+        firstRev.setDishText("normie");
         assertEquals(firstRev,revs.get(0));
     }
 
@@ -99,13 +107,15 @@ public class TestReviewDAO extends TestCase {
         List<Review> revs = reviewDAO.getCourierReviews(courier);
         assertEquals(1,revs.size());
         Review firstRev = new Review();
-        firstRev.setReview_id(5);
+        firstRev.setReview_id(304);
+        firstRev.setOrder_id(107);
         firstRev.setUser(5);
         firstRev.setDish(214);
         firstRev.setCourier(5);
         firstRev.setDishRating(5);
         firstRev.setCourierRating(5);
-        firstRev.setText("MAGARIA");
+        firstRev.setCourierText("MAGARIA");
+        firstRev.setDishText("MAGARIA");
         assertEquals(firstRev,revs.get(0));
     }
 
@@ -121,6 +131,7 @@ public class TestReviewDAO extends TestCase {
         assert(revs.isEmpty());
     }
 
+
     public void testAddReview() throws SQLException {
         ReviewDAO reviewDAO = new ReviewDAO(connection);
         UserDAO userDAO = new UserDAO(connection);
@@ -129,17 +140,20 @@ public class TestReviewDAO extends TestCase {
         courierDAO.addCourier("test@test.com","test","test","Didube","test","12345679");
         List<Review> revs = reviewDAO.getCourierReviews(courierDAO.getCourierByEmail("test@test.com"));
         assert(revs.isEmpty());
-        reviewDAO.addReview(userDAO.getByEmail("tarus19@freeuni.edu.ge"), dishDAO.getDishById(212),courierDAO.getCourierByEmail("test@test.com"),
-                3,2,"cool");
+        reviewDAO.addReview(239, userDAO.getByEmail("tarus19@freeuni.edu.ge"), dishDAO.getDishById(212),courierDAO.getCourierByEmail("test@test.com"),
+                3,2,"cool","cool");
         revs = reviewDAO.getCourierReviews(courierDAO.getCourierByEmail("test@test.com"));
         assertEquals(1,revs.size());
         Review review = new Review();
+        review.setReview_id(305);
+        review.setOrder_id(239);
         review.setUser(userDAO.getByEmail("tarus19@freeuni.edu.ge").getId());
         review.setCourier(courierDAO.getCourierByEmail("test@test.com").getId());
         review.setDish(212);
         review.setDishRating(3);
         review.setCourierRating(2);
-        review.setText("cool");
+        review.setCourierText("cool");
+        review.setDishText("cool");
         assertEquals(review,revs.get(0));
         PreparedStatement ps = connection.prepareStatement("delete from couriers where email = \"test@test.com\";");
         ps.executeUpdate();
@@ -148,4 +162,5 @@ public class TestReviewDAO extends TestCase {
         pss.setInt(2, review.getCourier());
         pss.executeUpdate();
     }
+
 }

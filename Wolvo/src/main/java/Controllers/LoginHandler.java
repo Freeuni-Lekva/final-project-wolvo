@@ -4,7 +4,6 @@ import Models.Courier;
 import Models.DAO.CourierDAO;
 import Models.DAO.ManagerDAO;
 import Models.DAO.OrderDAO;
-import Models.Manager;
 import Models.User;
 import Models.DAO.UserDAO;
 
@@ -84,24 +83,8 @@ public class LoginHandler extends HttpServlet {
     }
 
 
-    private void logInManager(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        String email = httpServletRequest.getParameter("email");
-        String password = httpServletRequest.getParameter("password");
-        ManagerDAO managerDAO = (ManagerDAO) getServletContext().getAttribute("managers");
+    private void logInManager(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) {
 
-        Manager currentManager = managerDAO.getManagerByEmail(email);
-        if (currentManager == null) {
-            return; // User not found
-        }
-        if (!currentManager.getPassword().equals(hashedPassword(password))) {
-            return; // illegal password
-        }
-        httpServletRequest.getSession().setAttribute("name",currentManager.getFirstName());
-        httpServletRequest.getSession().setAttribute("surname",currentManager.getLastName());
-        httpServletRequest.getSession().setAttribute("manager",currentManager);
-        httpServletRequest.getSession().setAttribute("userType","Manager");
-        httpServletRequest.getRequestDispatcher("WEB-INF/Views/ManagerPage.jsp")
-                .forward(httpServletRequest,httpServletResponse);
     }
 
     @Override
@@ -127,8 +110,12 @@ public class LoginHandler extends HttpServlet {
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/AdminPage.jsp")
                     .forward(httpServletRequest,httpServletResponse);
         }
+        if (httpServletRequest.getSession().getAttribute("userType").equals("Customer")) {
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/CustomerPage.jsp")
+                    .forward(httpServletRequest,httpServletResponse);
+        }
         if (httpServletRequest.getSession().getAttribute("userType").equals("Manager")) {
-            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ManagerPage.jsp")
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/Manager.jsp")
                     .forward(httpServletRequest,httpServletResponse);
         }
     }

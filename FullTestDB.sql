@@ -116,12 +116,14 @@ drop table if exists reviews;
 
 create table reviews(
 	review_id int auto_increment primary key,
-	user_id int NOT NULL,
+	order_id int not null,
+    user_id int NOT NULL,
 	dish_id int NOT NULL,
     courier_id int NOT NULL,
-	dish_rating int,
-	courier_rating int,
-	review varchar(8000)
+	dish_rating int default -1,
+	courier_rating int default -1,
+	courier_review varchar(8000) default '',
+	dish_review varchar(8000) default ''
 );
 
 ------------------------------------------------------------------------------------------------
@@ -135,7 +137,7 @@ insert into users values (2, 'tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili', 
 insert into users values (3, 'achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
 		"Admin", "Private", 'Gldani', '3 MD Naneishvili str 20/8', '555725362');
         
-insert into users values (4,'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
+insert into users values (4,'tbabu191@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
 		"Customer", "Public", 'Didube', 'Dighmis Masivi V kvartali 1a','555685305');
 
 insert into users values (5, 'tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', '5ed092a75b55d250d7cf19448ff66601d254d356', 
@@ -195,9 +197,9 @@ insert into orders
 insert into orders
 	values (104, 2, 211, '2009-11-11 13:23:44', '2009-11-11 14:23:44', 'Delivered', 'Saburtalo', 2, 'Fanjikidze str 22a/26', 100);
 insert into orders
-	values (105, 3, 212, '2010-11-11 13:23:44', null, 'OnWay', 'Gldani', 3, '3 MD Naneishvili str 20/8', 3);
+	values (105, 3, 212, '2010-11-11 13:23:44', '2010-11-11 14:23:44', 'Delivered', 'Gldani', 3, '3 MD Naneishvili str 20/8', 3);
 insert into orders
-	values (106, 4, 213, '2011-11-11 13:23:44', null, 'NotReceive', 'Didube', 4, 'Dighmis Masivi V kvartali 1a', 1);
+	values (106, 4, 213, '2011-11-11 13:23:44', '2011-11-11 13:30:44', 'Delivered', 'Didube', 4, 'Dighmis Masivi V kvartali 1a', 1);
 insert into orders
 	values (107, 5, 214, '2012-11-11 13:23:44', '2013-11-11 13:23:44', 'Delivered', 'Saburtalo', 5, 'Fanjikidze str 22a/26', 1);
 
@@ -252,12 +254,12 @@ insert into restaurants
 ---------------------------------------------------------------------------------------------------
 
 insert into reviews
-	values (300, 1, 210, 1, 4, 4, "KARGIA");
+	values (300, 103,1, 210, 1, 4, 4, "KARGIA", "KARGIA");
 insert into reviews
-	values (301, 2, 211, 2, 3, 2, "Fuf");
+	values (301, 104,2, 211, 2, 3, 2, "Fuf","Fuf");
 insert into reviews
-	values (302, 3, 212, 3, 1, 1, "normie");
+	values (302, 105,3, 212, 3, 1, 1, "normie","normie");
+insert into reviews (review_id,order_id,user_id,dish_id,courier_id)
+	values (303, 106,4, 213, 4);
 insert into reviews
-	values (303, 4, 213, 4, null, null, null);
-insert into reviews
-	values (304, 5, 214, 5, 5, 5, "MAGARIA");
+	values (304, 107, 5, 214, 5, 5, 5, "MAGARIA", "MAGARIA");

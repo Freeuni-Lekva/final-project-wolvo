@@ -33,7 +33,7 @@
             getByID(review.getUser()).getFirstName()%> 
         <%= ((UserDAO) application.getAttribute("users")).
                 getByID(review.getUser()).getLastName()%> gave you a <%=review.getCourierRating()%>  out of 5! </label> <br>
-    <label>User also made a comment: <%=review.getText()%></label>
+    <label>User also made a comment: <%=review.getCourierText()%></label>
     <% } %>
     <%
         }

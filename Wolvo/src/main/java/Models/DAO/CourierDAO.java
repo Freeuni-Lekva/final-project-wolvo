@@ -254,7 +254,21 @@ public class CourierDAO {
             throwables.printStackTrace();
         }
     }
-    
+
+    public void markAsOccupied(int courier_id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE couriers set curr_status = ? where courier_id = ?;");
+            Status status = new CourierStatus();
+            status.setStatus(OCCUPIED);
+            statement.setString(1, status.getStatus());
+            statement.setInt(2, courier_id);
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
     public void removeCourier(int id) {
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -264,5 +278,21 @@ public class CourierDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    public Courier getFreeCourier(String district) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from couriers where district = ?" +
+                    "and curr_status = ?");
+            statement.setString(1,district);
+            statement.setString(2,FREE);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return convertToCourier(resultSet);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
     }
 }

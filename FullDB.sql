@@ -116,10 +116,12 @@ drop table if exists reviews;
 
 create table reviews(
 	review_id int auto_increment primary key,
-	user_id int NOT NULL,
+	order_id int not null,
+    user_id int NOT NULL,
 	dish_id int NOT NULL,
     courier_id int NOT NULL,
-	dish_rating int,
-	courier_rating int,
-	review varchar(8000)
+	dish_rating int default -1,
+	courier_rating int default -1,
+	courier_review varchar(8000) default '',
+	dish_review varchar(8000) default ''
 );
