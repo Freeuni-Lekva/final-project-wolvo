@@ -131,6 +131,10 @@ public class OrderDAO {
         return ord;
     }
 
+    /**
+     * sets specified courier order as delivered.
+     * @param courier_id int type courier_id specified.
+     */
     public void markAsDelivered(int courier_id) {
         try {
             PreparedStatement statement = connection.prepareStatement(

@@ -123,6 +123,10 @@ public class Courier{
         this.isFree = isFree;
     }
 
+    /**
+     * sets current order to specified value.
+     * @param currOrder int type.
+     */
     public void setCurrOrder(int currOrder) {
         this.currOrder = currOrder;
     }
@@ -229,6 +233,10 @@ public class Courier{
         return isFree;
     }
 
+    /**
+     * returns current order.
+     * @return int type, representing current order.
+     */
     public int getCurrOrder() {
         return currOrder;
     }

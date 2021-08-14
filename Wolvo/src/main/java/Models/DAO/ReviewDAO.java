@@ -41,7 +41,7 @@ public class ReviewDAO{
      * @param courier
      * @param dishRating
      * @param courierRating
-     * @param text
+     * @param dishtext
      * inserts new review in the database (called when user rates either courier, dish or restaurant after the delivery)
      */
 
@@ -109,6 +109,11 @@ public class ReviewDAO{
         return reviews;
     }
 
+    /**
+     * returns Review by order_id specified.
+     * @param order_id int type, represents order_id.
+     * @return Review type.
+     */
     public Review getByID(int order_id) {
         Review ord = null;
         try {

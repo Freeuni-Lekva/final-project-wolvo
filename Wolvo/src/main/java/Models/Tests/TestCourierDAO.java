@@ -210,4 +210,80 @@ public class TestCourierDAO extends TestCase {
             assertTrue(c.equals(couriers[i]));
         }
     }
+
+    /**
+     * tests markAsFree.
+     */
+    public void testMarkAsFree() {
+        CourierDAO CDAO = new CourierDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            CDAO.markAsFree(id[i]);
+            assertEquals(CDAO.getCourierById(id[i]).getFree().getStatus(), FREE);
+        }
+        for (int i = 0; i < 5; i++) {
+            if (isAdded[i].equals(OCCUPIED))
+                CDAO.markAsOccupied(id[i]);
+        }
+    }
+
+    /**
+     * tests markAsOccupied.
+     */
+    public void testMarkAsOccupied() {
+        CourierDAO CDAO = new CourierDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            CDAO.markAsOccupied(id[i]);
+            assertEquals(CDAO.getCourierById(id[i]).getFree().getStatus(), OCCUPIED);
+        }
+        for (int i = 0; i < 5; i++) {
+            if (isAdded[i].equals(FREE))
+                CDAO.markAsFree(id[i]);
+        }
+    }
+
+    /**
+     * tests removeCourier.
+     */
+    public void testRemoveCourier() throws SQLException {
+        CourierDAO CDAO = new CourierDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            assertNotNull(CDAO.getCourierById(id[i]));
+            CDAO.removeCourier(id[i]);
+            assertNull(CDAO.getCourierById(id[i]));
+            PreparedStatement statement = connection.prepareStatement(
+                    "insert into couriers (courier_id, email, first_name, last_name, district, password, phone_number, rating, raters, completed_orders, curr_status, add_status, curr_order) " +
+                            "values (?,?,?,?,?,?,?,?,?,?,?,?,?);");
+            statement.setInt(1, id[i]);
+            statement.setString(2, email[i]);
+            statement.setString(3,first_name[i]);
+            statement.setString(4,last_name[i]);
+            statement.setString(5,districts[i]);
+            statement.setString(6,password[i]);
+            statement.setString(7,phoneNumbers[i]);
+            statement.setFloat(8, rating[i]);
+            statement.setInt(9, raters[i]);
+            statement.setInt(10, completedOrders[i]);
+            statement.setString(11, isFree[i]);
+            statement.setString(12, isAdded[i]);
+            statement.setInt(13, currOrder[i]);
+            int j = statement.executeUpdate();
+            assertEquals(1, j);
+        }
+    }
+
+    /**
+     * tests getFreeCourier.
+     */
+    public void testGetFreeCourier() {
+        CourierDAO CDAO = new CourierDAO(connection);
+        for (String d : districts) {
+            Courier c = CDAO.getFreeCourier(d);
+            if (d == "Didube") {
+                assertNotNull(c);
+                assertEquals(c.getDistrict(), d);
+            } else {
+                assertNull(c);
+            }
+        }
+    }
 }

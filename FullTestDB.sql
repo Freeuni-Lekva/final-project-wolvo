@@ -137,7 +137,7 @@ insert into users values (2, 'tarus19@freeuni.edu.ge', 'Temur', 'Arustashvili', 
 insert into users values (3, 'achuk19@freeuni.edu.ge', 'Akaki', 'Chukhua', 'db0d9ba0b474fc1a9ce19a389f4ed37df6350b3a',
 		"Admin", "Private", 'Gldani', '3 MD Naneishvili str 20/8', '555725362');
         
-insert into users values (4,'tbabu191@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
+insert into users values (4,'tbabu19(1)@freeuni.edu.ge', 'Tsotne(1)', 'Babunashvili(1)', 'c80adfeea5a0af6d3ab04a8dba3a8769064f0d90',
 		"Customer", "Public", 'Didube', 'Dighmis Masivi V kvartali 1a','555685305');
 
 insert into users values (5, 'tarus19(1)@freeuni.edu.ge', 'Temur(1)', 'Arustashvili(1)', '5ed092a75b55d250d7cf19448ff66601d254d356', 

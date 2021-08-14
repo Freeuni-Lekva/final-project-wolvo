@@ -241,6 +241,10 @@ public class CourierDAO {
         return c;
     }
 
+    /**
+     * marks courier as free.
+     * @param courier_id int type.
+     */
     public void markAsFree(int courier_id) {
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -255,6 +259,10 @@ public class CourierDAO {
         }
     }
 
+    /**
+     * marks courier as occupied.
+     * @param courier_id int type.
+     */
     public void markAsOccupied(int courier_id) {
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -269,6 +277,10 @@ public class CourierDAO {
         }
     }
 
+    /**
+     * removes courier specified by id.
+     * @param id int type id of courier.
+     */
     public void removeCourier(int id) {
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -280,6 +292,11 @@ public class CourierDAO {
         }
     }
 
+    /**
+     * retrutns free courier from district specified.
+     * @param district String type.
+     * @return Courier type.
+     */
     public Courier getFreeCourier(String district) {
         try {
             PreparedStatement statement = connection.prepareStatement("select * from couriers where district = ?" +

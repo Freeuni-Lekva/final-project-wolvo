@@ -27,7 +27,7 @@ public class TestReviewDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=inmess10nante");
+                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
         } catch (SQLException throwables) {
         }
     }
@@ -163,4 +163,57 @@ public class TestReviewDAO extends TestCase {
         pss.executeUpdate();
     }
 
+    /**
+     * tests getByID.
+     */
+    public void testGetByID() {
+        ReviewDAO RDAO = new ReviewDAO(connection);
+        Review firstRev = new Review();
+        firstRev.setReview_id(301);
+        firstRev.setOrder_id(104);
+        firstRev.setUser(2);
+        firstRev.setDish(211);
+        firstRev.setCourier(2);
+        firstRev.setDishRating(3);
+        firstRev.setCourierRating(2);
+        firstRev.setCourierText("Fuf");
+        firstRev.setDishText("Fuf");
+        assertEquals(RDAO.getByID(104), firstRev);
+
+        Review secRev = new Review();
+        secRev.setReview_id(303);
+        secRev.setUser(4);
+        secRev.setOrder_id(106);
+        secRev.setDish(213);
+        secRev.setCourier(4);
+        secRev.setCourierRating(-1);
+        secRev.setDishRating(-1);
+        secRev.setCourierText("");
+        secRev.setDishText("");
+        assertEquals(RDAO.getByID(106), secRev);
+
+        Review thirdRev = new Review();
+        thirdRev.setReview_id(302);
+        thirdRev.setOrder_id(105);
+        thirdRev.setUser(3);
+        thirdRev.setDish(212);
+        thirdRev.setCourier(3);
+        thirdRev.setDishRating(1);
+        thirdRev.setCourierRating(1);
+        thirdRev.setCourierText("normie");
+        thirdRev.setDishText("normie");
+        assertEquals(RDAO.getByID(105), thirdRev);
+
+        Review fourthRev = new Review();
+        fourthRev.setReview_id(304);
+        fourthRev.setOrder_id(107);
+        fourthRev.setUser(5);
+        fourthRev.setDish(214);
+        fourthRev.setCourier(5);
+        fourthRev.setDishRating(5);
+        fourthRev.setCourierRating(5);
+        fourthRev.setCourierText("MAGARIA");
+        fourthRev.setDishText("MAGARIA");
+        assertEquals(RDAO.getByID(107), fourthRev);
+    }
 }

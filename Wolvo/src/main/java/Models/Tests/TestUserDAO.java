@@ -1,6 +1,7 @@
 package Models.Tests;
 
 import Models.PrivacyStatus;
+import Models.Status;
 import Models.User;
 import Models.DAO.UserDAO;
 import Models.UserStatus;
@@ -8,8 +9,11 @@ import junit.framework.TestCase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.*;
+
+import static Models.Constants.ADMIN;
 
 public class TestUserDAO extends TestCase {
     private int[] id = {1,2,3,4,5};
@@ -171,5 +175,32 @@ public class TestUserDAO extends TestCase {
         List<User> l2 = UDAO.getByName("Akaki Chukhua");
         assertEquals(1, l2.size());
         assertEquals("Akaki", l2.get(0).getFirstName());
+    }
+
+    /**
+     * tests getByID.
+     */
+    public void testGetByID() {
+        UserDAO UDAO = new UserDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            User u = UDAO.getByID(id[i]);
+            assertEquals(u, convertToUser(i));
+        }
+    }
+
+    /**
+     * tests makeAdmin.
+     */
+    public void testMakeAdmin() throws SQLException {
+        UserDAO UDAO = new UserDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            UDAO.makeAdmin(id[i]);
+            assertEquals(UDAO.getByID(id[i]).getUserStatus().getStatus(), ADMIN);
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE users set user_type = ? where user_id = ?;");
+            statement.setString(1, types[i]);
+            statement.setInt(2, id[i]);
+            statement.executeUpdate();
+        }
     }
 }

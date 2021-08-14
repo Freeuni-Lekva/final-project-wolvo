@@ -176,6 +176,11 @@ public class UserDAO {
         return l;
     }
 
+    /**
+     * returns user by specified by id.
+     * @param id int specifying id.
+     * @return User type.
+     */
     public User getByID(int id) {
         try {
             PreparedStatement statement = connection.prepareStatement("select * from users where " +
@@ -191,7 +196,11 @@ public class UserDAO {
         }
         return null;
     }
- 
+
+    /**
+     * makes id-specified user as admin.
+     * @param id int type representing user id.
+     */
     public void makeAdmin(int id) {
         try {
             PreparedStatement statement = connection.prepareStatement(

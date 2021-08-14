@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../FullTestDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullTestDB.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/CourierDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/FriendsRequestDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/FriendsRequestDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestCourierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestCourierDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestOrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/CourierDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/FriendsRequestDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/FriendsRequestDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestReview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestReviewDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestUserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestUserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/AdminPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/AdminPage_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerPage_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/login_jsp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +93,7 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
+  <component name="RunManager" selected="JUnit.TestReviewDAO.testGetByID">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -76,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestOrderDAO.testGetByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -86,43 +115,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
       <option name="MAIN_CLASS_NAME" value="Models.Tests.TestOrderDAO" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRestaurantsDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestRestaurantsDAO" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRestaurantsDAO.testGetManagerRestaurants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestRestaurantsDAO" />
-      <option name="METHOD_NAME" value="testGetManagerRestaurants" />
+      <option name="METHOD_NAME" value="testGetByID" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestReviewDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestOrderDAO.testMarkAsDelivered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestOrderDAO" />
+      <option name="METHOD_NAME" value="testMarkAsDelivered" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestReviewDAO.testGetByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -132,12 +147,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
       <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testGetByID" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUserDAO.testGetByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +163,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
       <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testGetByID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserDAO.testMakeAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
+      <option name="METHOD_NAME" value="testMakeAdmin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,20 +211,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestOrderDAO" />
-      <item itemvalue="JUnit.TestRestaurantsDAO" />
-      <item itemvalue="JUnit.TestReviewDAO" />
-      <item itemvalue="JUnit.TestUserDAO" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
-      <item itemvalue="JUnit.TestRestaurantsDAO.testGetManagerRestaurants" />
+      <item itemvalue="JUnit.TestOrderDAO.testGetByID" />
+      <item itemvalue="JUnit.TestOrderDAO.testMarkAsDelivered" />
+      <item itemvalue="JUnit.TestUserDAO.testGetByID" />
+      <item itemvalue="JUnit.TestUserDAO.testMakeAdmin" />
+      <item itemvalue="JUnit.TestReviewDAO.testGetByID" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRestaurantsDAO" />
-        <item itemvalue="JUnit.TestRestaurantsDAO.testGetManagerRestaurants" />
-        <item itemvalue="JUnit.TestUserDAO" />
-        <item itemvalue="JUnit.TestReviewDAO" />
-        <item itemvalue="JUnit.TestOrderDAO" />
+        <item itemvalue="JUnit.TestReviewDAO.testGetByID" />
+        <item itemvalue="JUnit.TestUserDAO.testMakeAdmin" />
+        <item itemvalue="JUnit.TestUserDAO.testGetByID" />
+        <item itemvalue="JUnit.TestOrderDAO.testMarkAsDelivered" />
+        <item itemvalue="JUnit.TestOrderDAO.testGetByID" />
       </list>
     </recent_temporary>
   </component>

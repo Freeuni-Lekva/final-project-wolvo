@@ -116,4 +116,33 @@ public class TestOrderDAO extends TestCase {
             }
         }
     }
+
+    /**
+     * tests markAsDelivered.
+     */
+    public void testMarkAsDelivered() throws SQLException {
+        OrderDAO ODAO = new OrderDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            ODAO.markAsDelivered(id[i]);
+            if (orderStatus[i] != NOTRECEIVE)
+                assertEquals(ODAO.getByID(id[i]).getOrderStatus().getStatus(), DELIVERED);
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE orders set order_status = ? where courier_id= ?;");
+            statement.setString(1, orderStatus[i]);
+            statement.setInt(2, id[i]);
+            statement.executeUpdate();
+        }
+    }
+
+    /**
+     * tests getByID.
+     */
+    public void testGetByID() {
+        OrderDAO ODAO = new OrderDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            Order o = ODAO.getByID(id[i]);
+            assertEquals(o, orders[i]);
+        }
+        assertEquals(null, ODAO.getByID(-1));
+    }
 }

@@ -142,6 +142,13 @@ public class FriendsRequestDAO {
         return answer;
     }
 
+    /**
+     * inserts friend request in database between user1 and user2.
+     * @param usr1 User type.
+     * @param usr2 User type.
+     * @param status Status type.
+     * @return boolean type representing if friendship inserted successfully.
+     */
     public boolean insertFriendRequest(User usr1, User usr2, Status status) {
         boolean answer = false;
         int inserted = 0;
