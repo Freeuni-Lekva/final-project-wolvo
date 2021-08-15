@@ -33,6 +33,12 @@
     <% if ("other".equals(response.getHeader("registration error"))) { %>
         <p1>                  Registration failed </p1> <br>
     <% s = "/register?" + response.getHeader("url") + "=Sign+Up+as+a+Customer"; } %>
+    <% if ("email".equals(response.getHeader("login error"))) { %>
+        <p1>                               Email not correct</p1> <br>
+    <% } %>
+    <% if ("password".equals(response.getHeader("login error"))) { %>
+        <p1>                          Password is not correct</p1> <br>
+    <% } %>
     <a href=<%=s%> >Go Back</a>
 </div>
 </body>

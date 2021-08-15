@@ -12,7 +12,6 @@ public class ErrorHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         Integer status = (Integer) httpServletRequest.getAttribute("javax.servlet.error.status_code");
-        //int status = httpServletResponse.getStatus();
         httpServletResponse.setStatus(status);
         httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
     }

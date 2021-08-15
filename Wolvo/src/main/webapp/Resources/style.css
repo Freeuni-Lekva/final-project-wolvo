@@ -17,6 +17,12 @@ errh {
     text-align: center;
 }
 
+penh {
+    font-size: 75px;
+    color: goldenrod;
+    text-align: center;
+}
+
 regf {
     font-size: 75px;
     color: goldenrod;
@@ -38,6 +44,13 @@ regs {
 
 errp {
     font-size: 350px;
+    font-family: "Informal Roman", cursive;
+    text-align: center;
+    color: brown;
+}
+
+penp {
+    font-size: 125px;
     font-family: "Informal Roman", cursive;
     text-align: center;
     color: brown;
@@ -791,6 +804,13 @@ input::-webkit-inner-spin-button {
 }
 
 .Error {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Pending {
     position: absolute;
     top: 30%;
     left: 50%;
