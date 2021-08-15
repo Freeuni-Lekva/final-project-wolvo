@@ -8,9 +8,7 @@
 <div class="reg">
     <regf>Congratulations! You have successfully signed up on Wolvo!</regf> <br>
     <regs>You can now log in to your page!</regs>
-    <form method="get" action = "/">
-        <button>log in</button>
-    </form>
+    <a href="login">Log in</a>
 </div>
 </body>
 </html>
