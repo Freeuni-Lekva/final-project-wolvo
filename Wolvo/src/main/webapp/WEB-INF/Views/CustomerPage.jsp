@@ -36,7 +36,6 @@
     <label>Your friend Requests</label> <br>
     <% List<User> userRequests = ((FriendsRequestDAO) application.getAttribute("friend_requests")).
             receivedRequets((User) session.getAttribute("customer"));
-        System.out.println(userRequests);
         if (userRequests.isEmpty()) { %>
     <label>You don't have any friend requests yet.</label>
     <% }

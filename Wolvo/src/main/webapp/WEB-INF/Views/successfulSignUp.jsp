@@ -5,11 +5,12 @@
     <title>Congratulations!</title>
 </head>
 <body>
-<h1>Congratulations! You have successfully signed up on Wolvo!</h1>
-<h2>You can now proceed to your page!</h2>
-
-<form method="get" action = "home">
-    <button>Proceed</button>
-</form>
+<div class="reg">
+    <regf>Congratulations! You have successfully signed up on Wolvo!</regf> <br>
+    <regs>You can now log in to your page!</regs>
+    <form method="get" action = "/">
+        <button>log in</button>
+    </form>
+</div>
 </body>
 </html>

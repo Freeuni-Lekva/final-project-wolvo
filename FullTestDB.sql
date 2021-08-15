@@ -107,7 +107,7 @@ create table managers (
 	first_name varchar(100) not null,
 	last_name varchar(100) not null,
 	password varchar(100) not null,
-	rest_id int not null,
+	rest_id int,
 	phone_number varchar(20) not null,
 	add_status varchar(20) not null default 'Pending'
 );

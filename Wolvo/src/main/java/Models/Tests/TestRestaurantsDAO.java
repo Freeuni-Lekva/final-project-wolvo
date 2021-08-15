@@ -158,4 +158,14 @@ public class TestRestaurantsDAO extends TestCase {
             assertEquals(r.getAdded().getStatus(), status[i]);
         }
     }
+
+    /**
+     * tests getRestaurantByManager
+     */
+    public void testGetRestaurantByManager() {
+        RestaurantDAO RDAO = new RestaurantDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            assertEquals(RDAO.getRestaurantByManager(manager_id[i]), restaurants[i]);
+        }
+    }
 }

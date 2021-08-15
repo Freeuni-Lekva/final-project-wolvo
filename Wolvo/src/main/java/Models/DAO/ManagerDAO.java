@@ -4,6 +4,7 @@ import Models.Manager;
 import Models.RequestStatus;
 import Models.Status;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.awt.image.AreaAveragingScaleFilter;
 import java.sql.*;
 import java.util.ArrayList;
@@ -46,27 +47,26 @@ public class ManagerDAO {
      * @param firstName
      * @param lastName
      * @param password
-     * @param rest_id
      * @param phoneNumber
      * @return true if the database was affected by this SQL Statement
      */
-    public boolean addManager(String email, String firstName, String lastName, String password, int rest_id,String phoneNumber) {
-        boolean added = false;
+    public boolean addManager(String email, String firstName, String lastName, String password, String phoneNumber) {
+        boolean b = true;
         try {
             PreparedStatement statement = connection.prepareStatement(
-                   "insert into managers (email, first_name, last_name, password, rest_id, phone_number) " +
-                           "values (?,?,?,?,?,?);");
+                   "insert into managers (email, first_name, last_name, password, phone_number) " +
+                           "values (?,?,?,?,?);");
             statement.setString(1, email);
             statement.setString(2,firstName);
             statement.setString(3,lastName);
             statement.setString(4,password);
-            statement.setInt(5,rest_id);
-            statement.setString(6, phoneNumber);
+            statement.setString(5, phoneNumber);
             int i = statement.executeUpdate();
-            if (i != 0) added = true;
+            if (i != 1) b = false;
         } catch (SQLException throwables) {
+            b = false;
         }
-        return added;
+        return b;
     }
 
     /**
@@ -152,7 +152,6 @@ public class ManagerDAO {
      * approves manager registration (by admin)
      * @param id
      */
-
     public void approveManager(int id) {
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -161,6 +160,23 @@ public class ManagerDAO {
             status.setStatus(APPROVED);
             statement.setString(1, status.getStatus());
             statement.setInt(2, id);
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    /**
+     * sets new rest_id to manager.
+     * @param rest_id int type.
+     * @param manager_id int type.
+     */
+    public void changeRestaurant(int rest_id, int manager_id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE managers set rest_id = ? where manager_id = ?;");
+            statement.setInt(1, rest_id);
+            statement.setInt(2, manager_id);
             statement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

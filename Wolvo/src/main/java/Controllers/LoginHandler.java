@@ -48,10 +48,14 @@ public class LoginHandler extends HttpServlet {
 
         User currentUser = userDAO.getByEmail(email);
         if (currentUser == null) {
-            return; // User not found
+            httpServletResponse.setStatus(404);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
         }
         if (!currentUser.getPassword().equals(hashedPassword(password))) {
-            return; // illegal password
+            httpServletResponse.setStatus(404);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
         }
         httpServletRequest.getSession().setAttribute("name",currentUser.getFirstName());
         httpServletRequest.getSession().setAttribute("surname",currentUser.getLastName());
@@ -70,10 +74,14 @@ public class LoginHandler extends HttpServlet {
 
         Courier currentCourier = courierDAO.getCourierByEmail(email);
         if (currentCourier == null) {
-            return; // User not found
+            httpServletResponse.setStatus(404);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
         }
         if (!currentCourier.getPassword().equals(hashedPassword(password))) {
-            return; // illegal password
+            httpServletResponse.setStatus(404);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
         }
         httpServletRequest.getSession().setAttribute("name",currentCourier.getFirstName());
         httpServletRequest.getSession().setAttribute("surname",currentCourier.getLastName());
@@ -90,10 +98,14 @@ public class LoginHandler extends HttpServlet {
         ManagerDAO managerDAO = (ManagerDAO) getServletContext().getAttribute("managers");
         Manager currentManager = managerDAO.getManagerByEmail(email);
         if (currentManager == null) {
-            return; // User not found
+            httpServletResponse.setStatus(404);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
         }
         if (!currentManager.getPassword().equals(hashedPassword(password))) {
-            return; // illegal password
+            httpServletResponse.setStatus(404);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
         }
         httpServletRequest.getSession().setAttribute("name", currentManager.getFirstName());
         httpServletRequest.getSession().setAttribute("surname", currentManager.getLastName());

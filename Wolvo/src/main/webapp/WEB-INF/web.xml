@@ -121,8 +121,22 @@
     <servlet-name>DishRejection</servlet-name>
     <url-pattern>/rejectDish</url-pattern>
   </servlet-mapping>
-
-
+  <servlet>
+    <servlet-name>DishDeletion</servlet-name>
+    <servlet-class>Controllers.DishDeletionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishDeletion</servlet-name>
+    <url-pattern>/removeDish</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DishAddition</servlet-name>
+    <servlet-class>Controllers.DishAdditionHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DishAddition</servlet-name>
+    <url-pattern>/dishRequest</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>RegisterHandler</servlet-name>
     <servlet-class>Controllers.RegisterHandler</servlet-class>
@@ -203,6 +217,36 @@
     <servlet-name>RejectRequest</servlet-name>
     <url-pattern>/rejectRequest</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ErrorHandler</servlet-name>
+    <servlet-class>Controllers.ErrorHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ErrorHandler</servlet-name>
+    <url-pattern>/ErrorPage</url-pattern>
+  </servlet-mapping>
+  <!-- error pages -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/ErrorHandler</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/ErrorHandler</location>
+  </error-page>
+  <error-page>
+    <error-code>400</error-code>
+    <location>/ErrorHandler</location>
+  </error-page>
+  <error-page>
+    <error-code>414</error-code>
+    <location>/ErrorHandler</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/ErrorHandler</location>
+  </error-page>
+  <!-- error pages end -->
   <listener>
     <listener-class>Models.Initializer</listener-class>
   </listener>

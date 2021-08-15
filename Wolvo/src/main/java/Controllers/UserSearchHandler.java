@@ -11,8 +11,10 @@ import java.io.IOException;
 public class UserSearchHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        if (!httpServletRequest.getSession().getAttribute("userType").equals("Admin") &&
+        if (!"Admin".equals(httpServletRequest.getSession().getAttribute("userType")) &&
                 !httpServletRequest.getSession().getAttribute("userType").equals("Customer")) {
+            httpServletResponse.setStatus(405);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         UserDAO users = (UserDAO) getServletContext().getAttribute("users");

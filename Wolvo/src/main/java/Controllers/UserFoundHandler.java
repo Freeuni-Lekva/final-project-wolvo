@@ -16,14 +16,16 @@ import java.io.IOException;
 public class UserFoundHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        if (!httpServletRequest.getSession().getAttribute("userType").equals("Admin") &&
+        if (!"Admin".equals(httpServletRequest.getSession().getAttribute("userType")) &&
                 !httpServletRequest.getSession().getAttribute("userType").equals("Customer")) {
+            httpServletResponse.setStatus(405);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         User user = ((UserDAO) getServletContext().getAttribute("users")).
                 getByID(Integer.parseInt(httpServletRequest.getParameter("id")));
         httpServletRequest.setAttribute("foundUser",user);
-        if (httpServletRequest.getSession().getAttribute("userType").equals("Admin")) {
+        if ("Admin".equals(httpServletRequest.getSession().getAttribute("userType"))) {
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/UserPOVAdmin.jsp").forward(httpServletRequest, httpServletResponse);
         }   else {
             FriendsDAO friendsDAO = (FriendsDAO) ((getServletContext().getAttribute("friends")));

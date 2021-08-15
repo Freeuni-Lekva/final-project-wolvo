@@ -11,12 +11,18 @@ public class HomeHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         String userType = (String) httpServletRequest.getSession().getAttribute("userType");
-        HashMap<String,String> respectivePages = new HashMap<>();
-        respectivePages.put("Admin","WEB-INF/Views/AdminPage.jsp");
-        respectivePages.put("Customer","WEB-INF/Views/CustomerPage.jsp");
-        respectivePages.put("Manager","WEB-INF/Views/ManagerPage.jsp");
-        respectivePages.put("Courier","WEB-INF/Views/CourierPage.jsp");
-        httpServletRequest.getRequestDispatcher(respectivePages.get(userType)).
-                forward(httpServletRequest,httpServletResponse);
+        if (userType == null) {
+            httpServletResponse.setStatus(400);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
+        } else {
+            HashMap<String, String> respectivePages = new HashMap<>();
+            respectivePages.put("Admin", "WEB-INF/Views/AdminPage.jsp");
+            respectivePages.put("Customer", "WEB-INF/Views/CustomerPage.jsp");
+            respectivePages.put("Manager", "WEB-INF/Views/ManagerPage.jsp");
+            respectivePages.put("Courier", "WEB-INF/Views/CourierPage.jsp");
+            httpServletRequest.getRequestDispatcher(respectivePages.get(userType)).
+                    forward(httpServletRequest, httpServletResponse);
+        }
     }
 }

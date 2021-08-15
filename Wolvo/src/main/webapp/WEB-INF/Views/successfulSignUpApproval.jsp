@@ -5,8 +5,9 @@
     <title>Congratulations!</title>
 </head>
 <body>
-<h1>Congratulations! You have successfully signed up on Wolvo!</h1>
-<h2>Your request is pending to get approved by administration!</h2>
-
-<a href="/">Go Back to Main Page</a></body>
+<div class="reg">
+    <regf>Congratulations! You have successfully signed up on Wolvo!</regf> <br>
+    <regs>Your request is pending to get approved by administration!</regs> <br>
+    <a href="/">Go Back to Main Page</a></body>
+</div>
 </html>
