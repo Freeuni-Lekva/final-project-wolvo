@@ -23,7 +23,7 @@
     <a href = "orderDish?id=<%=dish.getDish_id()%>">Order</a> <br>
     <% } %>
     <% }%>
-    <a href="login">Go Back to My Page</a>
 </div>
+<a href="login">Go Back to My Page</a>
 </body>
 </html>

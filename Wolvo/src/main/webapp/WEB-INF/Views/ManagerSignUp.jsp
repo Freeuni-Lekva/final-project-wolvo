@@ -38,5 +38,6 @@
         <input type = "submit" id = "signUpManBut" name = "signUpManPressed" value="Sign Up">
     </form>
 </div>
+<a href="/" >Go Back</a>
 </body>
 </html>

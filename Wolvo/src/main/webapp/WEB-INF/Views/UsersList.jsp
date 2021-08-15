@@ -20,5 +20,6 @@
   <% }
    %>
 </div>
+<a href="login">Go Back to My Page</a>
 </body>
 </html>

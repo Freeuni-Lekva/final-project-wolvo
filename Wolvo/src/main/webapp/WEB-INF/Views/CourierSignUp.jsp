@@ -34,5 +34,6 @@
         <input type = "submit" id = "signUpCourBut" name = "signUpCourPressed" value="Sign Up">
     </form>
 </div>
+<a href="/" >Go Back</a>
 </body>
 </html>

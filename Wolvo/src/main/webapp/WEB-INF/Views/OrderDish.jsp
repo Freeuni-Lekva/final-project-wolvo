@@ -31,5 +31,6 @@
         <input type="submit" value="Order" id = "orderBut" name = "custReg"/>
     </form>
 </div>
+<a href="login">Go Back to My Page</a>
 </body>
 </html>
