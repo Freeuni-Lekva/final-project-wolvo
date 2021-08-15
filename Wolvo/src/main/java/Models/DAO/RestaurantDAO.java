@@ -1,9 +1,9 @@
 package Models.DAO;
 
-import Models.CourierStatus;
 import Models.RequestStatus;
 import Models.Restaurant;
 import Models.Status;
+
 import static Models.Constants.*;
 
 import java.sql.*;
@@ -62,7 +62,8 @@ public class RestaurantDAO{
      * Inserts new restaurant in the database with data received as a parameters
      */
 
-    public void addRestaurant(String name, int manager, String district, String address){
+    public boolean addRestaurant(String name, int manager, String district, String address){
+        boolean b = true;
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "insert into restaurants (manager_id, name, district, address, rating, raters, add_status) values (?,?,?,?,?,?,?);");
@@ -73,10 +74,12 @@ public class RestaurantDAO{
             statement.setFloat(5, 0F);
             statement.setInt(6, 0);
             statement.setString(7, PENDING);
-            statement.executeUpdate();
+            int i = statement.executeUpdate();
+            if (i != 1) b = false;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        return b;
     }
 
     /**
@@ -155,5 +158,24 @@ public class RestaurantDAO{
         r.setAdded(status);
         r.setRaters(rs.getInt("raters"));
         return r;
+    }
+
+    /**
+     * returns restaurant by manager id.
+     * @param manager_id int type.
+     * @return Restaurant type.
+     */
+    public Restaurant getRestaurantByManager(int manager_id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from restaurants where manager_id = ?");
+            statement.setInt(1,manager_id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return convertToRestaurant(resultSet);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
     }
 }

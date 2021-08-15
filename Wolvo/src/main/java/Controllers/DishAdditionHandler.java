@@ -11,6 +11,11 @@ import java.io.IOException;
 public class DishAdditionHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        if (!"Manager".equals(httpServletRequest.getSession().getAttribute("userType"))) {
+            httpServletResponse.setStatus(405);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
+        }
         String name = httpServletRequest.getParameter("name");
         int restaurant = Integer.valueOf(httpServletRequest.getParameter("restaurant"));
         String category = httpServletRequest.getParameter("category");

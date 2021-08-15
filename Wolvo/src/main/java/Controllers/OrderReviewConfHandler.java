@@ -15,7 +15,9 @@ import java.io.IOException;
 public class OrderReviewConfHandler extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        if (!httpServletRequest.getSession().getAttribute("userType").equals("Customer")) {
+        if (!"Customer".equals(httpServletRequest.getSession().getAttribute("userType"))) {
+            httpServletResponse.setStatus(405);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         Order ord = ((OrderDAO) getServletContext().getAttribute("orders")).

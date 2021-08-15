@@ -14,7 +14,9 @@ import java.io.IOException;
 public class ConfirmRequestHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        if (!httpServletRequest.getSession().getAttribute("userType").equals("Customer")) {
+        if (!"Customer".equals(httpServletRequest.getSession().getAttribute("userType"))) {
+            httpServletResponse.setStatus(405);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         User usrTo = (User) httpServletRequest.getSession().getAttribute("customer");
@@ -22,6 +24,8 @@ public class ConfirmRequestHandler extends HttpServlet {
                 getByID(Integer.parseInt(httpServletRequest.getParameter("id")));
         FriendsRequestDAO friendsRequestDAO = (FriendsRequestDAO) getServletContext().getAttribute("friend_requests");
         if (!friendsRequestDAO.receivedRequets(usrTo).contains(userFrom)) {
+            httpServletResponse.setStatus(410);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         FriendsDAO friendsDAO = (FriendsDAO) getServletContext().getAttribute("friends");

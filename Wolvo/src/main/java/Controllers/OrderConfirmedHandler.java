@@ -16,6 +16,11 @@ public class OrderConfirmedHandler extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        if (!"Courier".equals(httpServletRequest.getSession().getAttribute("userType"))) {
+            httpServletResponse.setStatus(405);
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
+        }
         OrderDAO orders = (OrderDAO) getServletContext().getAttribute("orders");
         orders.markAsDelivered(((Courier) httpServletRequest.getSession().getAttribute("courier")).getId());
         Courier courier = (Courier) httpServletRequest.getSession().getAttribute("courier");

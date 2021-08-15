@@ -28,6 +28,8 @@
             <option value="Varketili">Varketili</option>
             <option value="Digomi">Digomi</option>
         </select> <br> <br>
+        <label for = "nameRest">Restaurant name:    </label>
+        <input type = "text" id = "nameRest" required="required" name = "nameRest"/> <br> <br>
         <label for = "addressMan">Restaurant address:</label>
         <input type = "text" id = "addressMan" required="required" name = "AddressMan"/> <br> <br>
         <Label for = "phonenumberMan">Phone number:        </Label>

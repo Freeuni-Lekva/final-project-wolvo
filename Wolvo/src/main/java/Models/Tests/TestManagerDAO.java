@@ -6,6 +6,7 @@ import Models.RequestStatus;
 import Models.Status;
 import junit.framework.TestCase;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -98,13 +99,15 @@ public class TestManagerDAO extends TestCase {
     public void testAddApprove() throws SQLException {
         ManagerDAO managerDAO = new ManagerDAO(connection);
         assertNull(managerDAO.getManagerByEmail("test@test"));
-        assert(managerDAO.addManager("test@test","test","test","testp",0,"44"));
+        boolean k = managerDAO.addManager("test@test","test","test","testp","44");
+        assertTrue(k);
         PreparedStatement statement = connection.prepareStatement("delete from managers where email =?;");
         statement.setString(1,"test@test");
         int i = statement.executeUpdate();
         assertEquals(1, i);
         assertNull(managerDAO.getManagerByEmail("test@test"));
-        assert(managerDAO.addManager("test@test","test","test","testp",0,"44"));
+        boolean k1 = managerDAO.addManager("test@test","test","test","testp","44");
+        assertTrue(k1);
         Manager manager = managerDAO.getManagerByEmail("test@test");
         assertNotNull(manager);
         managerDAO.approveManager(manager.getId());
@@ -130,9 +133,24 @@ public class TestManagerDAO extends TestCase {
         Status status = new RequestStatus();
         manager.setAddStatus(status);
         assertEquals(managersearch,manager);
-        assert(managerDAO.addManager("test@test","test","test","ttt",0,"123"));
+        boolean k = managerDAO.addManager("test@test","test","test","ttt","123");
+        assertTrue(k);
         Manager man = managerDAO.getManagerByEmail("test@test");
         managerDAO.removeManager(man.getId());
         assertNull(managerDAO.getManagerByEmail("test@test"));
+    }
+
+    /**
+     * changes manager restaurant.
+     */
+    public void testChangeRestaurant() {
+        ManagerDAO MDAO = new ManagerDAO(connection);
+        for (int i = 0; i < 5; i++) {
+            assertEquals(MDAO.getManagerByID(ids[i]).getRest_id(), rest_ids[i]);
+            MDAO.changeRestaurant(rest_ids[(i + 1) % 5], ids[i]);
+            assertEquals(MDAO.getManagerByID(ids[i]).getRest_id(), rest_ids[(i + 1) % 5]);
+            MDAO.changeRestaurant(rest_ids[i], ids[i]);
+            assertEquals(MDAO.getManagerByID(ids[i]).getRest_id(), rest_ids[i]);
+        }
     }
 }
