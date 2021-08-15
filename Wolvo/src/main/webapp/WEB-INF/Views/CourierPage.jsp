@@ -27,17 +27,25 @@
     %>
     <label>You don't have any reviews.</label>
     <% }
-    else { %>
-    <% for (Review review : courRevs) { %>
+    else { boolean b = false;%>
+    <% for (Review review : courRevs) {
+        if (review.getCourierRating() != -1 || !"".equals(review.getCourierText())) { b = true;
+    %>
     <label>User <%= ((UserDAO) application.getAttribute("users")).
             getByID(review.getUser()).getFirstName()%> 
         <%= ((UserDAO) application.getAttribute("users")).
-                getByID(review.getUser()).getLastName()%> gave you a <%=review.getCourierRating()%>  out of 5! </label> <br>
-    <label>User also made a comment: <%=review.getCourierText()%></label>
-    <% } %>
-    <%
-        }
-    %>
+                getByID(review.getUser()).getLastName()%>  </label>
+                <% if (review.getCourierRating() != -1) %>
+                    <label>gave you a <%=review.getCourierRating()%>  out of 5!</label> <br>
+                <% if (!"".equals(review.getCourierText())) %>
+                    <label>User made a comment: <%=review.getCourierText()%></label>
+            <%}%>
+        <%}
+          if (b == false) { %>
+                <label>You don't have any reviews.</label>
+          <% }
+        %>
+    <%}%>
 </div>
 <div class = "currentOrder">
     <% if (((Courier) session.getAttribute("courier")).getFree().getStatus().equals("Free")) { %>

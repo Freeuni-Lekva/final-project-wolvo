@@ -5,16 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../FullDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullDB.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderReviewConfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderReviewConfHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestOrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestReviewDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CourierPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/successfulSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/successfulSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ApproveManager_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ApproveManager_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerSignUp_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ErrorPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ErrorPage_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerSignUp_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UsersList_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UsersList_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UsersList_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UsersList_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUpApproval_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUpApproval_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/OrderReviewConfHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/OrderReviewConfHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/OrderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestOrderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-15" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-15" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/AllOccupied_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/AllOccupied_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ApproveCourier_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ApproveCourier_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ApproveDish_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ApproveDish_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ConfirmedDishApproval_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ConfirmedDishApproval_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ConfirmedManagerApproval_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ConfirmedManagerApproval_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierRejection_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierRejection_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierSignUp_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/OrderDish_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/OrderDish_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/OrderRestaurant_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/OrderRestaurant_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/RequestSent_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/RequestSent_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVAdmin_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVAdmin_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVAdmin_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVAdmin_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVUser_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVUser_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVUser_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UserPOVUser_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/confirmedOrder_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/confirmedOrder_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +69,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1wBwI5KxugkRbA3d4qkYPFtBXLS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -77,7 +101,7 @@
       <recent name="C:\Users\tsotn\OneDrive\Desktop\OOP Project\final-project-wolvo\Wolvo\src\main\webapp\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Wolvo [tomcat7:run]">
+  <component name="RunManager" selected="JUnit.TestUserDAO">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -91,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCourierDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +124,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestCourierDAO" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReview" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCourierDAO.testMarkAsFree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReviewDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -115,45 +139,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestCourierDAO" />
-      <option name="METHOD_NAME" value="testMarkAsFree" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCourierDAO.testMarkAsOccupied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestCourierDAO" />
-      <option name="METHOD_NAME" value="testMarkAsOccupied" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Wolvo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestOrderDAO" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestReviewDAO" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestOrderDAO.testGetCouriersCurrentOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Wolvo" />
       <extension name="coverage">
         <pattern>
@@ -162,9 +154,38 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Models.Tests" />
-      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestOrderDAO" />
-      <option name="METHOD_NAME" value="testGetCouriersCurrentOrder" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestStatus" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUser" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wolvo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Models.Tests.TestUserDAO" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,20 +216,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestCourierDAO" />
-      <item itemvalue="JUnit.TestCourierDAO.testMarkAsOccupied" />
-      <item itemvalue="JUnit.TestCourierDAO.testMarkAsFree" />
-      <item itemvalue="JUnit.TestOrderDAO" />
-      <item itemvalue="JUnit.TestOrderDAO.testGetCouriersCurrentOrder" />
       <item itemvalue="Maven.Wolvo [tomcat7:run]" />
+      <item itemvalue="JUnit.TestReview" />
+      <item itemvalue="JUnit.TestReviewDAO" />
+      <item itemvalue="JUnit.TestStatus" />
+      <item itemvalue="JUnit.TestUser" />
+      <item itemvalue="JUnit.TestUserDAO" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestOrderDAO" />
-        <item itemvalue="JUnit.TestOrderDAO.testGetCouriersCurrentOrder" />
-        <item itemvalue="JUnit.TestCourierDAO" />
-        <item itemvalue="JUnit.TestCourierDAO.testMarkAsOccupied" />
-        <item itemvalue="JUnit.TestCourierDAO.testMarkAsFree" />
+        <item itemvalue="JUnit.TestUserDAO" />
+        <item itemvalue="JUnit.TestUser" />
+        <item itemvalue="JUnit.TestStatus" />
+        <item itemvalue="JUnit.TestReviewDAO" />
+        <item itemvalue="JUnit.TestReview" />
       </list>
     </recent_temporary>
   </component>
@@ -252,28 +273,31 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequest.ic" NAME="TestFriendRequest Coverage Results" MODIFIED="1629039507829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequest.ic" NAME="TestFriendRequest Coverage Results" MODIFIED="1629066990489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestManagerDAO.ic" NAME="TestManagerDAO Coverage Results" MODIFIED="1629039566040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestManagerDAO.ic" NAME="TestManagerDAO Coverage Results" MODIFIED="1629067050103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestDishDAO.ic" NAME="TestDishDAO Coverage Results" MODIFIED="1629039485942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestDishDAO.ic" NAME="TestDishDAO Coverage Results" MODIFIED="1629066978560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestFriendsDAO.ic" NAME="TestFriendsDAO Coverage Results" MODIFIED="1629039545852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendsDAO.ic" NAME="TestFriendsDAO Coverage Results" MODIFIED="1629067032541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestFriends.ic" NAME="TestFriends Coverage Results" MODIFIED="1629039534959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriends.ic" NAME="TestFriends Coverage Results" MODIFIED="1629067011114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequestDAO.ic" NAME="TestFriendRequestDAO Coverage Results" MODIFIED="1629039519827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestFriendRequestDAO.ic" NAME="TestFriendRequestDAO Coverage Results" MODIFIED="1629066999062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestOrderDAO_testMarkAsDelivered.ic" NAME="TestOrderDAO.testMarkAsDelivered Coverage Results" MODIFIED="1629067070902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO.ic" NAME="TestUserDAO Coverage Results" MODIFIED="1629039712781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestDish.ic" NAME="TestDish Coverage Results" MODIFIED="1629039156972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestDish.ic" NAME="TestDish Coverage Results" MODIFIED="1629066968145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Wolvo$TestOrderDAO.ic" NAME="TestOrderDAO Coverage Results" MODIFIED="1629041151148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -282,25 +306,25 @@
     <SUITE FILE_PATH="coverage/Wolvo$TestDishDAO_testAddApproveUpdate.ic" NAME="TestDishDAO.testAddApproveUpdate Coverage Results" MODIFIED="1628696055866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestCourier.ic" NAME="TestCourier Coverage Results" MODIFIED="1629038000652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestCourier.ic" NAME="TestCourier Coverage Results" MODIFIED="1629066838369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestRestaurantsDAO.ic" NAME="TestRestaurantsDAO Coverage Results" MODIFIED="1629039649092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestRestaurantsDAO.ic" NAME="TestRestaurantsDAO Coverage Results" MODIFIED="1629067092085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestOrder.ic" NAME="TestOrder Coverage Results" MODIFIED="1629039597057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Models.Tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestRestaurant.ic" NAME="TestRestaurant Coverage Results" MODIFIED="1629039641089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Models.Tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestReviewDAO.ic" NAME="TestReviewDAO Coverage Results" MODIFIED="1629039675514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestOrder.ic" NAME="TestOrder Coverage Results" MODIFIED="1629067060480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Wolvo$TestUser.ic" NAME="TestUser Coverage Results" MODIFIED="1629039700795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestManager.ic" NAME="TestManager Coverage Results" MODIFIED="1629039556121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestRestaurant.ic" NAME="TestRestaurant Coverage Results" MODIFIED="1629067082118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestReviewDAO.ic" NAME="TestReviewDAO Coverage Results" MODIFIED="1629067404621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Models.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Wolvo$TestManager.ic" NAME="TestManager Coverage Results" MODIFIED="1629067042316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Wolvo$TestStatus.ic" NAME="TestStatus Coverage Results" MODIFIED="1629039690264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -312,10 +336,10 @@
     <SUITE FILE_PATH="coverage/Wolvo$TestUserDAO_testGetByName.ic" NAME="TestUserDAO.testGetByName Coverage Results" MODIFIED="1628704155587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestReview.ic" NAME="TestReview Coverage Results" MODIFIED="1629039659625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestReview.ic" NAME="TestReview Coverage Results" MODIFIED="1629067103789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Wolvo$TestCourierDAO.ic" NAME="TestCourierDAO Coverage Results" MODIFIED="1629040344810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Wolvo$TestCourierDAO.ic" NAME="TestCourierDAO Coverage Results" MODIFIED="1629066955390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Models.Tests.*</FILTER>
     </SUITE>
   </component>

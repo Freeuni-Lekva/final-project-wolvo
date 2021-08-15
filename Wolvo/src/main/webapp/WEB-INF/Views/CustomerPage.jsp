@@ -43,8 +43,8 @@
         for (User user : userRequests) { %>
     <label><%=user.getFirstName()%> <%=user.getLastName()%></label> <br>
     <a href="userFound?id=<%=user.getId()%>">See Profile</a>
-    <a href="RequestApproved"> Accept </a>
-    <a href="RequestRejected"> Reject </a> <br>
+    <a href="confirmRequest?id=<%=user.getId()%>"> Accept </a>
+    <a href="rejectRequest?id=<%=user.getId()%>"> Reject </a> <br>
     <% }
     }  %>
 </div>

@@ -29,7 +29,7 @@ public class OrderReviewConfHandler extends HttpServlet {
 
         int dishrev = -1;
         if (httpServletRequest.getParameter("reviewDish") != null) {
-            courrev = Integer.parseInt(httpServletRequest.getParameter("reviewDish"));
+            dishrev = Integer.parseInt(httpServletRequest.getParameter("reviewDish"));
         }
 
         String courstr = "";

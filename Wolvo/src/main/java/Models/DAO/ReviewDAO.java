@@ -22,7 +22,7 @@ public class ReviewDAO{
         List<Review> reviews = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select * from reviews where dish_id = ? " +
-                    "and dish_id is not null and dish_id != 0;");
+                    "and dish_review is not null and dish_id != -1;");
             statement.setInt(1, dish.getDish_id());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -99,7 +99,7 @@ public class ReviewDAO{
         List<Review> reviews = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select * from reviews where courier_id = ? " +
-                    "and courier_rating is not null and courier_rating != 0;");
+                    "and courier_review is not null and courier_rating != -1;");
             statement.setInt(1, courier.getId());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {

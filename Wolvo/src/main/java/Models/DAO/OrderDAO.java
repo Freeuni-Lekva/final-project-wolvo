@@ -1,6 +1,7 @@
 package Models.DAO;
 
 import Models.*;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
 
 import java.sql.*;
 import java.util.*;
@@ -138,10 +139,11 @@ public class OrderDAO {
     public void markAsDelivered(int courier_id) {
         try {
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE orders set order_status = ? where courier_id=? and order_status = ?;");
+                    "UPDATE orders set order_status = ?, receive_date = ? where courier_id=? and order_status = ?;");
             statement.setString(1,"Delivered");
-            statement.setInt(2, courier_id);
-            statement.setString(3,"OnWay");
+            statement.setTimestamp(2, new Timestamp(new Date().getTime()));
+            statement.setInt(3, courier_id);
+            statement.setString(4,"OnWay");
             statement.executeUpdate();
             statement = connection.prepareStatement("select * from orders where courier_id = ? and order_status = ?;");
             statement.setInt(1,courier_id);
@@ -152,7 +154,6 @@ public class OrderDAO {
             CourierDAO courierDAO = new CourierDAO(connection);
             courierDAO.markAsFree(currOrder.getCourier());
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
     }
 

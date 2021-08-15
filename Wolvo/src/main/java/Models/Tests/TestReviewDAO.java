@@ -145,7 +145,7 @@ public class TestReviewDAO extends TestCase {
         revs = reviewDAO.getCourierReviews(courierDAO.getCourierByEmail("test@test.com"));
         assertEquals(1,revs.size());
         Review review = new Review();
-        review.setReview_id(305);
+        review.setReview_id(0);
         review.setOrder_id(239);
         review.setUser(userDAO.getByEmail("tarus19@freeuni.edu.ge").getId());
         review.setCourier(courierDAO.getCourierByEmail("test@test.com").getId());
@@ -154,7 +154,9 @@ public class TestReviewDAO extends TestCase {
         review.setCourierRating(2);
         review.setCourierText("cool");
         review.setDishText("cool");
-        assertEquals(review,revs.get(0));
+        Review review1 = revs.get(0);
+        review1.setReview_id(0);
+        assertEquals(review,review1);
         PreparedStatement ps = connection.prepareStatement("delete from couriers where email = \"test@test.com\";");
         ps.executeUpdate();
         PreparedStatement pss = connection.prepareStatement("delete from reviews where dish_id = 212 and user_id = ? and courier_id = ?;");

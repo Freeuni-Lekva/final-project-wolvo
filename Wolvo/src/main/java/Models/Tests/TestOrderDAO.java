@@ -127,9 +127,10 @@ public class TestOrderDAO extends TestCase {
             if (orderStatus[i] != NOTRECEIVE)
                 assertEquals(ODAO.getByID(id[i]).getOrderStatus().getStatus(), DELIVERED);
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE orders set order_status = ? where courier_id= ?;");
+                    "UPDATE orders set order_status = ?, receive_date = ? where courier_id= ?;");
             statement.setString(1, orderStatus[i]);
-            statement.setInt(2, courier[i]);
+            statement.setTimestamp(2, receiveDate[i]);
+            statement.setInt(3, courier[i]);
             statement.executeUpdate();
         }
     }
