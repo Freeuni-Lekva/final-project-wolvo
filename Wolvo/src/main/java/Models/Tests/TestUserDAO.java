@@ -38,7 +38,7 @@ public class TestUserDAO extends TestCase {
         }
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+                    "jdbc:mysql://localhost/wolvo_test_db?user=root&password=root");
         } catch (SQLException throwables) {
         }
     }

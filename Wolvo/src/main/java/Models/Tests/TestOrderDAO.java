@@ -40,7 +40,7 @@ public class TestOrderDAO extends TestCase {
     protected void setUp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+                "jdbc:mysql://localhost/wolvo_test_db?user=root&password=root");
         orders = new Order[5];
         for (int i = 0; i < 5; i++) {
             orders[i] = new Order();
@@ -123,13 +123,13 @@ public class TestOrderDAO extends TestCase {
     public void testMarkAsDelivered() throws SQLException {
         OrderDAO ODAO = new OrderDAO(connection);
         for (int i = 0; i < 5; i++) {
-            ODAO.markAsDelivered(id[i]);
+            ODAO.markAsDelivered(courier[i]);
             if (orderStatus[i] != NOTRECEIVE)
                 assertEquals(ODAO.getByID(id[i]).getOrderStatus().getStatus(), DELIVERED);
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE orders set order_status = ? where courier_id= ?;");
             statement.setString(1, orderStatus[i]);
-            statement.setInt(2, id[i]);
+            statement.setInt(2, courier[i]);
             statement.executeUpdate();
         }
     }

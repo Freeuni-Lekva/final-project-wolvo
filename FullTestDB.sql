@@ -1,8 +1,8 @@
-drop database if exists wolvo_db;
+drop database if exists wolvo_test_db;
 
-create database wolvo_db;
+create database wolvo_test_db;
 
-use wolvo_db;
+use wolvo_test_db;
 
 drop table if exists users;
 
@@ -197,9 +197,9 @@ insert into orders
 insert into orders
 	values (104, 2, 211, '2009-11-11 13:23:44', '2009-11-11 14:23:44', 'Delivered', 'Saburtalo', 2, 'Fanjikidze str 22a/26', 100);
 insert into orders
-	values (105, 3, 212, '2010-11-11 13:23:44', '2010-11-11 14:23:44', 'Delivered', 'Gldani', 3, '3 MD Naneishvili str 20/8', 3);
+	values (105, 3, 212, '2010-11-11 13:23:44', '2010-11-11 14:23:44', 'OnWay', 'Gldani', 3, '3 MD Naneishvili str 20/8', 3);
 insert into orders
-	values (106, 4, 213, '2011-11-11 13:23:44', '2011-11-11 13:30:44', 'Delivered', 'Didube', 4, 'Dighmis Masivi V kvartali 1a', 1);
+	values (106, 4, 213, '2011-11-11 13:23:44', '2011-11-11 13:30:44', 'NotReceive', 'Didube', 4, 'Dighmis Masivi V kvartali 1a', 1);
 insert into orders
 	values (107, 5, 214, '2012-11-11 13:23:44', '2013-11-11 13:23:44', 'Delivered', 'Saburtalo', 5, 'Fanjikidze str 22a/26', 1);
 

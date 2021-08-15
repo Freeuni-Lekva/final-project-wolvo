@@ -34,7 +34,7 @@ public class TestRestaurantsDAO extends TestCase {
     @Override
     protected void setUp() throws Exception {
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+                "jdbc:mysql://localhost/wolvo_test_db?user=root&password=root");
         restaurants = new Restaurant[5];
         for (int i = 0; i < 5; i++) {
             restaurants[i] = new Restaurant();

@@ -33,7 +33,7 @@ public class TestFriendRequestDAO extends TestCase {
     protected void setUp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+                "jdbc:mysql://localhost/wolvo_test_db?user=root&password=root");
         users = new User[5];
         for (int i = 0; i < 5; i++) {
             User usr = new User();

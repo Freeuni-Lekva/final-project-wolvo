@@ -39,7 +39,7 @@ public class TestCourierDAO extends TestCase {
     protected void setUp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-            "jdbc:mysql://localhost/wolvo_db?user=root&password=root");
+            "jdbc:mysql://localhost/wolvo_test_db?user=root&password=root");
         couriers = new Courier[5];
         for (int i = 0; i < 5; i++) {
             couriers[i] = new Courier();
@@ -221,7 +221,7 @@ public class TestCourierDAO extends TestCase {
             assertEquals(CDAO.getCourierById(id[i]).getFree().getStatus(), FREE);
         }
         for (int i = 0; i < 5; i++) {
-            if (isAdded[i].equals(OCCUPIED))
+            if (isFree[i].equals(OCCUPIED))
                 CDAO.markAsOccupied(id[i]);
         }
     }
@@ -236,7 +236,7 @@ public class TestCourierDAO extends TestCase {
             assertEquals(CDAO.getCourierById(id[i]).getFree().getStatus(), OCCUPIED);
         }
         for (int i = 0; i < 5; i++) {
-            if (isAdded[i].equals(FREE))
+            if (isFree[i].equals(FREE))
                 CDAO.markAsFree(id[i]);
         }
     }
@@ -278,7 +278,7 @@ public class TestCourierDAO extends TestCase {
         CourierDAO CDAO = new CourierDAO(connection);
         for (String d : districts) {
             Courier c = CDAO.getFreeCourier(d);
-            if (d == "Didube") {
+            if ("Didube".equals(d)) {
                 assertNotNull(c);
                 assertEquals(c.getDistrict(), d);
             } else {
