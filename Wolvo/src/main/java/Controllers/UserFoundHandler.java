@@ -17,7 +17,7 @@ public class UserFoundHandler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         if (!"Admin".equals(httpServletRequest.getSession().getAttribute("userType")) &&
-                !httpServletRequest.getSession().getAttribute("userType").equals("Customer")) {
+                !"Customer".equals(httpServletRequest.getSession().getAttribute("userType"))) {
             httpServletResponse.setStatus(405);
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
@@ -31,14 +31,24 @@ public class UserFoundHandler extends HttpServlet {
             FriendsDAO friendsDAO = (FriendsDAO) ((getServletContext().getAttribute("friends")));
             FriendsRequestDAO friendsRequestDAO = (FriendsRequestDAO) (getServletContext().getAttribute("friend_requests"));
             if (friendsDAO.getFriends((User) httpServletRequest.getSession().getAttribute("customer")).contains(user)) {
-                httpServletRequest.setAttribute("arefriends", 1);
+                httpServletRequest.setAttribute("areFriends", 1);
             }   else {
-                httpServletRequest.setAttribute("arefriends",0);
+                httpServletRequest.setAttribute("areFriends",0);
             }
             if (friendsRequestDAO.receivedRequets((User) httpServletRequest.getSession().getAttribute("customer")).contains(user)) {
-                httpServletRequest.setAttribute("hasRequest",1);
+                httpServletRequest.setAttribute("hasRequestReceived",1);
             }   else {
-                httpServletRequest.setAttribute("hasRequest",0);
+                httpServletRequest.setAttribute("hasRequestReceived",0);
+            }
+            if (friendsRequestDAO.sentRequests((User) httpServletRequest.getSession().getAttribute("customer")).contains(user)) {
+                httpServletRequest.setAttribute("hasRequestSent",1);
+            }   else {
+                httpServletRequest.setAttribute("hasRequestSent",0);
+            }
+            if (((User) httpServletRequest.getSession().getAttribute("customer")).equals(user)) {
+                httpServletRequest.setAttribute("searchSelf",1);
+            }   else {
+                httpServletRequest.setAttribute("searchSelf",0);
             }
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/UserPOVUser.jsp").forward(httpServletRequest,httpServletResponse);
         }

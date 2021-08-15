@@ -42,7 +42,9 @@
     else {
         for (User user : userRequests) { %>
     <label><%=user.getFirstName()%> <%=user.getLastName()%></label> <br>
-    <a href="userFound?id=<%=user.getId()%>">See Profile</a> <br>
+    <a href="userFound?id=<%=user.getId()%>">See Profile</a>
+    <a href="RequestApproved"> Accept </a>
+    <a href="RequestRejected"> Reject </a> <br>
     <% }
     }  %>
 </div>

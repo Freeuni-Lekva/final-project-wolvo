@@ -24,7 +24,7 @@ public class SendRequestHandler extends HttpServlet {
         FriendsRequestDAO friendsRequestDAO = (FriendsRequestDAO) (getServletContext().getAttribute("friend_requests"));
         Status rq = new RequestStatus();
         rq.setStatus(Constants.PENDING);
-        friendsRequestDAO.insertFriendRequest(user,userFrom,rq);
+        friendsRequestDAO.insertFriendRequest(userFrom,user,rq);
         httpServletRequest.getRequestDispatcher("WEB-INF/Views/RequestSent.jsp").forward(httpServletRequest,httpServletResponse);
     }
 }
