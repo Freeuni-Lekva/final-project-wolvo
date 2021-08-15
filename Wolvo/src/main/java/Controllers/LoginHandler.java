@@ -7,6 +7,7 @@ import Models.DAO.OrderDAO;
 import Models.Manager;
 import Models.User;
 import Models.DAO.UserDAO;
+import static Models.Constants.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -48,12 +49,12 @@ public class LoginHandler extends HttpServlet {
 
         User currentUser = userDAO.getByEmail(email);
         if (currentUser == null) {
-            httpServletResponse.setStatus(404);
+            httpServletResponse.setStatus(400);
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         if (!currentUser.getPassword().equals(hashedPassword(password))) {
-            httpServletResponse.setStatus(404);
+            httpServletResponse.setStatus(400);
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
@@ -61,7 +62,6 @@ public class LoginHandler extends HttpServlet {
         httpServletRequest.getSession().setAttribute("surname",currentUser.getLastName());
         httpServletRequest.getSession().setAttribute("customer",currentUser);
         httpServletRequest.getSession().setAttribute("userType",currentUser.getUserStatus().getStatus());
-        System.out.println("WEB-INF/Views/" + currentUser.getUserStatus().getStatus() + "Page.jsp");
         httpServletRequest.getRequestDispatcher("WEB-INF/Views/" + currentUser.getUserStatus().getStatus() + "Page.jsp")
                 .forward(httpServletRequest,httpServletResponse);
 
@@ -74,13 +74,17 @@ public class LoginHandler extends HttpServlet {
 
         Courier currentCourier = courierDAO.getCourierByEmail(email);
         if (currentCourier == null) {
-            httpServletResponse.setStatus(404);
+            httpServletResponse.setStatus(400);
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         if (!currentCourier.getPassword().equals(hashedPassword(password))) {
-            httpServletResponse.setStatus(404);
+            httpServletResponse.setStatus(400);
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
+        }
+        if (!currentCourier.getAdded().getStatus().equals(APPROVED)) {
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/PendingPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         httpServletRequest.getSession().setAttribute("name",currentCourier.getFirstName());
@@ -98,13 +102,19 @@ public class LoginHandler extends HttpServlet {
         ManagerDAO managerDAO = (ManagerDAO) getServletContext().getAttribute("managers");
         Manager currentManager = managerDAO.getManagerByEmail(email);
         if (currentManager == null) {
-            httpServletResponse.setStatus(404);
+            httpServletResponse.setStatus(400);
+            httpServletResponse.addHeader("login error", "email");
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         if (!currentManager.getPassword().equals(hashedPassword(password))) {
-            httpServletResponse.setStatus(404);
+            httpServletResponse.setStatus(400);
+            httpServletResponse.addHeader("login error", "password");
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
+            return;
+        }
+        if (!currentManager.getAddStatus().getStatus().equals(APPROVED)) {
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/PendingPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         httpServletRequest.getSession().setAttribute("name", currentManager.getFirstName());

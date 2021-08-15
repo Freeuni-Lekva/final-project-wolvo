@@ -5,85 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9bee9a-6f73-4cf3-b4a7-95398a9e63c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ErrorPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FullTestDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../FullTestDB.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/PendingPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ConfirmRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ConfirmRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/CourierApprovalConfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/CourierApprovalConfHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/CourierApprovalHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/CourierApprovalHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/CourierRejectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/CourierRejectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DishAdditionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DishAdditionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DishApprovalConfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DishApprovalConfHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DishApprovalHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DishApprovalHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DishDeletionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DishDeletionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DishRejectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DishRejectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/HomeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/HomeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ErrorHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MakeAdminHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MakeAdminHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ManagerApprovalConfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ManagerApprovalConfHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ManagerApprovalHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ManagerApprovalHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ManagerRejectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ManagerRejectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderConfirmedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderConfirmedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderDishConfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderDishConfHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderDishHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderDishHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderFromRestaurantHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderFromRestaurantHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderReviewConfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderReviewConfHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/OrderReviewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/OrderReviewHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegisterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RejectRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RejectRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SendRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SendRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UserFoundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UserFoundHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UserSearchHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UserSearchHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/ManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/ManagerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DAO/RestaurantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/DAO/RestaurantDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestManagerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Tests/TestRestaurantsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Tests/TestRestaurantsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Resources/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/CustomerPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ManagerSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/successfulSignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/successfulSignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/successfulSignUpApproval.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/successfulSignUpApproval.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ErrorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/ErrorPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/CourierApprovalConfHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/CourierApprovalConfHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/CourierApprovalHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/CourierApprovalHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/CourierRejectionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/CourierRejectionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DishAdditionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DishAdditionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DishApprovalConfHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DishApprovalConfHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DishApprovalHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DishApprovalHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DishDeletionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DishDeletionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DishRejectionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DishRejectionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/HomeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/HomeHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LoginHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MakeAdminHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MakeAdminHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ManagerApprovalConfHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ManagerApprovalConfHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ManagerApprovalHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ManagerApprovalHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ManagerRejectionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ManagerRejectionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/OrderConfirmedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/OrderConfirmedHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RegisterHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UserFoundHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UserFoundHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UserSearchHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UserSearchHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Courier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Courier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/ManagerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/ManagerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/RestaurantDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/RestaurantDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/DAO/ReviewDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestManagerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestManagerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Tests/TestRestaurantsDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-14" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-14" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierPage_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierSignUp_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierSignUp_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CourierSignUp_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerPage_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/CustomerSignUp_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerSignUp_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerSignUp_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ManagerSignUp_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UsersList_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/UsersList_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUpApproval_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUpApproval_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/successfulSignUp_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-15" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2021-08-15" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ErrorPage_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ErrorPage_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ErrorPage_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/Views/ErrorPage_jsp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,17 +195,17 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestRestaurantsDAO" />
-      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
       <item itemvalue="JUnit.TestManagerDAO" />
       <item itemvalue="JUnit.TestManagerDAO.testAddApprove" />
       <item itemvalue="JUnit.TestManagerDAO.testChangeRestaurant" />
       <item itemvalue="JUnit.TestRestaurantsDAO.testGetRestaurantByManager" />
+      <item itemvalue="Maven.Wolvo [tomcat7:run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestManagerDAO" />
         <item itemvalue="JUnit.TestRestaurantsDAO" />
         <item itemvalue="JUnit.TestRestaurantsDAO.testGetRestaurantByManager" />
-        <item itemvalue="JUnit.TestManagerDAO" />
         <item itemvalue="JUnit.TestManagerDAO.testAddApprove" />
         <item itemvalue="JUnit.TestManagerDAO.testChangeRestaurant" />
       </list>
