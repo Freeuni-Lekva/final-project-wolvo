@@ -21,21 +21,19 @@
     <label>Phone Number: <%= ((User) request.getAttribute("foundUser")).getPhoneNumber()%> </label> <br>
     <label>District: <%= ((User) request.getAttribute("foundUser")).getDistrict()%></label> <br>
     <label>Address: <%= ((User) request.getAttribute("foundUser")).getAddress()%></label> <br>
-    <%  if (((Integer) request.getAttribute("arefriends")).equals(0))
-    {
-        if (((Integer) request.getAttribute("hasRequest")).equals(1)) { %>
-    <a href="confirmRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Confirm Request</a>
-    <a href="rejectRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Reject Request</a>
-    <% }
-    else { %>
-    <a href = "sendFRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Send Friend Request</a>
-    <% } %>
-    <% } %>
+    <%  if (((Integer) request.getAttribute("areFriends")).equals(0)) {
+            if (((Integer) request.getAttribute("hasRequestReceived")).equals(1)) { %>
+                <a href="confirmRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Confirm Request</a>
+                <a href="rejectRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Reject Request</a>
+            <% } else if (((Integer) request.getAttribute("hasRequestSent")).equals(0) && ((Integer) request.getAttribute("searchSelf")).equals(0)) { %>
+                <a href = "sendFRequest?id=<%=((User) request.getAttribute("foundUser")).getId()%>">Send Friend Request</a>
+            <% }
+    }%>
 </div>
 
 <% if (((User) request.getAttribute("foundUser")).getPrivacyStatus().getStatus().equals("Public")
         || (((User) request.getAttribute("foundUser")).getPrivacyStatus().getStatus().equals("Friends") &&
-        ((Integer) (request.getAttribute("arefriends"))).equals(1))) { %>
+        ((Integer) (request.getAttribute("areFriends"))).equals(1)) || ((Integer) request.getAttribute("searchSelf")).equals(1)) { %>
 <div class = "userFOrders">
     <label>Order History</label> <br>
     <% List<Order> courOrds = ((OrderDAO) application.getAttribute("orders")).

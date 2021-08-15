@@ -233,6 +233,22 @@
     <servlet-name>PendingHandler</servlet-name>
     <url-pattern>/PendingPage</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestApproved</servlet-name>
+    <servlet-class>Controllers.ConfirmRequestHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestApproved</servlet-name>
+    <url-pattern>/RequestApproved</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestRejected</servlet-name>
+    <servlet-class>Controllers.RejectRequestHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestRejected</servlet-name>
+    <url-pattern>/RequestRejected</url-pattern>
+  </servlet-mapping>
   <!-- error pages -->
   <error-page>
     <error-code>400</error-code>
