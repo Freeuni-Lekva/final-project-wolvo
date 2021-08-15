@@ -14,7 +14,7 @@
 <label>Working district: <%= ((Courier) request.getAttribute("courierToApprove")).getDistrict()%></label> <br>
 <a href="approveCourierConf?id=<%= ((Courier) request.getAttribute("courierToApprove")).getId()%>">Approve</a>
 <a href="rejectCourier?id=<%= ((Courier) request.getAttribute("courierToApprove")).getId()%>">Reject</a>
-
 </div>
+<a href="login">Go Back to My Page</a>
 <body>
 </html>

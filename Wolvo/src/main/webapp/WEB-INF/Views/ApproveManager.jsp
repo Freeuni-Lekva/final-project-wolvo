@@ -22,7 +22,7 @@
     <label>Restaurant address: <%=res.getAddress()%></label> <br>
     <a href="approveManagerConf?id=<%= ((Manager) request.getAttribute("managerToApprove")).getId()%>">Approve</a>
     <a href="rejectManager?id=<%= ((Manager) request.getAttribute("managerToApprove")).getId()%>">Reject</a>
-
 </div>
+<a href="login">Go Back to My Page</a>
 <body>
 </html>
