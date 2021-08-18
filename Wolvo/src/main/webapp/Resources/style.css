@@ -884,13 +884,23 @@ input::-webkit-inner-spin-button {
 .logout {
     position: absolute;
     top: 6%;
-    left: 4.4%;
-    transform: translate(-50%, -50%);
+    right: 90%;
 }
 
 .logoutR {
     position: absolute;
     top: 6%;
     left: 95%;
-    transform: translate(-50%, -50%);
+}
+
+#SignOut {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 4px 30px;
+    transform: translate(-90%, -50%);
+    background-color: goldenrod;
+    border: 1px solid #223445;
+    border-radius: 18px;
+    -moz-border-radius: 5px;
 }
