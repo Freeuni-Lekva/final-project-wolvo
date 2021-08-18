@@ -50,11 +50,13 @@ public class LoginHandler extends HttpServlet {
         User currentUser = userDAO.getByEmail(email);
         if (currentUser == null) {
             httpServletResponse.setStatus(400);
+            httpServletResponse.addHeader("login error", "email");
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         if (!currentUser.getPassword().equals(hashedPassword(password))) {
             httpServletResponse.setStatus(400);
+            httpServletResponse.addHeader("login error", "password");
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
@@ -75,11 +77,13 @@ public class LoginHandler extends HttpServlet {
         Courier currentCourier = courierDAO.getCourierByEmail(email);
         if (currentCourier == null) {
             httpServletResponse.setStatus(400);
+            httpServletResponse.addHeader("login error", "email");
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
         if (!currentCourier.getPassword().equals(hashedPassword(password))) {
             httpServletResponse.setStatus(400);
+            httpServletResponse.addHeader("login error", "password");
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/ErrorPage.jsp").forward(httpServletRequest, httpServletResponse);
             return;
         }
@@ -140,6 +144,10 @@ public class LoginHandler extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        if (httpServletRequest.getSession().getAttribute("userType") == null) {
+            httpServletRequest.getRequestDispatcher("WEB-INF/Views/login.jsp")
+                    .forward(httpServletRequest, httpServletResponse);
+        }
         if (httpServletRequest.getSession().getAttribute("userType").equals("Courier")) {
             httpServletRequest.getRequestDispatcher("WEB-INF/Views/CourierPage.jsp")
                     .forward(httpServletRequest,httpServletResponse);

@@ -35,7 +35,7 @@
         || (((User) request.getAttribute("foundUser")).getPrivacyStatus().getStatus().equals("Friends") &&
         ((Integer) (request.getAttribute("areFriends"))).equals(1)) || ((Integer) request.getAttribute("searchSelf")).equals(1)) { %>
 <div class = "userFOrders">
-    <label>Order History</label> <br>
+    <label>Order History: </label> <br>
     <% List<Order> courOrds = ((OrderDAO) application.getAttribute("orders")).
             getUserOrders(((User) request.getAttribute("foundUser")).getId());
         if (courOrds.isEmpty()) {
@@ -45,6 +45,7 @@
     else { %>
     <% for (Order ord : courOrds) {
         Dish currDish = ((DishDAO) application.getAttribute("dishes")).getDishById(ord.getDish());
+        if (currDish != null) {
         Restaurant currRest = ((RestaurantDAO) application.getAttribute("restaurants")).getRestaurantById(currDish.getRest_id());
     %>
     <li>
@@ -53,12 +54,18 @@
             <label>Restaurant: <%=currRest.getName()%></label> <br>
             <label>Restaurant address: <%=currRest.getDistrict()%>, <%=currRest.getAddress()%></label> <br>
     </li>
-    <% } %>
+    <% }
+     }%>
     <%
         }
     %>
 </div>
 <% } %>
 <a href="login">Go Back to My Page</a>
+<div class = "logoutR">
+    <form action = "SignOut" method = "post">
+        <input type="submit" value="Sign Out" id = "SignOut" name = "SignOut"/>
+    </form>
+</div>
 </body>
 </html>

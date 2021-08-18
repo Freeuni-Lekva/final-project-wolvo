@@ -52,9 +52,12 @@
     <label>You don't have any orders right now.</label> <br>
     <% }
     else { %>
-    <label>           Your current order</label> <br>
+    <label>           Your current order:</label> <br>
     <% Order currentOrder = ((OrderDAO) application.getAttribute("orders")).
             getCouriersCurrentOrder(((Courier) session.getAttribute("courier")).getId());
+
+       Dish currDish = ((DishDAO) application.getAttribute("dishes")).getDishById(currentOrder.getDish());
+       if (currDish != null) {
        Restaurant currentRestaurant = ((RestaurantDAO) application.getAttribute("restaurants")).getRestaurantById(
                ((DishDAO) application.getAttribute("dishes")).getDishById(currentOrder.getDish()).getRest_id());
        Dish currentDish = ((DishDAO) application.getAttribute("dishes")).getDishById(currentOrder.getDish());
@@ -64,8 +67,14 @@
     <label>Price: <%=currentDish.getPrice()%></label> <br>
     <label>Address: <%=currentOrder.getAddress()%></label> <br>
     <a href="confirmOrder">Mark order as delivered</a>
-    <% } %>
+    <% }
+     }%>
 
+</div>
+<div class = "logout">
+    <form action = "SignOut" method = "post">
+        <input type="submit" value="Sign Out" id = "SignOut" name = "SignOut"/>
+    </form>
 </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <head>
     <link rel = "stylesheet" href = "../../Resources/style.css" />
     <title>Wolvo</title>
-]</head>
+</head>
 <body>
 <div class = "adminInfo">
     <label>Hello, <%=session.getAttribute("name")%> <%=session.getAttribute("surname")%>!</label> <br>
@@ -79,6 +79,11 @@
 <div class = "searchUsers">
     <form action = "userSearch" method = "get">
         <input type = "text" id = "searchUser" name = "search" placeholder="Look for users by full name"/> <br> <br>
+    </form>
+</div>
+<div class = "logout">
+    <form action = "SignOut" method = "post">
+        <input type="submit" value="Sign Out" id = "SignOut" name = "SignOut"/>
     </form>
 </div>
 </body>

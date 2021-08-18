@@ -41,6 +41,7 @@ Models\Dish.class
 Controllers\RejectRequestHandler.class
 Controllers\OrderReviewConfHandler.class
 Models\DAO\CourierDAO.class
+Controllers\SignOutHandler.class
 Controllers\UserSearchHandler.class
 Models\Courier.class
 Controllers\OrderDishConfHandler.class
