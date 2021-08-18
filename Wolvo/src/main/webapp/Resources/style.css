@@ -880,3 +880,17 @@ input::-webkit-inner-spin-button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.logout {
+    position: absolute;
+    top: 6%;
+    left: 4.4%;
+    transform: translate(-50%, -50%);
+}
+
+.logoutR {
+    position: absolute;
+    top: 6%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}

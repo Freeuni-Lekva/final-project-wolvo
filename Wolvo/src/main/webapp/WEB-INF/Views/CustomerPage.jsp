@@ -58,6 +58,7 @@
     else {
         for (Order ord : userOrds) {
             Dish dish = ((DishDAO) application.getAttribute("dishes")).getDishById(ord.getDish());
+            if (dish != null) {
             Restaurant rest = ((RestaurantDAO) application.getAttribute("restaurants")).getRestaurantById(dish.getRest_id());
             Courier courier = ((CourierDAO) application.getAttribute("couriers")).getCourierById(ord.getCourier()); %>
     <label>Dish name: <%=dish.getName()%></label> <br>
@@ -88,7 +89,8 @@
         if (!currRev.getDishText().equals("")) { %>
     <label>You also made a comment about dish: <%=currRev.getDishText()%> </label> <br>
     <%
-        } %>
+         }
+        }%>
     <% } %>
     <% }%>
     <%   } %>
@@ -112,6 +114,11 @@
 <div class = "userSearchBar">
     <form action = "userSearch" method = "get">
         <input type = "text" id = "searchUser" name = "search" placeholder="Look for users by full name"/> <br> <br>
+    </form>
+</div>
+<div class = "logout">
+    <form action = "SignOut" method = "post">
+        <input type="submit" value="Sign Out" id = "SignOut" name = "SignOut"/>
     </form>
 </div>
 </body>

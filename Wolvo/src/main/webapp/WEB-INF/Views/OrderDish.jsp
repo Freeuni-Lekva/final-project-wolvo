@@ -32,5 +32,10 @@
     </form>
 </div>
 <a href="login">Go Back to My Page</a>
+<div class = "logoutR">
+    <form action = "SignOut" method = "post">
+        <input type="submit" value="Sign Out" id = "SignOut" name = "SignOut"/>
+    </form>
+</div>
 </body>
 </html>

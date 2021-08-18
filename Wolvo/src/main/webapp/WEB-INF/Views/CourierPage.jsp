@@ -67,5 +67,10 @@
     <% } %>
 
 </div>
+<div class = "logout">
+    <form action = "SignOut" method = "post">
+        <input type="submit" value="Sign Out" id = "SignOut" name = "SignOut"/>
+    </form>
+</div>
 </body>
 </html>
